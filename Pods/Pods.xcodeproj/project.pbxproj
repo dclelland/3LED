@@ -251,6 +251,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		418B9D9B1C95600DFDDDDDDCB9784BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00642EC62E538F25EB86CBBB372FF508 /* LIFXClient.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -308,6 +325,24 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		60C977A2E715AD0CF481818281BD5789 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00642EC62E538F25EB86CBBB372FF508 /* LIFXClient.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -375,24 +410,6 @@
 			};
 			name = Debug;
 		};
-		7830546FED1A13FDB53B871AC1FE9673 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00642EC62E538F25EB86CBBB372FF508 /* LIFXClient.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		797EEACAC8A5CCCEF882CFDFAB9C7C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E276FD2C5C41EC3011A0173432CD9F7 /* Pods-3LED.debug.xcconfig */;
@@ -428,23 +445,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DFDE9D63CAA630ABC3796F3D494A7ADD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00642EC62E538F25EB86CBBB372FF508 /* LIFXClient.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -511,8 +511,8 @@
 		DD925C2C5C915F3286BDF2FEDD1152FB /* Build configuration list for PBXAggregateTarget "LIFXClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFDE9D63CAA630ABC3796F3D494A7ADD /* Debug */,
-				7830546FED1A13FDB53B871AC1FE9673 /* Release */,
+				418B9D9B1C95600DFDDDDDDCB9784BBC /* Debug */,
+				60C977A2E715AD0CF481818281BD5789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,13 +11,13 @@ target '3LED' do
     
     pod 'LIFXClient', path: '../LIFXClient'
     
-    # post_install do |installer|
+     post_install do |installer|
+       
+         # Write the acknowledgements
         
-    #     # Write the acknowledgements
+         require 'fileutils'
+         FileUtils.cp('Pods/Target Support Files/Pods-3LED/Pods-3LED-acknowledgements.plist', '3LED/Resources/Settings.bundle/Acknowledgements.plist')
         
-    #     require 'fileutils'
-    #     FileUtils.cp('Pods/Target Support Files/Pods-Binance/Pods-Binance-acknowledgements.plist', 'Binance/Resources/Settings.bundle/Acknowledgements.plist')
-        
-    # end
+     end
     
 end
