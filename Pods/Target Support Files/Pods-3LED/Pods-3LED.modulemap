@@ -1,0 +1,6 @@
+framework module Pods_3LED {
+  umbrella header "Pods-3LED-umbrella.h"
+
+  export *
+  module * { export * }
+}

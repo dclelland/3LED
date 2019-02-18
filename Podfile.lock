@@ -1,0 +1,16 @@
+PODS:
+  - LIFXClient (0.1.0)
+
+DEPENDENCIES:
+  - LIFXClient (from `../LIFXClient`)
+
+EXTERNAL SOURCES:
+  LIFXClient:
+    :path: "../LIFXClient"
+
+SPEC CHECKSUMS:
+  LIFXClient: f95350ae86e29997e1b15d2023a293c770d3f0ce
+
+PODFILE CHECKSUM: 40a3e75663beb70cd95eae4bf859b57e9e32ea72
+
+COCOAPODS: 1.6.0

@@ -12,9 +12,11 @@
 		658A681D221A9C3F008BD6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A681B221A9C3F008BD6A3 /* Main.storyboard */; };
 		658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658A681E221A9C44008BD6A3 /* Assets.xcassets */; };
 		658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */; };
+		D3055FB1EB034EAA6A941D35 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90767A9993EF4AD7812D3797 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		658A6814221A9C3F008BD6A3 /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6817221A9C3F008BD6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658A6819221A9C3F008BD6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		658A681E221A9C44008BD6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		658A6821221A9C44008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		658A6823221A9C44008BD6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90767A9993EF4AD7812D3797 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3055FB1EB034EAA6A941D35 /* Pods_3LED.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C09C1563B735E9826D3F4CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90767A9993EF4AD7812D3797 /* Pods_3LED.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		658A680B221A9C3F008BD6A3 = {
 			isa = PBXGroup;
 			children = (
 				658A6816221A9C3F008BD6A3 /* 3LED */,
 				658A6815221A9C3F008BD6A3 /* Products */,
+				71EDEE701F9C7301E5D10FD5 /* Pods */,
+				5C09C1563B735E9826D3F4CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,16 @@
 			path = 3LED;
 			sourceTree = "<group>";
 		};
+		71EDEE701F9C7301E5D10FD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */,
+				CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 658A6826221A9C44008BD6A3 /* Build configuration list for PBXNativeTarget "3LED" */;
 			buildPhases = (
+				CB494967FA72F522B1B7DF26 /* [CP] Check Pods Manifest.lock */,
 				658A6810221A9C3F008BD6A3 /* Sources */,
 				658A6811221A9C3F008BD6A3 /* Frameworks */,
 				658A6812221A9C3F008BD6A3 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB494967FA72F522B1B7DF26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3LED-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		658A6810221A9C3F008BD6A3 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		658A6827221A9C44008BD6A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +350,7 @@
 		};
 		658A6828221A9C44008BD6A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
