@@ -128,6 +128,7 @@
 				658A6810221A9C3F008BD6A3 /* Sources */,
 				658A6811221A9C3F008BD6A3 /* Frameworks */,
 				658A6812221A9C3F008BD6A3 /* Resources */,
+				15C56C41926596EED42CEB2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +187,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15C56C41926596EED42CEB2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CB494967FA72F522B1B7DF26 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
