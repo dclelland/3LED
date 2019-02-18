@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		658A6818221A9C3F008BD6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A6817221A9C3F008BD6A3 /* AppDelegate.swift */; };
 		658A681A221A9C3F008BD6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A6819221A9C3F008BD6A3 /* ViewController.swift */; };
-		658A681D221A9C3F008BD6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A681B221A9C3F008BD6A3 /* Main.storyboard */; };
+		658A681D221A9C3F008BD6A3 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A681B221A9C3F008BD6A3 /* App.storyboard */; };
 		658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658A681E221A9C44008BD6A3 /* Assets.xcassets */; };
 		658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */; };
 		D3055FB1EB034EAA6A941D35 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90767A9993EF4AD7812D3797 /* Pods_3LED.framework */; };
@@ -20,10 +20,11 @@
 		658A6814221A9C3F008BD6A3 /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6817221A9C3F008BD6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658A6819221A9C3F008BD6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		658A681C221A9C3F008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		658A681C221A9C3F008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/App.storyboard; sourceTree = "<group>"; };
 		658A681E221A9C44008BD6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		658A6821221A9C44008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		658A6823221A9C44008BD6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658A6829221A9D4F008BD6A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		90767A9993EF4AD7812D3797 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +52,7 @@
 		658A680B221A9C3F008BD6A3 = {
 			isa = PBXGroup;
 			children = (
+				658A6829221A9D4F008BD6A3 /* README.md */,
 				658A6816221A9C3F008BD6A3 /* 3LED */,
 				658A6815221A9C3F008BD6A3 /* Products */,
 				71EDEE701F9C7301E5D10FD5 /* Pods */,
@@ -69,14 +71,38 @@
 		658A6816221A9C3F008BD6A3 /* 3LED */ = {
 			isa = PBXGroup;
 			children = (
+				658A681B221A9C3F008BD6A3 /* App.storyboard */,
 				658A6817221A9C3F008BD6A3 /* AppDelegate.swift */,
-				658A6819221A9C3F008BD6A3 /* ViewController.swift */,
-				658A681B221A9C3F008BD6A3 /* Main.storyboard */,
-				658A681E221A9C44008BD6A3 /* Assets.xcassets */,
-				658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */,
-				658A6823221A9C44008BD6A3 /* Info.plist */,
+				658A682A221A9D54008BD6A3 /* Controllers */,
+				658A682B221A9D6C008BD6A3 /* Resources */,
+				658A682C221A9D77008BD6A3 /* Supporting Files */,
 			);
 			path = 3LED;
+			sourceTree = "<group>";
+		};
+		658A682A221A9D54008BD6A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				658A6819221A9C3F008BD6A3 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		658A682B221A9D6C008BD6A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				658A681E221A9C44008BD6A3 /* Assets.xcassets */,
+				658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		658A682C221A9D77008BD6A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				658A6823221A9C44008BD6A3 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		71EDEE701F9C7301E5D10FD5 /* Pods */ = {
@@ -85,7 +111,6 @@
 				51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */,
 				CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,7 +175,7 @@
 			files = (
 				658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */,
 				658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */,
-				658A681D221A9C3F008BD6A3 /* Main.storyboard in Resources */,
+				658A681D221A9C3F008BD6A3 /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,12 +219,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		658A681B221A9C3F008BD6A3 /* Main.storyboard */ = {
+		658A681B221A9C3F008BD6A3 /* App.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				658A681C221A9C3F008BD6A3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = App.storyboard;
 			sourceTree = "<group>";
 		};
 		658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */ = {
@@ -336,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = 3LED/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = 3LED/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
