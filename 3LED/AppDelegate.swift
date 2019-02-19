@@ -13,8 +13,11 @@ import LIFXClient
 
     var window: UIWindow?
     
+    var client = LIFXClient()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LIFXClient().connect()
+        
+        client.connect()
         
         return true
     }
