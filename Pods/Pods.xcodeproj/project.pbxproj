@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AFD6DDAC9E56A3A0CD19BA1D8D0E2ED /* LIFXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FB05F05AA55ABD0F381E13D235073 /* LIFXClient.swift */; };
-		4A2E581CC45BFB83724B09A2F7E19962 /* LIFXCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB6C7DBB8D0FA86085C21436855232 /* LIFXCodable.swift */; };
-		6BE8343651D253F0D966B1F904965896 /* LIFXMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F45FCF2BADD5A49AA83134740CF6A22 /* LIFXMessage.swift */; };
+		05E4B1B5F4778FEBF8BEDEA5B88D056D /* LIFXDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFDEE2CC49DF2E9D6B6480E697E7D8 /* LIFXDecodable.swift */; };
+		1A2DDB11340EA28FB34444D714C3D278 /* LIFXEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0CFDB1F1C80638CC54649709B9D7CF /* LIFXEncodable.swift */; };
+		29F577FA8D8D6435F5453811ADD44D3D /* LIFXPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1888B071D1193A24312CB361F72EA5 /* LIFXPacket.swift */; };
+		31B055D8D6568B40DEFAF53A65EC77E5 /* LIFXClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F918AEF9389F71DFDCD76C767ACC9EFB /* LIFXClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6853CED96FB2D5D2200874773394E86A /* LIFXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A4E5F62577BC45D4FCA1C8B6A9FA82 /* LIFXClient.swift */; };
+		68D887AE638A464514FC00C2D123540C /* LIFXClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B861E4C49EB44D9AF01D3FB99F328F4 /* LIFXClient-dummy.m */; };
+		68E3FD549FC880C6D05569213221CA3E /* LIFXEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371763E5BE685C51A6935D6E54F43626 /* LIFXEncoder.swift */; };
+		6BA7AB49D061448BA568B3614CCC83D2 /* LIFXCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E9AC2F8BB838192399F70A56B2EF9 /* LIFXCodable.swift */; };
 		76B58CE6A5146D21EA8FCB04F8581571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		7D4FA1314215B11D7C25AF5D3355B4BD /* LIFXClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F65DDF21AFB7CF35B678E7D54F6C69 /* LIFXClient-dummy.m */; };
-		849FD4E40E67FBEA2B60EA611411468F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		8D64C399C8BDC8252ED69B8260981CEA /* LIFXClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E11D6B85316C5BF720A7753F13D775 /* LIFXClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D38D295A5A1A184BF53C004F4BD5CE6 /* LIFXMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A39CEDE44BDC58D644554804AE1578 /* LIFXMessage.swift */; };
+		9B0FD8568D5EC1EFAB9FC2BBA3612C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		A78151A5CCD915447FBEE33700A0215F /* Pods-3LED-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D3B250FDF742DF98680478A4C2D5C9 /* Pods-3LED-dummy.m */; };
-		AF0201F1789BF1599B209A903BE3B294 /* LIFXPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DF5EDC36F0DC16B9DBB8A5409687A /* LIFXPacket.swift */; };
+		A98CACEC38F6375A8052A0FDCF46E78D /* LIFXDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762C48C9E4B90EC6D23FC2F433B1A88 /* LIFXDecoder.swift */; };
 		EA12625A233BFFCB7D31DF586625B926 /* Pods-3LED-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEF910DF80E2691EED710160CD04DC1 /* Pods-3LED-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,38 +28,42 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 55F9F8365AECCDECC793C6F7E9B4070B;
+			remoteGlobalIDString = 71A025806FAC7CED98D5C160D83061BC;
 			remoteInfo = LIFXClient;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0762C48C9E4B90EC6D23FC2F433B1A88 /* LIFXDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecoder.swift; sourceTree = "<group>"; };
 		0B6E601AEB697389651493C133D67839 /* Pods-3LED-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-3LED-frameworks.sh"; sourceTree = "<group>"; };
-		12E7FAA598EC2FC6439DE2F080F53206 /* LIFXClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LIFXClient.modulemap; sourceTree = "<group>"; };
 		28519E714E1FEEB263CC1DC56884F117 /* Pods-3LED-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-3LED-acknowledgements.markdown"; sourceTree = "<group>"; };
 		29D3B250FDF742DF98680478A4C2D5C9 /* Pods-3LED-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-3LED-dummy.m"; sourceTree = "<group>"; };
-		2ABB6C7DBB8D0FA86085C21436855232 /* LIFXCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXCodable.swift; path = Sources/LIFXCodable.swift; sourceTree = "<group>"; };
-		2F45FCF2BADD5A49AA83134740CF6A22 /* LIFXMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXMessage.swift; path = Sources/LIFXMessage.swift; sourceTree = "<group>"; };
+		310D19AACD993733A67B432FF6E1D814 /* LIFXClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LIFXClient.modulemap; sourceTree = "<group>"; };
 		32DC40ACA4340C48E55F24FE7B3F1808 /* Pods-3LED.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-3LED.modulemap"; sourceTree = "<group>"; };
-		3A6DF9484BCFE94DC710EA359ECA9677 /* LIFXClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LIFXClient-Info.plist"; sourceTree = "<group>"; };
+		371763E5BE685C51A6935D6E54F43626 /* LIFXEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncoder.swift; sourceTree = "<group>"; };
+		3B861E4C49EB44D9AF01D3FB99F328F4 /* LIFXClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIFXClient-dummy.m"; sourceTree = "<group>"; };
 		4023372B8A821CA0609F5C472FD8ACC6 /* Pods-3LED-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-acknowledgements.plist"; sourceTree = "<group>"; };
 		451C0C6F8C581ED949A48FF3E93D36B4 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
-		4A0DF5EDC36F0DC16B9DBB8A5409687A /* LIFXPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXPacket.swift; path = Sources/LIFXPacket.swift; sourceTree = "<group>"; };
-		4CC0312A2602870CBC098F3CFA25CDF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		47A4E5F62577BC45D4FCA1C8B6A9FA82 /* LIFXClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXClient.swift; path = Sources/LIFXClient.swift; sourceTree = "<group>"; };
+		502B3E48A4D6834BB875C44FCCD9ED93 /* LIFXClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LIFXClient-Info.plist"; sourceTree = "<group>"; };
+		566E9AC2F8BB838192399F70A56B2EF9 /* LIFXCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXCodable.swift; sourceTree = "<group>"; };
 		57E0356C40A45BD010AFE7BBA894B6A0 /* Pods-3LED-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-Info.plist"; sourceTree = "<group>"; };
+		59A1CD8C93EECE171A59539523342F3A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		66573FFB0775A4F8655FE829562A248F /* LIFXClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LIFXClient.framework; path = LIFXClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		665DC0EF8EFAAEFFEE298622DC978CDE /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
-		6C0848732430EF79D15552AD910E2BBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		79F65DDF21AFB7CF35B678E7D54F6C69 /* LIFXClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIFXClient-dummy.m"; sourceTree = "<group>"; };
+		77A39CEDE44BDC58D644554804AE1578 /* LIFXMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXMessage.swift; path = Sources/LIFXMessage.swift; sourceTree = "<group>"; };
+		7B05E076E0453CB1CCC88AA8C21C00F3 /* LIFXClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-prefix.pch"; sourceTree = "<group>"; };
+		8FDFDEE2CC49DF2E9D6B6480E697E7D8 /* LIFXDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecodable.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A99BC2E3A888142D7855BC05FED34511 /* LIFXClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-prefix.pch"; sourceTree = "<group>"; };
-		B76D3A48954F783CBDA2A2CD70475CF8 /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B81FB05F05AA55ABD0F381E13D235073 /* LIFXClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXClient.swift; path = Sources/LIFXClient.swift; sourceTree = "<group>"; };
+		BF68961DCDE2B69E5EC23921FDD9CCC4 /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C6D14A8A751763247DBBFCD718BD2BF4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CAEF910DF80E2691EED710160CD04DC1 /* Pods-3LED-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-3LED-umbrella.h"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DB1888B071D1193A24312CB361F72EA5 /* LIFXPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXPacket.swift; path = Sources/LIFXPacket.swift; sourceTree = "<group>"; };
+		DC0CFDB1F1C80638CC54649709B9D7CF /* LIFXEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncodable.swift; sourceTree = "<group>"; };
 		DC86A78DF2194828AD56CA360310DB96 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_3LED.framework; path = "Pods-3LED.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0ABC6D7B2A13299D964107209752B49 /* LIFXClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LIFXClient.xcconfig; sourceTree = "<group>"; };
-		E6E11D6B85316C5BF720A7753F13D775 /* LIFXClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-umbrella.h"; sourceTree = "<group>"; };
+		F8614C9DCAF147E2F994C106CAB59CC3 /* LIFXClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LIFXClient.xcconfig; sourceTree = "<group>"; };
+		F918AEF9389F71DFDCD76C767ACC9EFB /* LIFXClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,26 +75,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		545E3DD32CC9CA141B015CB3368A631A /* Frameworks */ = {
+		7EDB77B0ACE574E1758579204BCD2B07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849FD4E40E67FBEA2B60EA611411468F /* Foundation.framework in Frameworks */,
+				9B0FD8568D5EC1EFAB9FC2BBA3612C93 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		176D185EB24141D6E95D85207AD6BA38 /* Support Files */ = {
+		04B651383FBADC08B978B893DC7C16B7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				12E7FAA598EC2FC6439DE2F080F53206 /* LIFXClient.modulemap */,
-				E0ABC6D7B2A13299D964107209752B49 /* LIFXClient.xcconfig */,
-				79F65DDF21AFB7CF35B678E7D54F6C69 /* LIFXClient-dummy.m */,
-				3A6DF9484BCFE94DC710EA359ECA9677 /* LIFXClient-Info.plist */,
-				A99BC2E3A888142D7855BC05FED34511 /* LIFXClient-prefix.pch */,
-				E6E11D6B85316C5BF720A7753F13D775 /* LIFXClient-umbrella.h */,
+				310D19AACD993733A67B432FF6E1D814 /* LIFXClient.modulemap */,
+				F8614C9DCAF147E2F994C106CAB59CC3 /* LIFXClient.xcconfig */,
+				3B861E4C49EB44D9AF01D3FB99F328F4 /* LIFXClient-dummy.m */,
+				502B3E48A4D6834BB875C44FCCD9ED93 /* LIFXClient-Info.plist */,
+				7B05E076E0453CB1CCC88AA8C21C00F3 /* LIFXClient-prefix.pch */,
+				F918AEF9389F71DFDCD76C767ACC9EFB /* LIFXClient-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../3LED/Pods/Target Support Files/LIFXClient";
@@ -129,19 +137,32 @@
 		3B0EC89458936A15C284F5AE7E3EF019 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A642E6AA16A9E375C71503F85D42FF86 /* LIFXClient */,
+				EA7B17D5B3800199E958813FB6C0B4A8 /* LIFXClient */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		6D577D334429145F6B0BF46C5BC11D27 /* Pod */ = {
+		4001B4085D827EB839A8D9451F1D1CA8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				6C0848732430EF79D15552AD910E2BBF /* LICENSE */,
-				B76D3A48954F783CBDA2A2CD70475CF8 /* LIFXClient.podspec */,
-				4CC0312A2602870CBC098F3CFA25CDF3 /* README.md */,
+				C6D14A8A751763247DBBFCD718BD2BF4 /* LICENSE */,
+				BF68961DCDE2B69E5EC23921FDD9CCC4 /* LIFXClient.podspec */,
+				59A1CD8C93EECE171A59539523342F3A /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		498F9097867226AD162BCC6C99201B4F /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				566E9AC2F8BB838192399F70A56B2EF9 /* LIFXCodable.swift */,
+				8FDFDEE2CC49DF2E9D6B6480E697E7D8 /* LIFXDecodable.swift */,
+				0762C48C9E4B90EC6D23FC2F433B1A88 /* LIFXDecoder.swift */,
+				DC0CFDB1F1C80638CC54649709B9D7CF /* LIFXEncodable.swift */,
+				371763E5BE685C51A6935D6E54F43626 /* LIFXEncoder.swift */,
+			);
+			name = Serialization;
+			path = Sources/Serialization;
 			sourceTree = "<group>";
 		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
@@ -150,20 +171,6 @@
 				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		A642E6AA16A9E375C71503F85D42FF86 /* LIFXClient */ = {
-			isa = PBXGroup;
-			children = (
-				B81FB05F05AA55ABD0F381E13D235073 /* LIFXClient.swift */,
-				2ABB6C7DBB8D0FA86085C21436855232 /* LIFXCodable.swift */,
-				2F45FCF2BADD5A49AA83134740CF6A22 /* LIFXMessage.swift */,
-				4A0DF5EDC36F0DC16B9DBB8A5409687A /* LIFXPacket.swift */,
-				6D577D334429145F6B0BF46C5BC11D27 /* Pod */,
-				176D185EB24141D6E95D85207AD6BA38 /* Support Files */,
-			);
-			name = LIFXClient;
-			path = ../../LIFXClient;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -185,6 +192,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA7B17D5B3800199E958813FB6C0B4A8 /* LIFXClient */ = {
+			isa = PBXGroup;
+			children = (
+				47A4E5F62577BC45D4FCA1C8B6A9FA82 /* LIFXClient.swift */,
+				77A39CEDE44BDC58D644554804AE1578 /* LIFXMessage.swift */,
+				DB1888B071D1193A24312CB361F72EA5 /* LIFXPacket.swift */,
+				4001B4085D827EB839A8D9451F1D1CA8 /* Pod */,
+				498F9097867226AD162BCC6C99201B4F /* Serialization */,
+				04B651383FBADC08B978B893DC7C16B7 /* Support Files */,
+			);
+			name = LIFXClient;
+			path = ../../LIFXClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -196,35 +217,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84A11615413B41CB8218AED5D158732B /* Headers */ = {
+		7126F8A348101D7A9D6E069A79B9F550 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D64C399C8BDC8252ED69B8260981CEA /* LIFXClient-umbrella.h in Headers */,
+				31B055D8D6568B40DEFAF53A65EC77E5 /* LIFXClient-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		55F9F8365AECCDECC793C6F7E9B4070B /* LIFXClient */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F1E6DC38A82432F3A85276988D0EE4E1 /* Build configuration list for PBXNativeTarget "LIFXClient" */;
-			buildPhases = (
-				84A11615413B41CB8218AED5D158732B /* Headers */,
-				BB2A8FFB2E24DFB660B4123196AB73FD /* Sources */,
-				545E3DD32CC9CA141B015CB3368A631A /* Frameworks */,
-				2E311051DFA4C327868BAE45236D9065 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LIFXClient;
-			productName = LIFXClient;
-			productReference = 66573FFB0775A4F8655FE829562A248F /* LIFXClient.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		6ED91D97D0FD4D3FD4DFA212C9B04AAC /* Pods-3LED */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CE425D28BF41CF96CA6F7CC2C0562D9 /* Build configuration list for PBXNativeTarget "Pods-3LED" */;
@@ -242,6 +245,24 @@
 			name = "Pods-3LED";
 			productName = "Pods-3LED";
 			productReference = DC86A78DF2194828AD56CA360310DB96 /* Pods_3LED.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		71A025806FAC7CED98D5C160D83061BC /* LIFXClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99830390E887EF38280FE74E554CEE58 /* Build configuration list for PBXNativeTarget "LIFXClient" */;
+			buildPhases = (
+				7126F8A348101D7A9D6E069A79B9F550 /* Headers */,
+				31C896A51D98CB634EE93ED282AE19A8 /* Sources */,
+				7EDB77B0ACE574E1758579204BCD2B07 /* Frameworks */,
+				CFC61E461562C4E2C2303A00C35B553E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LIFXClient;
+			productName = LIFXClient;
+			productReference = 66573FFB0775A4F8655FE829562A248F /* LIFXClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -265,21 +286,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55F9F8365AECCDECC793C6F7E9B4070B /* LIFXClient */,
+				71A025806FAC7CED98D5C160D83061BC /* LIFXClient */,
 				6ED91D97D0FD4D3FD4DFA212C9B04AAC /* Pods-3LED */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2E311051DFA4C327868BAE45236D9065 /* Resources */ = {
+		A751032467F78CACE4FA86E308D28E97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A751032467F78CACE4FA86E308D28E97 /* Resources */ = {
+		CFC61E461562C4E2C2303A00C35B553E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,23 +310,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		31C896A51D98CB634EE93ED282AE19A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D887AE638A464514FC00C2D123540C /* LIFXClient-dummy.m in Sources */,
+				6853CED96FB2D5D2200874773394E86A /* LIFXClient.swift in Sources */,
+				6BA7AB49D061448BA568B3614CCC83D2 /* LIFXCodable.swift in Sources */,
+				05E4B1B5F4778FEBF8BEDEA5B88D056D /* LIFXDecodable.swift in Sources */,
+				A98CACEC38F6375A8052A0FDCF46E78D /* LIFXDecoder.swift in Sources */,
+				1A2DDB11340EA28FB34444D714C3D278 /* LIFXEncodable.swift in Sources */,
+				68E3FD549FC880C6D05569213221CA3E /* LIFXEncoder.swift in Sources */,
+				7D38D295A5A1A184BF53C004F4BD5CE6 /* LIFXMessage.swift in Sources */,
+				29F577FA8D8D6435F5453811ADD44D3D /* LIFXPacket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3682F9142AFE8E6DF9BE689B84123133 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A78151A5CCD915447FBEE33700A0215F /* Pods-3LED-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB2A8FFB2E24DFB660B4123196AB73FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D4FA1314215B11D7C25AF5D3355B4BD /* LIFXClient-dummy.m in Sources */,
-				0AFD6DDAC9E56A3A0CD19BA1D8D0E2ED /* LIFXClient.swift in Sources */,
-				4A2E581CC45BFB83724B09A2F7E19962 /* LIFXCodable.swift in Sources */,
-				6BE8343651D253F0D966B1F904965896 /* LIFXMessage.swift in Sources */,
-				AF0201F1789BF1599B209A903BE3B294 /* LIFXPacket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,85 +340,12 @@
 		9C8C0B9A8B604A9705A45B32682B7588 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LIFXClient;
-			target = 55F9F8365AECCDECC793C6F7E9B4070B /* LIFXClient */;
+			target = 71A025806FAC7CED98D5C160D83061BC /* LIFXClient */;
 			targetProxy = ABFC0E93849E47E053F956CDE85B10F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		028C8E549834C9E0AA47E7EF9BD1C2EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0ABC6D7B2A13299D964107209752B49 /* LIFXClient.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
-				PRODUCT_MODULE_NAME = LIFXClient;
-				PRODUCT_NAME = LIFXClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		22E00E287CAB5082E6385851D03AE2B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0ABC6D7B2A13299D964107209752B49 /* LIFXClient.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
-				PRODUCT_MODULE_NAME = LIFXClient;
-				PRODUCT_NAME = LIFXClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4093433A309EFE160336AC736594AB22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -518,6 +470,43 @@
 			};
 			name = Release;
 		};
+		A7B09E1E3FFEDF5A835A6FC13B369BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8614C9DCAF147E2F994C106CAB59CC3 /* LIFXClient.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
+				PRODUCT_MODULE_NAME = LIFXClient;
+				PRODUCT_NAME = LIFXClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CDE5FD3FDFA1611FCB35AB1114B349F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 451C0C6F8C581ED949A48FF3E93D36B4 /* Pods-3LED.debug.xcconfig */;
@@ -595,6 +584,42 @@
 			};
 			name = Release;
 		};
+		FD1573B1D01DB4DD9AD65F26054A28A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8614C9DCAF147E2F994C106CAB59CC3 /* LIFXClient.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
+				PRODUCT_MODULE_NAME = LIFXClient;
+				PRODUCT_NAME = LIFXClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,20 +632,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		99830390E887EF38280FE74E554CEE58 /* Build configuration list for PBXNativeTarget "LIFXClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1573B1D01DB4DD9AD65F26054A28A3 /* Debug */,
+				A7B09E1E3FFEDF5A835A6FC13B369BE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CE425D28BF41CF96CA6F7CC2C0562D9 /* Build configuration list for PBXNativeTarget "Pods-3LED" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDE5FD3FDFA1611FCB35AB1114B349F3 /* Debug */,
 				D1B0D5CC25FB8286EB90DCCF8081563F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F1E6DC38A82432F3A85276988D0EE4E1 /* Build configuration list for PBXNativeTarget "LIFXClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22E00E287CAB5082E6385851D03AE2B3 /* Debug */,
-				028C8E549834C9E0AA47E7EF9BD1C2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
