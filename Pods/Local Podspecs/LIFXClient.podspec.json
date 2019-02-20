@@ -18,6 +18,11 @@
     "osx": "10.14"
   },
   "swift_version": "4.2",
+  "dependencies": {
+    "PromiseKit": [
+      "~> 6.8.3"
+    ]
+  },
   "ios": {
     "source_files": "Sources/**/*.swift"
   },

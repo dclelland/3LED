@@ -8,12 +8,13 @@
 
 import UIKit
 import LIFXClient
+import Network
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var client = LIFXClient()
+    var client = LIFXClient(address: IPv4Address("192.168.1.83")!, source: 1234)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
