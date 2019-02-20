@@ -7,201 +7,194 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		018F175E3D3E968A3E94618FBC298439 /* LIFXCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3843119B55DBDA31D00B934B4EA718 /* LIFXCodable.swift */; };
-		0407E3A15A02B65A306BD28DD31FF610 /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CBDAF9B9EEBBAB0C93F9D4DE78475 /* UIView+Promise.swift */; };
-		0474A5EEDF96ABEB712BB24378CF6895 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD929429E4AA00D0A211BF1B963E12 /* CustomStringConvertible.swift */; };
-		0A5E02D008DEF4916A667C14ECB7C084 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D80573501D21DC8AD8775039F8ABB67 /* UIView+AnyPromise.m */; };
-		0B11249D430870D0F33E503A19241169 /* LIFXPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566454BD09A46A3A05ECAF7A077ABC75 /* LIFXPacket.swift */; };
-		122C57D3D559455BB7D46E781990861E /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7B0C20380D62C91FD47BC67F92495 /* NSURLSession+Promise.swift */; };
-		22D09B36FF0610EDAD71295F1EB16F2B /* LIFXClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2105A431529256468D0CE25CC9ABECAA /* LIFXClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23A468DFBE7FE81AA78F8359333748EF /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B50E13C964E3FC009487D10DE094B1 /* LogEvent.swift */; };
-		2743F8B2BED77F668F31810F0A227B32 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A7088B208A517D5AE8E753A38D5942 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2988BDBDB33C05A56E98FEDE418C9EB9 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACF4EE7A80EAF623401056759B0643 /* when.swift */; };
-		29B7232B57F9CBC580AAA9531A241586 /* LIFXMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14AA75CF4C1ADAF0AB517D391B409C /* LIFXMessage.swift */; };
-		2A6490F6A3FA051253BE2AD2E8B25704 /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = 677B32DCD10AE6B27BA7A8958ECCFE6B /* when.m */; };
-		2F68B630EC487581B614E3FEC24721E2 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4AEA6C2062827A0B345F2FF668743 /* after.swift */; };
-		313558ECAA2A899B373896910FCF714C /* LIFXClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E94F0004F2710C82401643D1AE115CD5 /* LIFXClient-dummy.m */; };
-		3EB1F2FF39DEB5D6362920132CE3B243 /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB73199E53934E0C0CD23389DA0C40 /* Catchable.swift */; };
+		040B0C4769CE2CBACF2F0010120DD01F /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FF0EB29FE9D7FDB6E90FED312AAE8 /* Process+Promise.swift */; };
+		0C64F44F531FF6D5E22E75B706351B62 /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D635088F341AA67F850A827C14172 /* PromiseKit-dummy.m */; };
+		0C8A2D607A6DEB47512BB095AEA1E7AC /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB76B74D4EC87ACF9BADA102F058DB /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D44C66B6BE369A236F43A87EE050A52 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A811945BBABB1E763732230355CC22 /* NSURLSession+AnyPromise.m */; };
+		11137DF042EC8CF2754EAA445E63BB01 /* LIFXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A6CF66AFB3718F634B405A5892FC0 /* LIFXClient.swift */; };
+		12F0DA0AE89551F25C47317AE0CC34B9 /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C8C7BBC3CD3677A3934AC819F5BAC /* firstly.swift */; };
+		13BDE1C6B99691812E0DA045D7D734BF /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036DC0CAE0C329C78DDFA1D1785D9F8 /* NSNotificationCenter+Promise.swift */; };
+		14AB2C127F3C03EF142729AE2DFFD829 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
+		1B6A879E2671E84AD59DF1BEED0D800D /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F51383849898E614BA85FBE7FFC767A /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CD06C60C161CCEB545B6F5F59D6120C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0594717ADD69799757B0DBC9684473 /* Error.swift */; };
+		20C8932B200CA68D3936DB567BB8028C /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8305A005FF8D955208A6640FDF172D /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23ECA38AAE9BAEC64990A2BAE8C75C1D /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F45CD12DCE2131A44A779FB0F02DC1 /* after.m */; };
+		2AE58724573B12C8F5E48458111340AD /* UIViewPropertyAnimator+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392962B6F3607C58FB96B4ED4181C6C /* UIViewPropertyAnimator+Promise.swift */; };
+		36A4A58D9C6AC5D110A01EFEDEE7E2CF /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FFFF513D6B6152F5BBE55535C050B /* NSObject+Promise.swift */; };
+		36D33177CD2804545D9D20921B104AD9 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08541CAD70C0B900CE83FDA138EAC4B /* Guarantee.swift */; };
+		3B66078DB34D234C46BE52DFB28C067A /* LIFXMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A897E5C762C5E5B1C45A6AE75BC7C74 /* LIFXMessage.swift */; };
+		3F10B4A387D4EB7A2711888CCFED927B /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = 677B32DCD10AE6B27BA7A8958ECCFE6B /* when.m */; };
 		406EBECDB75B12A213A4E42F06C382FA /* Pods-3LED-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEF910DF80E2691EED710160CD04DC1 /* Pods-3LED-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41CE5B0FCC4F33B9306DBE226B875135 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA4FE9F301A2DE595EF18D1981B50B /* AnyPromise.m */; };
-		448FF3570AABF2750D5EEF75C26327BC /* NSTask+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB86AC94D4752E91897EB6A4FEBC37F /* NSTask+AnyPromise.m */; };
-		453C1596C94F27BD37E929544BBEA6F8 /* LIFXDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77339DE665080E6F3EFB7E195C1FFE8 /* LIFXDecodable.swift */; };
-		463E5F6C57B7D597B8E4CE605F53EDB9 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8305A005FF8D955208A6640FDF172D /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4837858C4582AA4B6F56AD3443BC19E3 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD655636927E2E87E54CE4E8A1C2FA2 /* UIViewController+AnyPromise.m */; };
-		4AA855E4F44468D0DE97939FABFA1395 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120672BD2058FF6575163EA0F7B3818 /* hang.swift */; };
-		4D18A11EE3ED0A8B4A9D97CA7D1FAF9B /* race.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0FBE7A3301204F5CBFC55E9A151DE6 /* race.m */; };
-		57C65B1EEA9E74C78430DFE3AFB2CCA6 /* PMKFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A46DE7946CDBA0798AB212B99F45D4 /* PMKFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A08DE66EB49EE669871FDE7958FB564 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08541CAD70C0B900CE83FDA138EAC4B /* Guarantee.swift */; };
-		5A778C68278C3B616B6A06238F0A0B20 /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F45CD12DCE2131A44A779FB0F02DC1 /* after.m */; };
-		5A810949A6CBDA38772B13B3DDBBB071 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 67620D931F3EEB90E4299B6A5528C8C8 /* NSNotificationCenter+AnyPromise.m */; };
-		5E0B1ED58343C28D049B56A8D68CEE76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
-		61B0AC394F0CCBF9A6E9658F035A5FFF /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6A18C6C4C067F916CFFD5789ECE5C2 /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		638775F65124F3524D0FE7C5249554B1 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4DF6DA31DB84AE2BDB95F1F582711 /* Deprecations.swift */; };
-		6BFE9CEAC88912BC26F5A5DD6134753C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFD26D02C1B0EABEC684B311BF2B85 /* Configuration.swift */; };
-		6CA5C80766A0BD5F09DDD6035070E76F /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FADD9E89070EFF5AD05064E22BB174 /* join.m */; };
-		7E0CBB5BB496E1F7AFD6F984798A6717 /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D635088F341AA67F850A827C14172 /* PromiseKit-dummy.m */; };
-		81474ADFF05F459F84E556FB7950E2B4 /* LIFXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC93548CEC2CE2B07AD772AF7E9026D /* LIFXClient.swift */; };
-		8E7ECF306F145FB514CE6ABD67CA41BA /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA6F748BCD7CAD6990886F990A9944 /* AnyPromise.swift */; };
-		97881008621EE3A89FC950A47C147D2F /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FF0EB29FE9D7FDB6E90FED312AAE8 /* Process+Promise.swift */; };
-		9A679349C0CB50618B35FD7081281402 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B46BB89F51E6CC599F63C2A87250412 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CF8D044DABEDC95969F8C6548B57398 /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AAEF848AEF1FD8EB69818FC90B81C19 /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B445CC98A5CE01D26939E44F853649 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120672BD2058FF6575163EA0F7B3818 /* hang.swift */; };
+		4BCDA71E92336DAEA9510B9E0EBF7214 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B121A0F93C02A2151ACBB55A399427 /* race.swift */; };
+		4C445A146B5ECD418E2819FED6702379 /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB73199E53934E0C0CD23389DA0C40 /* Catchable.swift */; };
+		5891A5D2D6C77213505773ABB89702BA /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B50E13C964E3FC009487D10DE094B1 /* LogEvent.swift */; };
+		5F773433F505D88587D42C193347E288 /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4D8E011D8C811F064D8A59C7EFF91 /* Thenable.swift */; };
+		611CB5DD571613E820E8AE0E73AAECB7 /* race.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0FBE7A3301204F5CBFC55E9A151DE6 /* race.m */; };
+		62249509FEA9BA17B9A71AE7BCAE47A6 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D80573501D21DC8AD8775039F8ABB67 /* UIView+AnyPromise.m */; };
+		64D21E5ACD40C4591B04CA0954D2F59B /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AAEF848AEF1FD8EB69818FC90B81C19 /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		665511BFBEAEB45C62E5ACFDDD8149A6 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 67620D931F3EEB90E4299B6A5528C8C8 /* NSNotificationCenter+AnyPromise.m */; };
+		6C1D3667D35B220C73F22ECEEEC3866A /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ACF4EE7A80EAF623401056759B0643 /* when.swift */; };
+		6E53987714DD35B09A85CE1628173DFA /* LIFXDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C0E7259D85D566C5AB82BEB206D763 /* LIFXDecoder.swift */; };
+		718CAC676FBD7DD2A6AA0F68D693EE37 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4AEA6C2062827A0B345F2FF668743 /* after.swift */; };
+		726AD75D83C6C254955F1467ADBCA34A /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA6F748BCD7CAD6990886F990A9944 /* AnyPromise.swift */; };
+		7303DA8A83F9B9073832AA52F8FCECAE /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FADD9E89070EFF5AD05064E22BB174 /* join.m */; };
+		7AE2ED1E2D1A93EEB69574767CA63D59 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD929429E4AA00D0A211BF1B963E12 /* CustomStringConvertible.swift */; };
+		7E71C8C8006D0FF18ED36DD617705415 /* NSTask+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB86AC94D4752E91897EB6A4FEBC37F /* NSTask+AnyPromise.m */; };
+		7EBE37FF0E8D1F0EEA7DDB6C605B0054 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565026BBCD0842AC151CAB4A4149F014 /* Box.swift */; };
+		84A989A4D67D85BEAB3ADACC40297067 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFD26D02C1B0EABEC684B311BF2B85 /* Configuration.swift */; };
+		8B1BA902B4FBB3ED7CC3EF2221E89DEB /* PMKFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A46DE7946CDBA0798AB212B99F45D4 /* PMKFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90F76BBAA15A1C12A7F6205BEBD6904F /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CBDAF9B9EEBBAB0C93F9D4DE78475 /* UIView+Promise.swift */; };
+		94BCE35AA71EE7A74B051F8751E89468 /* LIFXPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA184FCE40B6EB09414E2BCB9967B /* LIFXPacket.swift */; };
+		96A989A0109AA0207FB8F2E655E49B74 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4DF6DA31DB84AE2BDB95F1F582711 /* Deprecations.swift */; };
+		9C741CE9DEC6D0D17AA862C496F8D3B2 /* LIFXClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCCE628BF9600B6A4B357F3279F5FB1 /* LIFXClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E6CF9C41A9385FF007816522F979B71 /* Pods-3LED-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D3B250FDF742DF98680478A4C2D5C9 /* Pods-3LED-dummy.m */; };
-		A0563A0103C86B0E2A21970430FDC99B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
-		AD09A9DA290E3C754370943E878C734D /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA634E92083372CE4E08BAA27E4F76 /* dispatch_promise.m */; };
-		B0C777C32EC8C593B9C21E2344606880 /* LIFXDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDE68884BFA11A829FE2C9D265F47F7 /* LIFXDecoder.swift */; };
-		B253059F396DD1403AAB61C40554CCE1 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565026BBCD0842AC151CAB4A4149F014 /* Box.swift */; };
-		B3485A596E078F62D2AD509F86FB0017 /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 078EBD73602479363ABE31E9BC800B48 /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3AB2745EC8651385403CB6522790A48 /* LIFXEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F592DC2360A2E0070B7FF5C361E05286 /* LIFXEncoder.swift */; };
-		B867F83313862AB0ADD973F5C6386687 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B121A0F93C02A2151ACBB55A399427 /* race.swift */; };
-		BECD4AD1F185B86AD719B0B5281EC607 /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F51383849898E614BA85FBE7FFC767A /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2054DBD437FC0B5DAE69B88D3CE071E /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2335B7E6754B286937C3C27490DF2 /* hang.m */; };
-		C54C87FAE87E0861B0DFD98E3C6CBDC1 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 69DF6F331F32D552DC9AB2DCA1386F1A /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C57B6F69F878F6195A11400DB98AB110 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2307CC8C3B42DAF98663EAE5D2E60 /* Promise.swift */; };
-		C71C636A6084CD23D67CFE7A32F21372 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE12A9711CFE52497A368A29FA007 /* PromiseKit.framework */; };
-		C9CF0D051BD41D2699D8BB454C49CA98 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E175BA4502C8C3A63685F2BC5BEB4 /* afterlife.swift */; };
-		D1B5BC56FFFDFF395D4820B9E7A00944 /* LIFXEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D358813852BF3596315439F0F3C0D69 /* LIFXEncodable.swift */; };
-		D3674DB73AD51F7932842687B4B7A59F /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CACE16203D14FE45C1F8E2185D05146 /* Resolver.swift */; };
-		E68A15E07C41DC84703348A31A945452 /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FFFF513D6B6152F5BBE55535C050B /* NSObject+Promise.swift */; };
-		E709BD4F08184B3BFC601721C5EC772C /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EB76B74D4EC87ACF9BADA102F058DB /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E74C538693099A4E1895130FC1B2EC3D /* UIViewPropertyAnimator+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392962B6F3607C58FB96B4ED4181C6C /* UIViewPropertyAnimator+Promise.swift */; };
-		E7DE771BCA257976065460153A2C51F8 /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4D8E011D8C811F064D8A59C7EFF91 /* Thenable.swift */; };
+		A1A3F0C655CD0E77B28EDF7D79D90F2F /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CACE16203D14FE45C1F8E2185D05146 /* Resolver.swift */; };
+		AA58AA329703A57E62DD7A6BD597CEDE /* LIFXEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4AFB8F5285714321A3F75F437DFE18 /* LIFXEncoder.swift */; };
+		AE8165EA54354745416C4912E61C1FF4 /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 515F2628FA09232B0F3D69285A9E1896 /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF28E173BE37E6653B8A928DD42E7B84 /* LIFXCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D174586DAAAC36047C120FB92B1E44 /* LIFXCodable.swift */; };
+		B939BF85D72FAF46BE930240F2C9A937 /* LIFXEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C6C0993C40C37D9D4F05780F5A51C5 /* LIFXEncodable.swift */; };
+		BBF5EBD918C913217F52E5E5B7E2B814 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD655636927E2E87E54CE4E8A1C2FA2 /* UIViewController+AnyPromise.m */; };
+		C2049A0127A07D0E28D2A58F793816CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D46C36A92041022DC1CB20261809E /* UIKit.framework */; };
+		C2F3D3C683A04703C0DA6C46448BE139 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B46BB89F51E6CC599F63C2A87250412 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6AEB72E3045AE7D39A1BDE35B0814CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
+		C787D30A6B68DCC532673598D91747F1 /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 69DF6F331F32D552DC9AB2DCA1386F1A /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAEBF84883C1545911408F2C4A6F1F06 /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7B0C20380D62C91FD47BC67F92495 /* NSURLSession+Promise.swift */; };
+		CD6597EC47D1D17837C1CC0150602A9F /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE2307CC8C3B42DAF98663EAE5D2E60 /* Promise.swift */; };
+		CF3D7BD670A310E4AB35FF321F800F46 /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 078EBD73602479363ABE31E9BC800B48 /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF9D7957891D5A10CFA6D7172BF2A25A /* LIFXClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A7D3868B8A2A3C4EDE7DA47ED7BE7 /* LIFXClient-dummy.m */; };
+		D1D2776E97CCDA0E2463024B6625AD3D /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA634E92083372CE4E08BAA27E4F76 /* dispatch_promise.m */; };
+		D238A8D8698720B233ECC69138514579 /* NWConnection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F1E36D16508414DE43F1FD5BFB675 /* NWConnection+Extensions.swift */; };
+		D3EFBA7701A9EC02EE338D8CEA3E0CDE /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA4FE9F301A2DE595EF18D1981B50B /* AnyPromise.m */; };
+		D53CB20735947AB65B671F741C01AA20 /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2335B7E6754B286937C3C27490DF2 /* hang.m */; };
+		DC292738BF7414F0A4ECC4A8D8F1D34F /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6A18C6C4C067F916CFFD5789ECE5C2 /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA0B4017FB27CF47D58AC2386CE0308F /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E175BA4502C8C3A63685F2BC5BEB4 /* afterlife.swift */; };
 		F39A7058D2E83A1D23D7C2175D500E3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
-		F4026DD864945C4C8074F82CAA904BF8 /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 515F2628FA09232B0F3D69285A9E1896 /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4FA3F01C16DF80C3D5E23243D9C7CF2 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A811945BBABB1E763732230355CC22 /* NSURLSession+AnyPromise.m */; };
-		F6DCD66DC4859456F58A39E62EB8FB3D /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C8C7BBC3CD3677A3934AC819F5BAC /* firstly.swift */; };
-		F7270652121054AD9F3B8C3AE3AEB175 /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036DC0CAE0C329C78DDFA1D1785D9F8 /* NSNotificationCenter+Promise.swift */; };
-		F843C5076067A47660971368501837E1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0594717ADD69799757B0DBC9684473 /* Error.swift */; };
-		FAC80987CF542A4CA327980E7B4A62F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D46C36A92041022DC1CB20261809E /* UIKit.framework */; };
+		F83CDE02E62A80F4EC83295C1DA3A7DE /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FE12A9711CFE52497A368A29FA007 /* PromiseKit.framework */; };
+		FC06EEAAD9ECB48A670F34C3BEACCBFA /* LIFXDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2106F7A3383BF2BC2EA3D9E10763A /* LIFXDecodable.swift */; };
+		FF3015DE49EDE4D8E906C294C0A27D4A /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A7088B208A517D5AE8E753A38D5942 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DAB2870BC5320828F6C5A6769932B23 /* PBXContainerItemProxy */ = {
+		16C9C15FC7FAB42F03A369C578CEB684 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CABEBE7E6B9D0E40EA4008CA7077B658;
+			remoteGlobalIDString = AA5937755B21A729CD72DF534BCC1788;
 			remoteInfo = PromiseKit;
 		};
 		7A623FE8FF16BDB6D22DBB30AB35CE33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CABEBE7E6B9D0E40EA4008CA7077B658;
+			remoteGlobalIDString = AA5937755B21A729CD72DF534BCC1788;
 			remoteInfo = PromiseKit;
 		};
 		B9BF655995B7593E37E45165D6D5FFDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C2381F4F4520334555E8B86CD0EC7826;
+			remoteGlobalIDString = 279CAD1C10EB7CED939A45EB0F5C0AA6;
 			remoteInfo = LIFXClient;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		078EBD73602479363ABE31E9BC800B48 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
-		085B45A9C7DB405724C049679C2960DA /* LIFXClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LIFXClient-Info.plist"; sourceTree = "<group>"; };
 		0B6E601AEB697389651493C133D67839 /* Pods-3LED-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-3LED-frameworks.sh"; sourceTree = "<group>"; };
 		0FEA634E92083372CE4E08BAA27E4F76 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
+		15229AC9EDC531264B356E2911F8EB66 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		18F7B0C20380D62C91FD47BC67F92495 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
-		1BC93548CEC2CE2B07AD772AF7E9026D /* LIFXClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXClient.swift; path = Sources/LIFXClient.swift; sourceTree = "<group>"; };
+		1A7A7D3868B8A2A3C4EDE7DA47ED7BE7 /* LIFXClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIFXClient-dummy.m"; sourceTree = "<group>"; };
 		1CACE16203D14FE45C1F8E2185D05146 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
 		1E0FBE7A3301204F5CBFC55E9A151DE6 /* race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = race.m; path = Sources/race.m; sourceTree = "<group>"; };
-		2105A431529256468D0CE25CC9ABECAA /* LIFXClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-umbrella.h"; sourceTree = "<group>"; };
 		2120672BD2058FF6575163EA0F7B3818 /* hang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = hang.swift; path = Sources/hang.swift; sourceTree = "<group>"; };
+		22915D289A834C3E341E0395E1AC23E6 /* LIFXClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-prefix.pch"; sourceTree = "<group>"; };
 		237FFFF513D6B6152F5BBE55535C050B /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
+		26457B6A88E570FE54041AED29830199 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		27BA6F748BCD7CAD6990886F990A9944 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
-		27DE0FA779F8B8CC111A7DD1C645FAC4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		28519E714E1FEEB263CC1DC56884F117 /* Pods-3LED-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-3LED-acknowledgements.markdown"; sourceTree = "<group>"; };
 		29D3B250FDF742DF98680478A4C2D5C9 /* Pods-3LED-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-3LED-dummy.m"; sourceTree = "<group>"; };
 		2D4D635088F341AA67F850A827C14172 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		30C0E7259D85D566C5AB82BEB206D763 /* LIFXDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecoder.swift; sourceTree = "<group>"; };
 		31FADD9E89070EFF5AD05064E22BB174 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
 		327FE12A9711CFE52497A368A29FA007 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DC40ACA4340C48E55F24FE7B3F1808 /* Pods-3LED.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-3LED.modulemap"; sourceTree = "<group>"; };
 		346D928F84555F55E01EFBD52D729DE3 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A811945BBABB1E763732230355CC22 /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
-		3AA489C9FE56FE0CB1D390583E272022 /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4023372B8A821CA0609F5C472FD8ACC6 /* Pods-3LED-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-acknowledgements.plist"; sourceTree = "<group>"; };
 		451C0C6F8C581ED949A48FF3E93D36B4 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		45ACF4EE7A80EAF623401056759B0643 /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
 		45C4AEA6C2062827A0B345F2FF668743 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
 		4C0594717ADD69799757B0DBC9684473 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
 		4D4D46C36A92041022DC1CB20261809E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4E1FA184FCE40B6EB09414E2BCB9967B /* LIFXPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXPacket.swift; path = Sources/LIFXPacket.swift; sourceTree = "<group>"; };
+		4EF2106F7A3383BF2BC2EA3D9E10763A /* LIFXDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecodable.swift; sourceTree = "<group>"; };
 		4F8305A005FF8D955208A6640FDF172D /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
 		515F2628FA09232B0F3D69285A9E1896 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
 		565026BBCD0842AC151CAB4A4149F014 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
-		566454BD09A46A3A05ECAF7A077ABC75 /* LIFXPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXPacket.swift; path = Sources/LIFXPacket.swift; sourceTree = "<group>"; };
 		57E0356C40A45BD010AFE7BBA894B6A0 /* Pods-3LED-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-Info.plist"; sourceTree = "<group>"; };
+		586EFF85F97978DC221140A53912A225 /* LIFXClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LIFXClient.modulemap; sourceTree = "<group>"; };
+		5A897E5C762C5E5B1C45A6AE75BC7C74 /* LIFXMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXMessage.swift; path = Sources/LIFXMessage.swift; sourceTree = "<group>"; };
 		5AAEF848AEF1FD8EB69818FC90B81C19 /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
 		5ABB73199E53934E0C0CD23389DA0C40 /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
 		5C6A18C6C4C067F916CFFD5789ECE5C2 /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
-		5D14AA75CF4C1ADAF0AB517D391B409C /* LIFXMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXMessage.swift; path = Sources/LIFXMessage.swift; sourceTree = "<group>"; };
-		5D358813852BF3596315439F0F3C0D69 /* LIFXEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncodable.swift; sourceTree = "<group>"; };
 		5D9AA418B9F53608ECC98D7BF432F172 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		5E5F1E36D16508414DE43F1FD5BFB675 /* NWConnection+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NWConnection+Extensions.swift"; sourceTree = "<group>"; };
 		665DC0EF8EFAAEFFEE298622DC978CDE /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 		67620D931F3EEB90E4299B6A5528C8C8 /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
 		677B32DCD10AE6B27BA7A8958ECCFE6B /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
 		69DF6F331F32D552DC9AB2DCA1386F1A /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
 		6B46BB89F51E6CC599F63C2A87250412 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
+		6B4AFB8F5285714321A3F75F437DFE18 /* LIFXEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncoder.swift; sourceTree = "<group>"; };
 		6D2E175BA4502C8C3A63685F2BC5BEB4 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
 		77A7088B208A517D5AE8E753A38D5942 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
 		7CE2307CC8C3B42DAF98663EAE5D2E60 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
+		7D0A6CF66AFB3718F634B405A5892FC0 /* LIFXClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXClient.swift; path = Sources/LIFXClient.swift; sourceTree = "<group>"; };
 		7D80573501D21DC8AD8775039F8ABB67 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
+		80D174586DAAAC36047C120FB92B1E44 /* LIFXCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXCodable.swift; sourceTree = "<group>"; };
 		86BD929429E4AA00D0A211BF1B963E12 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomStringConvertible.swift; path = Sources/CustomStringConvertible.swift; sourceTree = "<group>"; };
-		8BDE68884BFA11A829FE2C9D265F47F7 /* LIFXDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecoder.swift; sourceTree = "<group>"; };
 		8E4C8DC24FB82DE426C43B05C2A76138 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_3LED.framework; path = "Pods-3LED.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB86AC94D4752E91897EB6A4FEBC37F /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
 		9036DC0CAE0C329C78DDFA1D1785D9F8 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
 		9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9B97319039814AAB5A3C6BA19F73094B /* LIFXClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LIFXClient.xcconfig; sourceTree = "<group>"; };
 		9BE4D8E011D8C811F064D8A59C7EFF91 /* Thenable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thenable.swift; path = Sources/Thenable.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F51383849898E614BA85FBE7FFC767A /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
+		A6C6C0993C40C37D9D4F05780F5A51C5 /* LIFXEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncodable.swift; sourceTree = "<group>"; };
 		A8F2335B7E6754B286937C3C27490DF2 /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
 		B0A46DE7946CDBA0798AB212B99F45D4 /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
 		B2B50E13C964E3FC009487D10DE094B1 /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogEvent.swift; path = Sources/LogEvent.swift; sourceTree = "<group>"; };
 		B5EB76B74D4EC87ACF9BADA102F058DB /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
-		B8635BB0BC50FAA5A66B23A630284CD4 /* LIFXClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LIFXClient.xcconfig; sourceTree = "<group>"; };
+		BD1A244CC34339C2BA1F62C29835EC60 /* LIFXClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LIFXClient-Info.plist"; sourceTree = "<group>"; };
 		BFD655636927E2E87E54CE4E8A1C2FA2 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
 		C12CBDAF9B9EEBBAB0C93F9D4DE78475 /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Extensions/UIKit/Sources/UIView+Promise.swift"; sourceTree = "<group>"; };
 		C1B121A0F93C02A2151ACBB55A399427 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
 		C2BA4FE9F301A2DE595EF18D1981B50B /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
-		C77339DE665080E6F3EFB7E195C1FFE8 /* LIFXDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXDecodable.swift; sourceTree = "<group>"; };
 		CAEF910DF80E2691EED710160CD04DC1 /* Pods-3LED-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-3LED-umbrella.h"; sourceTree = "<group>"; };
 		CAF36BA3D61CBB3EAC3F41A2C6D16933 /* LIFXClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LIFXClient.framework; path = LIFXClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFCCE628BF9600B6A4B357F3279F5FB1 /* LIFXClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-umbrella.h"; sourceTree = "<group>"; };
 		D13FF0EB29FE9D7FDB6E90FED312AAE8 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
 		D5DFD26D02C1B0EABEC684B311BF2B85 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = "<group>"; };
 		DE9C8C7BBC3CD3677A3934AC819F5BAC /* firstly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = firstly.swift; path = Sources/firstly.swift; sourceTree = "<group>"; };
-		DEF86A2CDC6AAA6D7CD05BFF564B9150 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DF3843119B55DBDA31D00B934B4EA718 /* LIFXCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXCodable.swift; sourceTree = "<group>"; };
-		E077F1925BF18EDD1E7D3A89AD2206D0 /* LIFXClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LIFXClient.modulemap; sourceTree = "<group>"; };
 		E0B4DF6DA31DB84AE2BDB95F1F582711 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
 		E1F45CD12DCE2131A44A779FB0F02DC1 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
-		E8400E2F6D174466FD10342B24CA1F17 /* LIFXClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIFXClient-prefix.pch"; sourceTree = "<group>"; };
-		E94F0004F2710C82401643D1AE115CD5 /* LIFXClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIFXClient-dummy.m"; sourceTree = "<group>"; };
 		EEC83C5374C596AB1A3B545405E87A54 /* PromiseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromiseKit-Info.plist"; sourceTree = "<group>"; };
 		F08541CAD70C0B900CE83FDA138EAC4B /* Guarantee.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Guarantee.swift; path = Sources/Guarantee.swift; sourceTree = "<group>"; };
 		F392962B6F3607C58FB96B4ED4181C6C /* UIViewPropertyAnimator+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewPropertyAnimator+Promise.swift"; path = "Extensions/UIKit/Sources/UIViewPropertyAnimator+Promise.swift"; sourceTree = "<group>"; };
-		F592DC2360A2E0070B7FF5C361E05286 /* LIFXEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIFXEncoder.swift; sourceTree = "<group>"; };
+		FBB02F7317C677F29C519C0DE93AC891 /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD97E72D6587F144A9BA9A0991F02FF2 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromiseKit.modulemap; sourceTree = "<group>"; };
 		FFD00044954B6A06B6970742DB59B83B /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BE4C2927EB1E7F6D80B582E9ED16EE9 /* Frameworks */ = {
+		1B1F0BB658B2F87506A4618E5B57CFBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0B1ED58343C28D049B56A8D68CEE76 /* Foundation.framework in Frameworks */,
-				FAC80987CF542A4CA327980E7B4A62F7 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AF4120136F709030F7AE1C84AAFBC76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0563A0103C86B0E2A21970430FDC99B /* Foundation.framework in Frameworks */,
-				C71C636A6084CD23D67CFE7A32F21372 /* PromiseKit.framework in Frameworks */,
+				14AB2C127F3C03EF142729AE2DFFD829 /* Foundation.framework in Frameworks */,
+				C2049A0127A07D0E28D2A58F793816CB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F39A7058D2E83A1D23D7C2175D500E3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C990C675CA162F748B24EB50C36C32A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6AEB72E3045AE7D39A1BDE35B0814CC /* Foundation.framework in Frameworks */,
+				F83CDE02E62A80F4EC83295C1DA3A7DE /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,16 +269,6 @@
 			name = CorePromise;
 			sourceTree = "<group>";
 		};
-		28FA469DEBBF64B5AB4BDC19CB9C71DD /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				DEF86A2CDC6AAA6D7CD05BFF564B9150 /* LICENSE */,
-				3AA489C9FE56FE0CB1D390583E272022 /* LIFXClient.podspec */,
-				27DE0FA779F8B8CC111A7DD1C645FAC4 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		3584F930A5E802FFF8163A1B29FAACA2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,40 +277,41 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3A925077D5A0BD267BE79439D5EF786D /* LIFXClient */ = {
+		5035D4C9EE6C14CA608F9F42D0711CD3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1BC93548CEC2CE2B07AD772AF7E9026D /* LIFXClient.swift */,
-				5D14AA75CF4C1ADAF0AB517D391B409C /* LIFXMessage.swift */,
-				566454BD09A46A3A05ECAF7A077ABC75 /* LIFXPacket.swift */,
-				97EAE5B45985FB627812D6DA587E571D /* Coding */,
-				28FA469DEBBF64B5AB4BDC19CB9C71DD /* Pod */,
-				4AC4AA46AA7FAB39275B9F57541C36BB /* Support Files */,
-			);
-			name = LIFXClient;
-			path = ../../LIFXClient;
-			sourceTree = "<group>";
-		};
-		3B0EC89458936A15C284F5AE7E3EF019 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3A925077D5A0BD267BE79439D5EF786D /* LIFXClient */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		4AC4AA46AA7FAB39275B9F57541C36BB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E077F1925BF18EDD1E7D3A89AD2206D0 /* LIFXClient.modulemap */,
-				B8635BB0BC50FAA5A66B23A630284CD4 /* LIFXClient.xcconfig */,
-				E94F0004F2710C82401643D1AE115CD5 /* LIFXClient-dummy.m */,
-				085B45A9C7DB405724C049679C2960DA /* LIFXClient-Info.plist */,
-				E8400E2F6D174466FD10342B24CA1F17 /* LIFXClient-prefix.pch */,
-				2105A431529256468D0CE25CC9ABECAA /* LIFXClient-umbrella.h */,
+				586EFF85F97978DC221140A53912A225 /* LIFXClient.modulemap */,
+				9B97319039814AAB5A3C6BA19F73094B /* LIFXClient.xcconfig */,
+				1A7A7D3868B8A2A3C4EDE7DA47ED7BE7 /* LIFXClient-dummy.m */,
+				BD1A244CC34339C2BA1F62C29835EC60 /* LIFXClient-Info.plist */,
+				22915D289A834C3E341E0395E1AC23E6 /* LIFXClient-prefix.pch */,
+				CFCCE628BF9600B6A4B357F3279F5FB1 /* LIFXClient-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../3LED/Pods/Target Support Files/LIFXClient";
+			sourceTree = "<group>";
+		};
+		51FD2FCAFC765D56A2305EE7CBD84488 /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				80D174586DAAAC36047C120FB92B1E44 /* LIFXCodable.swift */,
+				4EF2106F7A3383BF2BC2EA3D9E10763A /* LIFXDecodable.swift */,
+				30C0E7259D85D566C5AB82BEB206D763 /* LIFXDecoder.swift */,
+				A6C6C0993C40C37D9D4F05780F5A51C5 /* LIFXEncodable.swift */,
+				6B4AFB8F5285714321A3F75F437DFE18 /* LIFXEncoder.swift */,
+			);
+			name = Coding;
+			path = Sources/Coding;
+			sourceTree = "<group>";
+		};
+		5ED0F06B36DF8F17A2A4342364B2DF6F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				26457B6A88E570FE54041AED29830199 /* LICENSE */,
+				FBB02F7317C677F29C519C0DE93AC891 /* LIFXClient.podspec */,
+				15229AC9EDC531264B356E2911F8EB66 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		6244FD98BEC6BFE26A365DC8179A6911 /* Support Files */ = {
@@ -344,25 +337,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		7974D18CE67B2DC70AD4D152C832EF52 /* LIFXClient */ = {
+			isa = PBXGroup;
+			children = (
+				7D0A6CF66AFB3718F634B405A5892FC0 /* LIFXClient.swift */,
+				5A897E5C762C5E5B1C45A6AE75BC7C74 /* LIFXMessage.swift */,
+				4E1FA184FCE40B6EB09414E2BCB9967B /* LIFXPacket.swift */,
+				51FD2FCAFC765D56A2305EE7CBD84488 /* Coding */,
+				A0D77BB5D99D03D622853865B7A04321 /* Extensions */,
+				5ED0F06B36DF8F17A2A4342364B2DF6F /* Pod */,
+				5035D4C9EE6C14CA608F9F42D0711CD3 /* Support Files */,
+			);
+			name = LIFXClient;
+			path = ../../LIFXClient;
+			sourceTree = "<group>";
+		};
 		82FE3C18B52F86227DB7105B7FD644BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				D9A56758E309F17E1152B989D653A6DF /* PromiseKit */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		97EAE5B45985FB627812D6DA587E571D /* Coding */ = {
-			isa = PBXGroup;
-			children = (
-				DF3843119B55DBDA31D00B934B4EA718 /* LIFXCodable.swift */,
-				C77339DE665080E6F3EFB7E195C1FFE8 /* LIFXDecodable.swift */,
-				8BDE68884BFA11A829FE2C9D265F47F7 /* LIFXDecoder.swift */,
-				5D358813852BF3596315439F0F3C0D69 /* LIFXEncodable.swift */,
-				F592DC2360A2E0070B7FF5C361E05286 /* LIFXEncoder.swift */,
-			);
-			name = Coding;
-			path = Sources/Coding;
 			sourceTree = "<group>";
 		};
 		9D3D1DCE80244467A7C65C9EA2371E60 /* Foundation */ = {
@@ -382,6 +377,15 @@
 				D13FF0EB29FE9D7FDB6E90FED312AAE8 /* Process+Promise.swift */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		A0D77BB5D99D03D622853865B7A04321 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E5F1E36D16508414DE43F1FD5BFB675 /* NWConnection+Extensions.swift */,
+			);
+			name = Extensions;
+			path = Sources/Extensions;
 			sourceTree = "<group>";
 		};
 		B187DA9EED1D9DCC17E409B2DF74CE12 /* Products */ = {
@@ -412,12 +416,20 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				3B0EC89458936A15C284F5AE7E3EF019 /* Development Pods */,
+				CF8001D6806CA073D8331AE47B328EC5 /* Development Pods */,
 				FDF6557E2DF6033F239601930D7CDF1D /* Frameworks */,
 				82FE3C18B52F86227DB7105B7FD644BE /* Pods */,
 				B187DA9EED1D9DCC17E409B2DF74CE12 /* Products */,
 				3584F930A5E802FFF8163A1B29FAACA2 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CF8001D6806CA073D8331AE47B328EC5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7974D18CE67B2DC70AD4D152C832EF52 /* LIFXClient */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		D9A56758E309F17E1152B989D653A6DF /* PromiseKit */ = {
@@ -452,35 +464,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B9E1457DC59CB5E2B3F4B27B4F7170D /* Headers */ = {
+		A01B91A4F92E08E14DC015CB0BB0C637 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D09B36FF0610EDAD71295F1EB16F2B /* LIFXClient-umbrella.h in Headers */,
+				9C741CE9DEC6D0D17AA862C496F8D3B2 /* LIFXClient-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1E0BE8810C573110E6E3C36A5938DBA /* Headers */ = {
+		D863AF7A246BB90B37790F6649C898A9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54C87FAE87E0861B0DFD98E3C6CBDC1 /* AnyPromise.h in Headers */,
-				9CF8D044DABEDC95969F8C6548B57398 /* fwd.h in Headers */,
-				BECD4AD1F185B86AD719B0B5281EC607 /* NSNotificationCenter+AnyPromise.h in Headers */,
-				463E5F6C57B7D597B8E4CE605F53EDB9 /* NSTask+AnyPromise.h in Headers */,
-				61B0AC394F0CCBF9A6E9658F035A5FFF /* NSURLSession+AnyPromise.h in Headers */,
-				57C65B1EEA9E74C78430DFE3AFB2CCA6 /* PMKFoundation.h in Headers */,
-				2743F8B2BED77F668F31810F0A227B32 /* PMKUIKit.h in Headers */,
-				F4026DD864945C4C8074F82CAA904BF8 /* PromiseKit-umbrella.h in Headers */,
-				B3485A596E078F62D2AD509F86FB0017 /* PromiseKit.h in Headers */,
-				9A679349C0CB50618B35FD7081281402 /* UIView+AnyPromise.h in Headers */,
-				E709BD4F08184B3BFC601721C5EC772C /* UIViewController+AnyPromise.h in Headers */,
+				C787D30A6B68DCC532673598D91747F1 /* AnyPromise.h in Headers */,
+				64D21E5ACD40C4591B04CA0954D2F59B /* fwd.h in Headers */,
+				1B6A879E2671E84AD59DF1BEED0D800D /* NSNotificationCenter+AnyPromise.h in Headers */,
+				20C8932B200CA68D3936DB567BB8028C /* NSTask+AnyPromise.h in Headers */,
+				DC292738BF7414F0A4ECC4A8D8F1D34F /* NSURLSession+AnyPromise.h in Headers */,
+				8B1BA902B4FBB3ED7CC3EF2221E89DEB /* PMKFoundation.h in Headers */,
+				FF3015DE49EDE4D8E906C294C0A27D4A /* PMKUIKit.h in Headers */,
+				AE8165EA54354745416C4912E61C1FF4 /* PromiseKit-umbrella.h in Headers */,
+				CF3D7BD670A310E4AB35FF321F800F46 /* PromiseKit.h in Headers */,
+				C2F3D3C683A04703C0DA6C46448BE139 /* UIView+AnyPromise.h in Headers */,
+				0C8A2D607A6DEB47512BB095AEA1E7AC /* UIViewController+AnyPromise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		279CAD1C10EB7CED939A45EB0F5C0AA6 /* LIFXClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497DB5EF2E421B989EA32AA283000096 /* Build configuration list for PBXNativeTarget "LIFXClient" */;
+			buildPhases = (
+				A01B91A4F92E08E14DC015CB0BB0C637 /* Headers */,
+				52A52523B37E5FEBEB45110DE4634F5A /* Sources */,
+				C990C675CA162F748B24EB50C36C32A2 /* Frameworks */,
+				46A43072112AC0C6127BE79BCD13D573 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06D843B4A268BAF8981A53D7E64DEE5B /* PBXTargetDependency */,
+			);
+			name = LIFXClient;
+			productName = LIFXClient;
+			productReference = CAF36BA3D61CBB3EAC3F41A2C6D16933 /* LIFXClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8EFC75251998DE6CBC3DE8D005D6CB96 /* Pods-3LED */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C313C8488C2AAAE58BF5B16F48D745 /* Build configuration list for PBXNativeTarget "Pods-3LED" */;
@@ -501,33 +532,14 @@
 			productReference = 8E4C8DC24FB82DE426C43B05C2A76138 /* Pods_3LED.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C2381F4F4520334555E8B86CD0EC7826 /* LIFXClient */ = {
+		AA5937755B21A729CD72DF534BCC1788 /* PromiseKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C753FB1B9AFB33F2BCAB1EAFE46F3B6 /* Build configuration list for PBXNativeTarget "LIFXClient" */;
+			buildConfigurationList = 4CF9A4EF71E0FCFE1144AA9A502AAE32 /* Build configuration list for PBXNativeTarget "PromiseKit" */;
 			buildPhases = (
-				5B9E1457DC59CB5E2B3F4B27B4F7170D /* Headers */,
-				C60EED66D88501759932FBC4530EB08C /* Sources */,
-				2AF4120136F709030F7AE1C84AAFBC76 /* Frameworks */,
-				364709F6560D1F35E8282D383B1BCA68 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16D8DE988D2B0B40E9FCEA71CB1CCB4C /* PBXTargetDependency */,
-			);
-			name = LIFXClient;
-			productName = LIFXClient;
-			productReference = CAF36BA3D61CBB3EAC3F41A2C6D16933 /* LIFXClient.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CABEBE7E6B9D0E40EA4008CA7077B658 /* PromiseKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D02957A90F5E0F9AD492D51A98CBE8AD /* Build configuration list for PBXNativeTarget "PromiseKit" */;
-			buildPhases = (
-				C1E0BE8810C573110E6E3C36A5938DBA /* Headers */,
-				36DC56BD396FC03DE554735A0E006324 /* Sources */,
-				1BE4C2927EB1E7F6D80B582E9ED16EE9 /* Frameworks */,
-				71AD1FB69451D5443B2F9DDE4A7EB778 /* Resources */,
+				D863AF7A246BB90B37790F6649C898A9 /* Headers */,
+				4B5F7115F40B98B555F4DD1A2EECC4B6 /* Sources */,
+				1B1F0BB658B2F87506A4618E5B57CFBE /* Frameworks */,
+				F26DCE34584E5C09A98510EA1A88A2E7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -559,22 +571,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2381F4F4520334555E8B86CD0EC7826 /* LIFXClient */,
+				279CAD1C10EB7CED939A45EB0F5C0AA6 /* LIFXClient */,
 				8EFC75251998DE6CBC3DE8D005D6CB96 /* Pods-3LED */,
-				CABEBE7E6B9D0E40EA4008CA7077B658 /* PromiseKit */,
+				AA5937755B21A729CD72DF534BCC1788 /* PromiseKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		364709F6560D1F35E8282D383B1BCA68 /* Resources */ = {
+		46A43072112AC0C6127BE79BCD13D573 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71AD1FB69451D5443B2F9DDE4A7EB778 /* Resources */ = {
+		F26DCE34584E5C09A98510EA1A88A2E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,63 +603,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		36DC56BD396FC03DE554735A0E006324 /* Sources */ = {
+		4B5F7115F40B98B555F4DD1A2EECC4B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A778C68278C3B616B6A06238F0A0B20 /* after.m in Sources */,
-				2F68B630EC487581B614E3FEC24721E2 /* after.swift in Sources */,
-				C9CF0D051BD41D2699D8BB454C49CA98 /* afterlife.swift in Sources */,
-				41CE5B0FCC4F33B9306DBE226B875135 /* AnyPromise.m in Sources */,
-				8E7ECF306F145FB514CE6ABD67CA41BA /* AnyPromise.swift in Sources */,
-				B253059F396DD1403AAB61C40554CCE1 /* Box.swift in Sources */,
-				3EB1F2FF39DEB5D6362920132CE3B243 /* Catchable.swift in Sources */,
-				6BFE9CEAC88912BC26F5A5DD6134753C /* Configuration.swift in Sources */,
-				0474A5EEDF96ABEB712BB24378CF6895 /* CustomStringConvertible.swift in Sources */,
-				638775F65124F3524D0FE7C5249554B1 /* Deprecations.swift in Sources */,
-				AD09A9DA290E3C754370943E878C734D /* dispatch_promise.m in Sources */,
-				F843C5076067A47660971368501837E1 /* Error.swift in Sources */,
-				F6DCD66DC4859456F58A39E62EB8FB3D /* firstly.swift in Sources */,
-				5A08DE66EB49EE669871FDE7958FB564 /* Guarantee.swift in Sources */,
-				C2054DBD437FC0B5DAE69B88D3CE071E /* hang.m in Sources */,
-				4AA855E4F44468D0DE97939FABFA1395 /* hang.swift in Sources */,
-				6CA5C80766A0BD5F09DDD6035070E76F /* join.m in Sources */,
-				23A468DFBE7FE81AA78F8359333748EF /* LogEvent.swift in Sources */,
-				5A810949A6CBDA38772B13B3DDBBB071 /* NSNotificationCenter+AnyPromise.m in Sources */,
-				F7270652121054AD9F3B8C3AE3AEB175 /* NSNotificationCenter+Promise.swift in Sources */,
-				E68A15E07C41DC84703348A31A945452 /* NSObject+Promise.swift in Sources */,
-				448FF3570AABF2750D5EEF75C26327BC /* NSTask+AnyPromise.m in Sources */,
-				F4FA3F01C16DF80C3D5E23243D9C7CF2 /* NSURLSession+AnyPromise.m in Sources */,
-				122C57D3D559455BB7D46E781990861E /* NSURLSession+Promise.swift in Sources */,
-				97881008621EE3A89FC950A47C147D2F /* Process+Promise.swift in Sources */,
-				C57B6F69F878F6195A11400DB98AB110 /* Promise.swift in Sources */,
-				7E0CBB5BB496E1F7AFD6F984798A6717 /* PromiseKit-dummy.m in Sources */,
-				4D18A11EE3ED0A8B4A9D97CA7D1FAF9B /* race.m in Sources */,
-				B867F83313862AB0ADD973F5C6386687 /* race.swift in Sources */,
-				D3674DB73AD51F7932842687B4B7A59F /* Resolver.swift in Sources */,
-				E7DE771BCA257976065460153A2C51F8 /* Thenable.swift in Sources */,
-				0A5E02D008DEF4916A667C14ECB7C084 /* UIView+AnyPromise.m in Sources */,
-				0407E3A15A02B65A306BD28DD31FF610 /* UIView+Promise.swift in Sources */,
-				4837858C4582AA4B6F56AD3443BC19E3 /* UIViewController+AnyPromise.m in Sources */,
-				E74C538693099A4E1895130FC1B2EC3D /* UIViewPropertyAnimator+Promise.swift in Sources */,
-				2A6490F6A3FA051253BE2AD2E8B25704 /* when.m in Sources */,
-				2988BDBDB33C05A56E98FEDE418C9EB9 /* when.swift in Sources */,
+				23ECA38AAE9BAEC64990A2BAE8C75C1D /* after.m in Sources */,
+				718CAC676FBD7DD2A6AA0F68D693EE37 /* after.swift in Sources */,
+				EA0B4017FB27CF47D58AC2386CE0308F /* afterlife.swift in Sources */,
+				D3EFBA7701A9EC02EE338D8CEA3E0CDE /* AnyPromise.m in Sources */,
+				726AD75D83C6C254955F1467ADBCA34A /* AnyPromise.swift in Sources */,
+				7EBE37FF0E8D1F0EEA7DDB6C605B0054 /* Box.swift in Sources */,
+				4C445A146B5ECD418E2819FED6702379 /* Catchable.swift in Sources */,
+				84A989A4D67D85BEAB3ADACC40297067 /* Configuration.swift in Sources */,
+				7AE2ED1E2D1A93EEB69574767CA63D59 /* CustomStringConvertible.swift in Sources */,
+				96A989A0109AA0207FB8F2E655E49B74 /* Deprecations.swift in Sources */,
+				D1D2776E97CCDA0E2463024B6625AD3D /* dispatch_promise.m in Sources */,
+				1CD06C60C161CCEB545B6F5F59D6120C /* Error.swift in Sources */,
+				12F0DA0AE89551F25C47317AE0CC34B9 /* firstly.swift in Sources */,
+				36D33177CD2804545D9D20921B104AD9 /* Guarantee.swift in Sources */,
+				D53CB20735947AB65B671F741C01AA20 /* hang.m in Sources */,
+				45B445CC98A5CE01D26939E44F853649 /* hang.swift in Sources */,
+				7303DA8A83F9B9073832AA52F8FCECAE /* join.m in Sources */,
+				5891A5D2D6C77213505773ABB89702BA /* LogEvent.swift in Sources */,
+				665511BFBEAEB45C62E5ACFDDD8149A6 /* NSNotificationCenter+AnyPromise.m in Sources */,
+				13BDE1C6B99691812E0DA045D7D734BF /* NSNotificationCenter+Promise.swift in Sources */,
+				36A4A58D9C6AC5D110A01EFEDEE7E2CF /* NSObject+Promise.swift in Sources */,
+				7E71C8C8006D0FF18ED36DD617705415 /* NSTask+AnyPromise.m in Sources */,
+				0D44C66B6BE369A236F43A87EE050A52 /* NSURLSession+AnyPromise.m in Sources */,
+				CAEBF84883C1545911408F2C4A6F1F06 /* NSURLSession+Promise.swift in Sources */,
+				040B0C4769CE2CBACF2F0010120DD01F /* Process+Promise.swift in Sources */,
+				CD6597EC47D1D17837C1CC0150602A9F /* Promise.swift in Sources */,
+				0C64F44F531FF6D5E22E75B706351B62 /* PromiseKit-dummy.m in Sources */,
+				611CB5DD571613E820E8AE0E73AAECB7 /* race.m in Sources */,
+				4BCDA71E92336DAEA9510B9E0EBF7214 /* race.swift in Sources */,
+				A1A3F0C655CD0E77B28EDF7D79D90F2F /* Resolver.swift in Sources */,
+				5F773433F505D88587D42C193347E288 /* Thenable.swift in Sources */,
+				62249509FEA9BA17B9A71AE7BCAE47A6 /* UIView+AnyPromise.m in Sources */,
+				90F76BBAA15A1C12A7F6205BEBD6904F /* UIView+Promise.swift in Sources */,
+				BBF5EBD918C913217F52E5E5B7E2B814 /* UIViewController+AnyPromise.m in Sources */,
+				2AE58724573B12C8F5E48458111340AD /* UIViewPropertyAnimator+Promise.swift in Sources */,
+				3F10B4A387D4EB7A2711888CCFED927B /* when.m in Sources */,
+				6C1D3667D35B220C73F22ECEEEC3866A /* when.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C60EED66D88501759932FBC4530EB08C /* Sources */ = {
+		52A52523B37E5FEBEB45110DE4634F5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313558ECAA2A899B373896910FCF714C /* LIFXClient-dummy.m in Sources */,
-				81474ADFF05F459F84E556FB7950E2B4 /* LIFXClient.swift in Sources */,
-				018F175E3D3E968A3E94618FBC298439 /* LIFXCodable.swift in Sources */,
-				453C1596C94F27BD37E929544BBEA6F8 /* LIFXDecodable.swift in Sources */,
-				B0C777C32EC8C593B9C21E2344606880 /* LIFXDecoder.swift in Sources */,
-				D1B5BC56FFFDFF395D4820B9E7A00944 /* LIFXEncodable.swift in Sources */,
-				B3AB2745EC8651385403CB6522790A48 /* LIFXEncoder.swift in Sources */,
-				29B7232B57F9CBC580AAA9531A241586 /* LIFXMessage.swift in Sources */,
-				0B11249D430870D0F33E503A19241169 /* LIFXPacket.swift in Sources */,
+				CF9D7957891D5A10CFA6D7172BF2A25A /* LIFXClient-dummy.m in Sources */,
+				11137DF042EC8CF2754EAA445E63BB01 /* LIFXClient.swift in Sources */,
+				AF28E173BE37E6653B8A928DD42E7B84 /* LIFXCodable.swift in Sources */,
+				FC06EEAAD9ECB48A670F34C3BEACCBFA /* LIFXDecodable.swift in Sources */,
+				6E53987714DD35B09A85CE1628173DFA /* LIFXDecoder.swift in Sources */,
+				B939BF85D72FAF46BE930240F2C9A937 /* LIFXEncodable.swift in Sources */,
+				AA58AA329703A57E62DD7A6BD597CEDE /* LIFXEncoder.swift in Sources */,
+				3B66078DB34D234C46BE52DFB28C067A /* LIFXMessage.swift in Sources */,
+				94BCE35AA71EE7A74B051F8751E89468 /* LIFXPacket.swift in Sources */,
+				D238A8D8698720B233ECC69138514579 /* NWConnection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,22 +675,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		16D8DE988D2B0B40E9FCEA71CB1CCB4C /* PBXTargetDependency */ = {
+		06D843B4A268BAF8981A53D7E64DEE5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PromiseKit;
-			target = CABEBE7E6B9D0E40EA4008CA7077B658 /* PromiseKit */;
-			targetProxy = 0DAB2870BC5320828F6C5A6769932B23 /* PBXContainerItemProxy */;
+			target = AA5937755B21A729CD72DF534BCC1788 /* PromiseKit */;
+			targetProxy = 16C9C15FC7FAB42F03A369C578CEB684 /* PBXContainerItemProxy */;
 		};
 		3CDB8B3735BB7B82D83B787FA3699311 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LIFXClient;
-			target = C2381F4F4520334555E8B86CD0EC7826 /* LIFXClient */;
+			target = 279CAD1C10EB7CED939A45EB0F5C0AA6 /* LIFXClient */;
 			targetProxy = B9BF655995B7593E37E45165D6D5FFDA /* PBXContainerItemProxy */;
 		};
 		8D203BC756F43DC9C6D6922F99377895 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PromiseKit;
-			target = CABEBE7E6B9D0E40EA4008CA7077B658 /* PromiseKit */;
+			target = AA5937755B21A729CD72DF534BCC1788 /* PromiseKit */;
 			targetProxy = 7A623FE8FF16BDB6D22DBB30AB35CE33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -744,42 +757,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		66EFC885B1352657536D8E57D8E5229C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8635BB0BC50FAA5A66B23A630284CD4 /* LIFXClient.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
-				PRODUCT_MODULE_NAME = LIFXClient;
-				PRODUCT_NAME = LIFXClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -920,9 +897,81 @@
 			};
 			name = Release;
 		};
-		B8CC995E50A0AC75BB443EF9BC6E5FC8 /* Release */ = {
+		9F900989D51C1AF52B1C8F12F1A06937 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8635BB0BC50FAA5A66B23A630284CD4 /* LIFXClient.xcconfig */;
+			baseConfigurationReference = 9B97319039814AAB5A3C6BA19F73094B /* LIFXClient.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LIFXClient/LIFXClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
+				PRODUCT_MODULE_NAME = LIFXClient;
+				PRODUCT_NAME = LIFXClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B98B6AECEF0DD35421A29520CD659AF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9AA418B9F53608ECC98D7BF432F172 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				PRODUCT_MODULE_NAME = PromiseKit;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBDADF56E5122614CC31D3EEBF774F6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B97319039814AAB5A3C6BA19F73094B /* LIFXClient.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -957,7 +1006,7 @@
 			};
 			name = Release;
 		};
-		BE7BEEA8148974ECADBC31719D54D4F7 /* Debug */ = {
+		E98F704DCA03933B19C934CE3C172E9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D9AA418B9F53608ECC98D7BF432F172 /* PromiseKit.xcconfig */;
 			buildSettings = {
@@ -992,42 +1041,6 @@
 			};
 			name = Debug;
 		};
-		EEEC702F4DEFED40E9FF53173AE5A246 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D9AA418B9F53608ECC98D7BF432F172 /* PromiseKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
-				PRODUCT_MODULE_NAME = PromiseKit;
-				PRODUCT_NAME = PromiseKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1040,29 +1053,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		497DB5EF2E421B989EA32AA283000096 /* Build configuration list for PBXNativeTarget "LIFXClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F900989D51C1AF52B1C8F12F1A06937 /* Debug */,
+				BBDADF56E5122614CC31D3EEBF774F6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CF9A4EF71E0FCFE1144AA9A502AAE32 /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98F704DCA03933B19C934CE3C172E9E /* Debug */,
+				B98B6AECEF0DD35421A29520CD659AF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55C313C8488C2AAAE58BF5B16F48D745 /* Build configuration list for PBXNativeTarget "Pods-3LED" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AE9D8A2DDEBDB6575CBEFB60FA9090F /* Debug */,
 				9E6FD6454517D9BA4169EE91735B80E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C753FB1B9AFB33F2BCAB1EAFE46F3B6 /* Build configuration list for PBXNativeTarget "LIFXClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66EFC885B1352657536D8E57D8E5229C /* Debug */,
-				B8CC995E50A0AC75BB443EF9BC6E5FC8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D02957A90F5E0F9AD492D51A98CBE8AD /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE7BEEA8148974ECADBC31719D54D4F7 /* Debug */,
-				EEEC702F4DEFED40E9FF53173AE5A246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
