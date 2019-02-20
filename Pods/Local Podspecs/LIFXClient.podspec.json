@@ -14,8 +14,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "12.0",
-    "osx": "10.14"
+    "ios": "12.0"
   },
   "swift_version": "4.2",
   "dependencies": {
@@ -24,9 +23,6 @@
     ]
   },
   "ios": {
-    "source_files": "Sources/**/*.swift"
-  },
-  "osx": {
     "source_files": "Sources/**/*.swift"
   }
 }
