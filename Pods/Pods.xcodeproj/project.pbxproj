@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,12 +66,14 @@
 		DA981A62CF4C2018DF528EB53C395B31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
 		E295CD0F70B0AC21441731C1F2A946E8 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E175BA4502C8C3A63685F2BC5BEB4 /* afterlife.swift */; };
 		E2E949B522E765DDD90C805CA8894C01 /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F45CD12DCE2131A44A779FB0F02DC1 /* after.m */; };
+		E72EFD53F52A52D5A42300892FE654FF /* LIFXDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76235D9906D7BE43686DF9D77FFD569F /* LIFXDevice.swift */; };
 		E8D8759066C2420EBD15E46CA3A239AE /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 67620D931F3EEB90E4299B6A5528C8C8 /* NSNotificationCenter+AnyPromise.m */; };
 		E99BE1D4D242A909AC34CDC655EE3CA4 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8305A005FF8D955208A6640FDF172D /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF2849DED78C5D06C8A78A0F8106ED00 /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 515F2628FA09232B0F3D69285A9E1896 /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3089EFE760E56C3BC53BA102C482FAE /* NSTask+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB86AC94D4752E91897EB6A4FEBC37F /* NSTask+AnyPromise.m */; };
 		F352C62CE57A85679CCF42B90FAFD911 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
 		F39A7058D2E83A1D23D7C2175D500E3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */; };
+		F39AF2CDCEA0A77C1E86C1B30D71CE6B /* LIFXLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAAEF7F9D9D4EABB6C17C34837B840 /* LIFXLight.swift */; };
 		F48CA2A3BC669AD11927EDCA7F0E4262 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D46C36A92041022DC1CB20261809E /* UIKit.framework */; };
 		FACFBDE10B6E085FC9A36725F9C11777 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4AEA6C2062827A0B345F2FF668743 /* after.swift */; };
 /* End PBXBuildFile section */
@@ -108,7 +110,7 @@
 		180DD3CE89D934560F672F7DFCF61C9B /* LIFXClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXClient.swift; path = Sources/LIFXClient.swift; sourceTree = "<group>"; };
 		18F7B0C20380D62C91FD47BC67F92495 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
 		1CACE16203D14FE45C1F8E2185D05146 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
-		1D8D862A9996DBACA1FC80D2ABE0D70E /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1D8D862A9996DBACA1FC80D2ABE0D70E /* LIFXClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LIFXClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1E0FBE7A3301204F5CBFC55E9A151DE6 /* race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = race.m; path = Sources/race.m; sourceTree = "<group>"; };
 		2120672BD2058FF6575163EA0F7B3818 /* hang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = hang.swift; path = Sources/hang.swift; sourceTree = "<group>"; };
 		237FFFF513D6B6152F5BBE55535C050B /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		31FADD9E89070EFF5AD05064E22BB174 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
 		327FE12A9711CFE52497A368A29FA007 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DC40ACA4340C48E55F24FE7B3F1808 /* Pods-3LED.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-3LED.modulemap"; sourceTree = "<group>"; };
-		346D928F84555F55E01EFBD52D729DE3 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		346D928F84555F55E01EFBD52D729DE3 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A811945BBABB1E763732230355CC22 /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
 		4023372B8A821CA0609F5C472FD8ACC6 /* Pods-3LED-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-acknowledgements.plist"; sourceTree = "<group>"; };
 		451C0C6F8C581ED949A48FF3E93D36B4 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 		515F2628FA09232B0F3D69285A9E1896 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
 		52D28E7924C1F9E7F56275ACF70F5E98 /* LIFXClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIFXClient-dummy.m"; sourceTree = "<group>"; };
 		565026BBCD0842AC151CAB4A4149F014 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
-		57AA26DB0F7EC542185DBA95E146A0F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		57AA26DB0F7EC542185DBA95E146A0F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		57E0356C40A45BD010AFE7BBA894B6A0 /* Pods-3LED-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-3LED-Info.plist"; sourceTree = "<group>"; };
 		5AAEF848AEF1FD8EB69818FC90B81C19 /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
 		5ABB73199E53934E0C0CD23389DA0C40 /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
@@ -146,20 +148,21 @@
 		69DF6F331F32D552DC9AB2DCA1386F1A /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
 		6B46BB89F51E6CC599F63C2A87250412 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
 		6D2E175BA4502C8C3A63685F2BC5BEB4 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
+		76235D9906D7BE43686DF9D77FFD569F /* LIFXDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXDevice.swift; path = Sources/LIFXDevice.swift; sourceTree = "<group>"; };
 		77A7088B208A517D5AE8E753A38D5942 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
 		7CE2307CC8C3B42DAF98663EAE5D2E60 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
 		7D80573501D21DC8AD8775039F8ABB67 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
 		86BD929429E4AA00D0A211BF1B963E12 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomStringConvertible.swift; path = Sources/CustomStringConvertible.swift; sourceTree = "<group>"; };
-		8E4C8DC24FB82DE426C43B05C2A76138 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E4C8DC24FB82DE426C43B05C2A76138 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_3LED.framework; path = "Pods-3LED.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB86AC94D4752E91897EB6A4FEBC37F /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
 		9036DC0CAE0C329C78DDFA1D1785D9F8 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
 		9491269C5B4C4CA7443038187BE1C610 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9BE4D8E011D8C811F064D8A59C7EFF91 /* Thenable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thenable.swift; path = Sources/Thenable.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F51383849898E614BA85FBE7FFC767A /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
 		A8F2335B7E6754B286937C3C27490DF2 /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
 		A9A8B003EB25CEB0E6152B2FBAA9DF70 /* LIFXPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXPacket.swift; path = Sources/LIFXPacket.swift; sourceTree = "<group>"; };
-		B01864E71865C42C8910C80C7BC4D210 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B01864E71865C42C8910C80C7BC4D210 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		B0A46DE7946CDBA0798AB212B99F45D4 /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
 		B2B50E13C964E3FC009487D10DE094B1 /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogEvent.swift; path = Sources/LogEvent.swift; sourceTree = "<group>"; };
 		B5EB76B74D4EC87ACF9BADA102F058DB /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
@@ -170,9 +173,10 @@
 		C1B121A0F93C02A2151ACBB55A399427 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
 		C2BA4FE9F301A2DE595EF18D1981B50B /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
 		CAEF910DF80E2691EED710160CD04DC1 /* Pods-3LED-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-3LED-umbrella.h"; sourceTree = "<group>"; };
-		CAF36BA3D61CBB3EAC3F41A2C6D16933 /* LIFXClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LIFXClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF36BA3D61CBB3EAC3F41A2C6D16933 /* LIFXClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LIFXClient.framework; path = LIFXClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13FF0EB29FE9D7FDB6E90FED312AAE8 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
 		D5DFD26D02C1B0EABEC684B311BF2B85 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = "<group>"; };
+		DBFAAEF7F9D9D4EABB6C17C34837B840 /* LIFXLight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LIFXLight.swift; path = Sources/LIFXLight.swift; sourceTree = "<group>"; };
 		DE9C8C7BBC3CD3677A3934AC819F5BAC /* firstly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = firstly.swift; path = Sources/firstly.swift; sourceTree = "<group>"; };
 		E0B4DF6DA31DB84AE2BDB95F1F582711 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
 		E1F45CD12DCE2131A44A779FB0F02DC1 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 			children = (
 				180DD3CE89D934560F672F7DFCF61C9B /* LIFXClient.swift */,
 				FAB28D8209AE2401E97B646947AC828A /* LIFXConnection.swift */,
+				76235D9906D7BE43686DF9D77FFD569F /* LIFXDevice.swift */,
+				DBFAAEF7F9D9D4EABB6C17C34837B840 /* LIFXLight.swift */,
 				ECC195F4B516FC85F4935B02E7F0E56B /* LIFXMessage.swift */,
 				A9A8B003EB25CEB0E6152B2FBAA9DF70 /* LIFXPacket.swift */,
 				BA89FA46EC00DDF9967B0F6ACFB6C585 /* Coding */,
@@ -443,6 +449,7 @@
 				6244FD98BEC6BFE26A365DC8179A6911 /* Support Files */,
 				C8E9EB0D4E69E69D6479278E3D3599F4 /* UIKit */,
 			);
+			name = PromiseKit;
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
@@ -659,8 +666,10 @@
 				9B3E5A98C0D0C0666352DDB74EB12CF5 /* LIFXConnection.swift in Sources */,
 				040861C92661D9A584C52D9669F5124B /* LIFXDecodable.swift in Sources */,
 				AE7CC29E5656951D3B8C24EAC53E4C01 /* LIFXDecoder.swift in Sources */,
+				E72EFD53F52A52D5A42300892FE654FF /* LIFXDevice.swift in Sources */,
 				31A32012755E475715668545B3A8F8D3 /* LIFXEncodable.swift in Sources */,
 				501F913E059448B2CFB0232732691429 /* LIFXEncoder.swift in Sources */,
+				F39AF2CDCEA0A77C1E86C1B30D71CE6B /* LIFXLight.swift in Sources */,
 				5901D57E0BEDAFBADFFA130020EF59A9 /* LIFXMessage.swift in Sources */,
 				094EB8C6147538939ECD308B61B71696 /* LIFXPacket.swift in Sources */,
 				08CA5D5F6466302B4CD3E70FE16A04FB /* NWConnection+Extensions.swift in Sources */,
@@ -781,7 +790,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-3LED/Pods-3LED-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-3LED/Pods-3LED.modulemap";
 				OTHER_LDFLAGS = "";
@@ -850,7 +863,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -874,7 +888,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-3LED/Pods-3LED-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-3LED/Pods-3LED.modulemap";
 				OTHER_LDFLAGS = "";
@@ -908,7 +926,11 @@
 				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
 				PRODUCT_MODULE_NAME = PromiseKit;
 				PRODUCT_NAME = PromiseKit;
@@ -940,7 +962,11 @@
 				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
 				PRODUCT_MODULE_NAME = LIFXClient;
 				PRODUCT_NAME = LIFXClient;
@@ -971,7 +997,11 @@
 				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
 				PRODUCT_MODULE_NAME = PromiseKit;
 				PRODUCT_NAME = PromiseKit;
@@ -1004,7 +1034,11 @@
 				INFOPLIST_FILE = "Target Support Files/LIFXClient/LIFXClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/LIFXClient/LIFXClient.modulemap";
 				PRODUCT_MODULE_NAME = LIFXClient;
 				PRODUCT_NAME = LIFXClient;

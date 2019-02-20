@@ -16,8 +16,8 @@ import PromiseKit
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!), source: UInt32(1337)).then { client -> Promise<Light.State> in
-            let message = Light.SetColor(color: Light.HSBK(hue: 0x4444, saturation: 0xFFFF, brightness: 0xFFFF, kelvin: 3500), duration: 1000)
+        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!), source: UInt32(1337)).then { client -> Promise<LIFXLight.State> in
+            let message = LIFXLight.SetColor(color: LIFXLight.HSBK(hue: 0x4444, saturation: 0xFFFF, brightness: 0xFFFF, kelvin: 3500), duration: 1000)
             return client.light.setColor(message)
         }.done { response in
             print(response)
