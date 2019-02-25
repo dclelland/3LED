@@ -16,9 +16,8 @@ import PromiseKit
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!), source: UInt32(1337)).then { client in
-            return client.light.setColor(color: .red)
-//            return client.light.setWaveform(color: .green, period: 1.0, waveform: .sine)
+        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
+            return client.light.setColor(color: .green)
         }.done { response in
             print(response)
         }.catch { error in
