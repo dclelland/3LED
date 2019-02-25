@@ -1,5 +1,5 @@
 PODS:
-  - LIFXClient (0.1.0):
+  - LIFXClient (1.0.0):
     - PromiseKit (~> 6.8.3)
   - PromiseKit (6.8.3):
     - PromiseKit/CorePromise (= 6.8.3)
@@ -12,20 +12,17 @@ PODS:
     - PromiseKit/CorePromise
 
 DEPENDENCIES:
-  - LIFXClient (from `../LIFXClient`)
+  - LIFXClient (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - LIFXClient
     - PromiseKit
 
-EXTERNAL SOURCES:
-  LIFXClient:
-    :path: "../LIFXClient"
-
 SPEC CHECKSUMS:
-  LIFXClient: db8f590e40933adbe19faede0cdef72af94470a6
+  LIFXClient: cfa365fd0deaa6675e08e97f2d118f9bf23ea057
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
 
-PODFILE CHECKSUM: 1f4ca591da41331e4a3c7e8d98e24e7256075165
+PODFILE CHECKSUM: 4cb926a340773aaa02ff28aa64c94ce894a0261a
 
 COCOAPODS: 1.6.0
