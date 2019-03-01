@@ -14,7 +14,9 @@ class LightsCoordinator: Coordinator<LightsNavigationController> {
     
     init() {
         super.init(viewController: LightsNavigationController.instantiate())
-        self.viewController.viewControllers = [LightsViewController.instantiate(coordinator: self)]
+        self.viewController.viewControllers = [
+            LightsViewController.instantiate(coordinator: self)
+        ]
     }
     
 }
