@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LIFXClient
 import Reusable
 
 class LightsCoordinator: Coordinator<LightsNavigationController> {
@@ -27,6 +28,11 @@ class LightsCoordinator: Coordinator<LightsNavigationController> {
 //        }
 
 extension LightsCoordinator: LightsViewControllerCoordinator {
+    
+    func lightsViewController(_ lightsViewController: LightsViewController, didSelectLight light: LIFXLight) {
+        let lightViewController = LightViewController.instantiate(coordinator: self)
+        viewController.pushViewController(lightViewController, animated: true)
+    }
     
 }
 

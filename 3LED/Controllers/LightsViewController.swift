@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import LIFXClient
 import Reusable
 
 protocol LightsViewControllerCoordinator: class {
+    
+    func lightsViewController(_ lightsViewController: LightsViewController, didSelectLight light: LIFXLight)
     
 }
 
