@@ -10,19 +10,27 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.8.3):
     - PromiseKit/CorePromise
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
 
 DEPENDENCIES:
   - LIFXClient (~> 1.0)
+  - Reusable (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - LIFXClient
     - PromiseKit
+    - Reusable
 
 SPEC CHECKSUMS:
   LIFXClient: cfa365fd0deaa6675e08e97f2d118f9bf23ea057
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
 
-PODFILE CHECKSUM: 4cb926a340773aaa02ff28aa64c94ce894a0261a
+PODFILE CHECKSUM: 3064ca110a105b254ee08ad99bb6a7c2e509176f
 
 COCOAPODS: 1.6.0

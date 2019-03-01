@@ -15,14 +15,12 @@ import PromiseKit
 
     var window: UIWindow?
     
+    var coordinator = LightsCoordinator()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
-            return client.light.setColor(color: .green)
-        }.done { response in
-            print(response)
-        }.catch { error in
-            print(error)
-        }
+        window = UIWindow()
+        window?.rootViewController = coordinator.viewController
+        window?.makeKeyAndVisible()
         
         return true
     }

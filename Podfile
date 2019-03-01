@@ -6,6 +6,7 @@ use_frameworks!
 target '3LED' do
     
     pod 'LIFXClient', '~> 1.0'
+    pod 'Reusable', '~> 4.0'
     
     post_install do |installer|
        

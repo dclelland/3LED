@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651BE4A0222943310069C369 /* LightsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE49F222943310069C369 /* LightsCoordinator.swift */; };
+		651BE4A7222943C30069C369 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4A6222943C30069C369 /* Coordinator.swift */; };
+		651BE4A9222943CD0069C369 /* Coordinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4A8222943CD0069C369 /* Coordinated.swift */; };
+		651BE4AB222944950069C369 /* LightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4AA222944950069C369 /* LightsViewController.swift */; };
+		651BE4AD2229449E0069C369 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4AC2229449E0069C369 /* LightViewController.swift */; };
+		651BE4AF222945150069C369 /* LightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4AE222945150069C369 /* LightViewController.storyboard */; };
+		651BE4B1222945250069C369 /* LightsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4B0222945250069C369 /* LightsViewController.storyboard */; };
+		651BE4B3222945750069C369 /* LightsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4B2222945750069C369 /* LightsNavigationController.swift */; };
+		651BE4B5222945840069C369 /* LightsNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4B4222945840069C369 /* LightsNavigationController.storyboard */; };
 		658A6818221A9C3F008BD6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A6817221A9C3F008BD6A3 /* AppDelegate.swift */; };
-		658A681A221A9C3F008BD6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A6819221A9C3F008BD6A3 /* ViewController.swift */; };
-		658A681D221A9C3F008BD6A3 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A681B221A9C3F008BD6A3 /* App.storyboard */; };
 		658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658A681E221A9C44008BD6A3 /* Assets.xcassets */; };
 		658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */; };
 		658A682E221AA025008BD6A3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 658A682D221AA025008BD6A3 /* Settings.bundle */; };
@@ -18,10 +25,17 @@
 
 /* Begin PBXFileReference section */
 		51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
+		651BE49F222943310069C369 /* LightsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsCoordinator.swift; sourceTree = "<group>"; };
+		651BE4A6222943C30069C369 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		651BE4A8222943CD0069C369 /* Coordinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinated.swift; sourceTree = "<group>"; };
+		651BE4AA222944950069C369 /* LightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsViewController.swift; sourceTree = "<group>"; };
+		651BE4AC2229449E0069C369 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
+		651BE4AE222945150069C369 /* LightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightViewController.storyboard; sourceTree = "<group>"; };
+		651BE4B0222945250069C369 /* LightsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightsViewController.storyboard; sourceTree = "<group>"; };
+		651BE4B2222945750069C369 /* LightsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsNavigationController.swift; sourceTree = "<group>"; };
+		651BE4B4222945840069C369 /* LightsNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightsNavigationController.storyboard; sourceTree = "<group>"; };
 		658A6814221A9C3F008BD6A3 /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6817221A9C3F008BD6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		658A6819221A9C3F008BD6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		658A681C221A9C3F008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/App.storyboard; sourceTree = "<group>"; };
 		658A681E221A9C44008BD6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		658A6821221A9C44008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		658A6823221A9C44008BD6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +65,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		651BE49E222943180069C369 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				651BE4A5222943B80069C369 /* Base */,
+				651BE4A4222943A50069C369 /* Implementations */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		651BE4A3222943700069C369 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		651BE4A4222943A50069C369 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				651BE49F222943310069C369 /* LightsCoordinator.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		651BE4A5222943B80069C369 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				651BE4A6222943C30069C369 /* Coordinator.swift */,
+				651BE4A8222943CD0069C369 /* Coordinated.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		658A680B221A9C3F008BD6A3 = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +120,10 @@
 		658A6816221A9C3F008BD6A3 /* 3LED */ = {
 			isa = PBXGroup;
 			children = (
-				658A681B221A9C3F008BD6A3 /* App.storyboard */,
 				658A6817221A9C3F008BD6A3 /* AppDelegate.swift */,
+				651BE49E222943180069C369 /* Coordinators */,
 				658A682A221A9D54008BD6A3 /* Controllers */,
+				651BE4A3222943700069C369 /* Protocols */,
 				658A682B221A9D6C008BD6A3 /* Resources */,
 				658A682C221A9D77008BD6A3 /* Supporting Files */,
 			);
@@ -85,7 +133,12 @@
 		658A682A221A9D54008BD6A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				658A6819221A9C3F008BD6A3 /* ViewController.swift */,
+				651BE4B4222945840069C369 /* LightsNavigationController.storyboard */,
+				651BE4B2222945750069C369 /* LightsNavigationController.swift */,
+				651BE4B0222945250069C369 /* LightsViewController.storyboard */,
+				651BE4AA222944950069C369 /* LightsViewController.swift */,
+				651BE4AE222945150069C369 /* LightViewController.storyboard */,
+				651BE4AC2229449E0069C369 /* LightViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,10 +230,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651BE4AF222945150069C369 /* LightViewController.storyboard in Resources */,
+				651BE4B5222945840069C369 /* LightsNavigationController.storyboard in Resources */,
 				658A682E221AA025008BD6A3 /* Settings.bundle in Resources */,
+				651BE4B1222945250069C369 /* LightsViewController.storyboard in Resources */,
 				658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */,
 				658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */,
-				658A681D221A9C3F008BD6A3 /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +253,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LIFXClient/LIFXClient.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -205,6 +261,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LIFXClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,22 +297,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658A681A221A9C3F008BD6A3 /* ViewController.swift in Sources */,
+				651BE4A7222943C30069C369 /* Coordinator.swift in Sources */,
+				651BE4AD2229449E0069C369 /* LightViewController.swift in Sources */,
+				651BE4AB222944950069C369 /* LightsViewController.swift in Sources */,
+				651BE4A0222943310069C369 /* LightsCoordinator.swift in Sources */,
 				658A6818221A9C3F008BD6A3 /* AppDelegate.swift in Sources */,
+				651BE4A9222943CD0069C369 /* Coordinated.swift in Sources */,
+				651BE4B3222945750069C369 /* LightsNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		658A681B221A9C3F008BD6A3 /* App.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				658A681C221A9C3F008BD6A3 /* Base */,
-			);
-			name = App.storyboard;
-			sourceTree = "<group>";
-		};
 		658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
