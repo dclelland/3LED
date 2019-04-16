@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BC22668DCD00B5FEEA /* AppDelegate.swift */; };
-		654177BF22668DCD00B5FEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BE22668DCD00B5FEEA /* ViewController.swift */; };
 		654177C122668DD000B5FEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654177C022668DD000B5FEEA /* Assets.xcassets */; };
-		654177C422668DD000B5FEEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* Main.storyboard */; };
+		654177C422668DD000B5FEEA /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* App.storyboard */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,9 +17,8 @@
 		3678F1729C36550414340834 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654177B922668DCD00B5FEEA /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654177BC22668DCD00B5FEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		654177BE22668DCD00B5FEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		654177C022668DD000B5FEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		654177C322668DD000B5FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654177C322668DD000B5FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/App.storyboard; sourceTree = "<group>"; };
 		654177C522668DD000B5FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654177C622668DD000B5FEEA /* _LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _LED.entitlements; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,14 +58,53 @@
 		654177BB22668DCD00B5FEEA /* 3LED */ = {
 			isa = PBXGroup;
 			children = (
+				654177C222668DD000B5FEEA /* App.storyboard */,
 				654177BC22668DCD00B5FEEA /* AppDelegate.swift */,
-				654177BE22668DCD00B5FEEA /* ViewController.swift */,
+				654177CD2266A2F100B5FEEA /* Coordinators */,
+				654177CE2266A30000B5FEEA /* Controllers */,
+				654177CF2266A31000B5FEEA /* Models */,
+				654177D02266A33E00B5FEEA /* Resources */,
+				654177D12266A34E00B5FEEA /* Supporting Files */,
+			);
+			path = 3LED;
+			sourceTree = "<group>";
+		};
+		654177CD2266A2F100B5FEEA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		654177CE2266A30000B5FEEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		654177CF2266A31000B5FEEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		654177D02266A33E00B5FEEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				654177C022668DD000B5FEEA /* Assets.xcassets */,
-				654177C222668DD000B5FEEA /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		654177D12266A34E00B5FEEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				654177C522668DD000B5FEEA /* Info.plist */,
 				654177C622668DD000B5FEEA /* _LED.entitlements */,
 			);
-			path = 3LED;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		95463196D4F57B771E68FD1F /* Pods */ = {
@@ -76,7 +113,6 @@
 				BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */,
 				D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				654177C122668DD000B5FEEA /* Assets.xcassets in Resources */,
-				654177C422668DD000B5FEEA /* Main.storyboard in Resources */,
+				654177C422668DD000B5FEEA /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654177BF22668DCD00B5FEEA /* ViewController.swift in Sources */,
 				654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,12 +245,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		654177C222668DD000B5FEEA /* Main.storyboard */ = {
+		654177C222668DD000B5FEEA /* App.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				654177C322668DD000B5FEEA /* Base */,
 			);
-			name = Main.storyboard;
+			name = App.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,11 +376,11 @@
 			baseConfigurationReference = BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = 3LED/_LED.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/_LED.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = 3LED/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -361,11 +396,11 @@
 			baseConfigurationReference = D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = 3LED/_LED.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/_LED.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = 3LED/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
