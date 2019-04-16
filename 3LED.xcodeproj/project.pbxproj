@@ -7,181 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		651BE4A0222943310069C369 /* LightsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE49F222943310069C369 /* LightsCoordinator.swift */; };
-		651BE4A7222943C30069C369 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4A6222943C30069C369 /* Coordinator.swift */; };
-		651BE4A9222943CD0069C369 /* Coordinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4A8222943CD0069C369 /* Coordinated.swift */; };
-		651BE4AB222944950069C369 /* LightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4AA222944950069C369 /* LightsViewController.swift */; };
-		651BE4AD2229449E0069C369 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4AC2229449E0069C369 /* LightViewController.swift */; };
-		651BE4AF222945150069C369 /* LightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4AE222945150069C369 /* LightViewController.storyboard */; };
-		651BE4B1222945250069C369 /* LightsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4B0222945250069C369 /* LightsViewController.storyboard */; };
-		651BE4B3222945750069C369 /* LightsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651BE4B2222945750069C369 /* LightsNavigationController.swift */; };
-		651BE4B5222945840069C369 /* LightsNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651BE4B4222945840069C369 /* LightsNavigationController.storyboard */; };
-		658A6818221A9C3F008BD6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A6817221A9C3F008BD6A3 /* AppDelegate.swift */; };
-		658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658A681E221A9C44008BD6A3 /* Assets.xcassets */; };
-		658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */; };
-		658A682E221AA025008BD6A3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 658A682D221AA025008BD6A3 /* Settings.bundle */; };
-		D3055FB1EB034EAA6A941D35 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90767A9993EF4AD7812D3797 /* Pods_3LED.framework */; };
+		654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BC22668DCD00B5FEEA /* AppDelegate.swift */; };
+		654177BF22668DCD00B5FEEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BE22668DCD00B5FEEA /* ViewController.swift */; };
+		654177C122668DD000B5FEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654177C022668DD000B5FEEA /* Assets.xcassets */; };
+		654177C422668DD000B5FEEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* Main.storyboard */; };
+		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
-		651BE49F222943310069C369 /* LightsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsCoordinator.swift; sourceTree = "<group>"; };
-		651BE4A6222943C30069C369 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		651BE4A8222943CD0069C369 /* Coordinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinated.swift; sourceTree = "<group>"; };
-		651BE4AA222944950069C369 /* LightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsViewController.swift; sourceTree = "<group>"; };
-		651BE4AC2229449E0069C369 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
-		651BE4AE222945150069C369 /* LightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightViewController.storyboard; sourceTree = "<group>"; };
-		651BE4B0222945250069C369 /* LightsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightsViewController.storyboard; sourceTree = "<group>"; };
-		651BE4B2222945750069C369 /* LightsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsNavigationController.swift; sourceTree = "<group>"; };
-		651BE4B4222945840069C369 /* LightsNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightsNavigationController.storyboard; sourceTree = "<group>"; };
-		658A6814221A9C3F008BD6A3 /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		658A6817221A9C3F008BD6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		658A681E221A9C44008BD6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		658A6821221A9C44008BD6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		658A6823221A9C44008BD6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		658A6829221A9D4F008BD6A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		658A682D221AA025008BD6A3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		90767A9993EF4AD7812D3797 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
+		3678F1729C36550414340834 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		654177B922668DCD00B5FEEA /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		654177BC22668DCD00B5FEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		654177BE22668DCD00B5FEEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		654177C022668DD000B5FEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		654177C322668DD000B5FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654177C522668DD000B5FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654177C622668DD000B5FEEA /* _LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _LED.entitlements; sourceTree = "<group>"; };
+		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
+		D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		658A6811221A9C3F008BD6A3 /* Frameworks */ = {
+		654177B622668DCD00B5FEEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3055FB1EB034EAA6A941D35 /* Pods_3LED.framework in Frameworks */,
+				E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C09C1563B735E9826D3F4CF /* Frameworks */ = {
+		654177B022668DCD00B5FEEA = {
 			isa = PBXGroup;
 			children = (
-				90767A9993EF4AD7812D3797 /* Pods_3LED.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		651BE49E222943180069C369 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				651BE4A5222943B80069C369 /* Base */,
-				651BE4A4222943A50069C369 /* Implementations */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		651BE4A3222943700069C369 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		651BE4A4222943A50069C369 /* Implementations */ = {
-			isa = PBXGroup;
-			children = (
-				651BE49F222943310069C369 /* LightsCoordinator.swift */,
-			);
-			path = Implementations;
-			sourceTree = "<group>";
-		};
-		651BE4A5222943B80069C369 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				651BE4A6222943C30069C369 /* Coordinator.swift */,
-				651BE4A8222943CD0069C369 /* Coordinated.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		658A680B221A9C3F008BD6A3 = {
-			isa = PBXGroup;
-			children = (
-				658A6829221A9D4F008BD6A3 /* README.md */,
-				658A6816221A9C3F008BD6A3 /* 3LED */,
-				658A6815221A9C3F008BD6A3 /* Products */,
-				71EDEE701F9C7301E5D10FD5 /* Pods */,
-				5C09C1563B735E9826D3F4CF /* Frameworks */,
+				654177BB22668DCD00B5FEEA /* 3LED */,
+				654177BA22668DCD00B5FEEA /* Products */,
+				95463196D4F57B771E68FD1F /* Pods */,
+				BB05131973B4689A98109CDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		658A6815221A9C3F008BD6A3 /* Products */ = {
+		654177BA22668DCD00B5FEEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				658A6814221A9C3F008BD6A3 /* 3LED.app */,
+				654177B922668DCD00B5FEEA /* 3LED.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		658A6816221A9C3F008BD6A3 /* 3LED */ = {
+		654177BB22668DCD00B5FEEA /* 3LED */ = {
 			isa = PBXGroup;
 			children = (
-				658A6817221A9C3F008BD6A3 /* AppDelegate.swift */,
-				651BE49E222943180069C369 /* Coordinators */,
-				658A682A221A9D54008BD6A3 /* Controllers */,
-				651BE4A3222943700069C369 /* Protocols */,
-				658A682B221A9D6C008BD6A3 /* Resources */,
-				658A682C221A9D77008BD6A3 /* Supporting Files */,
+				654177BC22668DCD00B5FEEA /* AppDelegate.swift */,
+				654177BE22668DCD00B5FEEA /* ViewController.swift */,
+				654177C022668DD000B5FEEA /* Assets.xcassets */,
+				654177C222668DD000B5FEEA /* Main.storyboard */,
+				654177C522668DD000B5FEEA /* Info.plist */,
+				654177C622668DD000B5FEEA /* _LED.entitlements */,
 			);
 			path = 3LED;
 			sourceTree = "<group>";
 		};
-		658A682A221A9D54008BD6A3 /* Controllers */ = {
+		95463196D4F57B771E68FD1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				651BE4B4222945840069C369 /* LightsNavigationController.storyboard */,
-				651BE4B2222945750069C369 /* LightsNavigationController.swift */,
-				651BE4B0222945250069C369 /* LightsViewController.storyboard */,
-				651BE4AA222944950069C369 /* LightsViewController.swift */,
-				651BE4AE222945150069C369 /* LightViewController.storyboard */,
-				651BE4AC2229449E0069C369 /* LightViewController.swift */,
+				BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */,
+				D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		658A682B221A9D6C008BD6A3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				658A681E221A9C44008BD6A3 /* Assets.xcassets */,
-				658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */,
-				658A682D221AA025008BD6A3 /* Settings.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		658A682C221A9D77008BD6A3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				658A6823221A9C44008BD6A3 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		71EDEE701F9C7301E5D10FD5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */,
-				CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */,
-			);
+			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB05131973B4689A98109CDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3678F1729C36550414340834 /* Pods_3LED.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		658A6813221A9C3F008BD6A3 /* 3LED */ = {
+		654177B822668DCD00B5FEEA /* 3LED */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 658A6826221A9C44008BD6A3 /* Build configuration list for PBXNativeTarget "3LED" */;
+			buildConfigurationList = 654177C922668DD000B5FEEA /* Build configuration list for PBXNativeTarget "3LED" */;
 			buildPhases = (
-				CB494967FA72F522B1B7DF26 /* [CP] Check Pods Manifest.lock */,
-				658A6810221A9C3F008BD6A3 /* Sources */,
-				658A6811221A9C3F008BD6A3 /* Frameworks */,
-				658A6812221A9C3F008BD6A3 /* Resources */,
-				15C56C41926596EED42CEB2C /* [CP] Embed Pods Frameworks */,
+				0BD18397E6D5229F72890082 /* [CP] Check Pods Manifest.lock */,
+				654177B522668DCD00B5FEEA /* Sources */,
+				654177B622668DCD00B5FEEA /* Frameworks */,
+				654177B722668DCD00B5FEEA /* Resources */,
+				67E2A5A5095EE22937481F93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,25 +107,25 @@
 			);
 			name = 3LED;
 			productName = 3LED;
-			productReference = 658A6814221A9C3F008BD6A3 /* 3LED.app */;
+			productReference = 654177B922668DCD00B5FEEA /* 3LED.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		658A680C221A9C3F008BD6A3 /* Project object */ = {
+		654177B122668DCD00B5FEEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Protonome;
 				TargetAttributes = {
-					658A6813221A9C3F008BD6A3 = {
-						CreatedOnToolsVersion = 10.1;
+					654177B822668DCD00B5FEEA = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
-			buildConfigurationList = 658A680F221A9C3F008BD6A3 /* Build configuration list for PBXProject "3LED" */;
+			buildConfigurationList = 654177B422668DCD00B5FEEA /* Build configuration list for PBXProject "3LED" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,60 +133,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 658A680B221A9C3F008BD6A3;
-			productRefGroup = 658A6815221A9C3F008BD6A3 /* Products */;
+			mainGroup = 654177B022668DCD00B5FEEA;
+			productRefGroup = 654177BA22668DCD00B5FEEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				658A6813221A9C3F008BD6A3 /* 3LED */,
+				654177B822668DCD00B5FEEA /* 3LED */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		658A6812221A9C3F008BD6A3 /* Resources */ = {
+		654177B722668DCD00B5FEEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651BE4AF222945150069C369 /* LightViewController.storyboard in Resources */,
-				651BE4B5222945840069C369 /* LightsNavigationController.storyboard in Resources */,
-				658A682E221AA025008BD6A3 /* Settings.bundle in Resources */,
-				651BE4B1222945250069C369 /* LightsViewController.storyboard in Resources */,
-				658A6822221A9C44008BD6A3 /* LaunchScreen.storyboard in Resources */,
-				658A681F221A9C44008BD6A3 /* Assets.xcassets in Resources */,
+				654177C122668DD000B5FEEA /* Assets.xcassets in Resources */,
+				654177C422668DD000B5FEEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15C56C41926596EED42CEB2C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LIFXClient/LIFXClient.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LIFXClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB494967FA72F522B1B7DF26 /* [CP] Check Pods Manifest.lock */ = {
+		0BD18397E6D5229F72890082 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,38 +178,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		67E2A5A5095EE22937481F93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		658A6810221A9C3F008BD6A3 /* Sources */ = {
+		654177B522668DCD00B5FEEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651BE4A7222943C30069C369 /* Coordinator.swift in Sources */,
-				651BE4AD2229449E0069C369 /* LightViewController.swift in Sources */,
-				651BE4AB222944950069C369 /* LightsViewController.swift in Sources */,
-				651BE4A0222943310069C369 /* LightsCoordinator.swift in Sources */,
-				658A6818221A9C3F008BD6A3 /* AppDelegate.swift in Sources */,
-				651BE4A9222943CD0069C369 /* Coordinated.swift in Sources */,
-				651BE4B3222945750069C369 /* LightsNavigationController.swift in Sources */,
+				654177BF22668DCD00B5FEEA /* ViewController.swift in Sources */,
+				654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		658A6820221A9C44008BD6A3 /* LaunchScreen.storyboard */ = {
+		654177C222668DD000B5FEEA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				658A6821221A9C44008BD6A3 /* Base */,
+				654177C322668DD000B5FEEA /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		658A6824221A9C44008BD6A3 /* Debug */ = {
+		654177C722668DD000B5FEEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,7 +253,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -372,17 +272,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		658A6825221A9C44008BD6A3 /* Release */ = {
+		654177C822668DD000B5FEEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,7 +314,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -427,78 +327,77 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		658A6827221A9C44008BD6A3 /* Debug */ = {
+		654177CA22668DD000B5FEEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51E874FBA815BBB45A98DABC /* Pods-3LED.debug.xcconfig */;
+			baseConfigurationReference = BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3LED/_LED.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = 3LED/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.threeLED;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.protonome.-LED";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		658A6828221A9C44008BD6A3 /* Release */ = {
+		654177CB22668DD000B5FEEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDD051955235B94248B5E18D /* Pods-3LED.release.xcconfig */;
+			baseConfigurationReference = D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3LED/_LED.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
-				INFOPLIST_FILE = "$(SRCROOT)/3LED/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = 3LED/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.threeLED;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.protonome.-LED";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		658A680F221A9C3F008BD6A3 /* Build configuration list for PBXProject "3LED" */ = {
+		654177B422668DCD00B5FEEA /* Build configuration list for PBXProject "3LED" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				658A6824221A9C44008BD6A3 /* Debug */,
-				658A6825221A9C44008BD6A3 /* Release */,
+				654177C722668DD000B5FEEA /* Debug */,
+				654177C822668DD000B5FEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		658A6826221A9C44008BD6A3 /* Build configuration list for PBXNativeTarget "3LED" */ = {
+		654177C922668DD000B5FEEA /* Build configuration list for PBXNativeTarget "3LED" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				658A6827221A9C44008BD6A3 /* Debug */,
-				658A6828221A9C44008BD6A3 /* Release */,
+				654177CA22668DD000B5FEEA /* Debug */,
+				654177CB22668DD000B5FEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 658A680C221A9C3F008BD6A3 /* Project object */;
+	rootObject = 654177B122668DCD00B5FEEA /* Project object */;
 }

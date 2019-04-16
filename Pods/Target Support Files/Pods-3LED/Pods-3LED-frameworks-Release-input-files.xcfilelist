@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-3LED/Pods-3LED-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LIFXClient/LIFXClient.framework
+${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework

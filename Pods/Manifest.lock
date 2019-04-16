@@ -1,36 +1,26 @@
 PODS:
-  - LIFXClient (1.0.0):
-    - PromiseKit (~> 6.8.3)
-  - PromiseKit (6.8.3):
-    - PromiseKit/CorePromise (= 6.8.3)
-    - PromiseKit/Foundation (= 6.8.3)
-    - PromiseKit/UIKit (= 6.8.3)
-  - PromiseKit/CorePromise (6.8.3)
-  - PromiseKit/Foundation (6.8.3):
+  - LIFXClient (1.1.0):
+    - PromiseKit (~> 6.8.4)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.8.3):
-    - PromiseKit/CorePromise
-  - Reusable (4.0.5):
-    - Reusable/Storyboard (= 4.0.5)
-    - Reusable/View (= 4.0.5)
-  - Reusable/Storyboard (4.0.5)
-  - Reusable/View (4.0.5)
 
 DEPENDENCIES:
-  - LIFXClient (~> 1.0)
-  - Reusable (~> 4.0)
+  - LIFXClient (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - LIFXClient
     - PromiseKit
-    - Reusable
 
 SPEC CHECKSUMS:
-  LIFXClient: cfa365fd0deaa6675e08e97f2d118f9bf23ea057
-  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
-  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
+  LIFXClient: 911fd344a6a063f325cd6ff971f83dbd957bc70f
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
 
-PODFILE CHECKSUM: 3064ca110a105b254ee08ad99bb6a7c2e509176f
+PODFILE CHECKSUM: 62e014bfa14436842ba61e0c1faec28ed8babb0e
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.0.beta.3

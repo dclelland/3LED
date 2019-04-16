@@ -1,6 +1,6 @@
 {
   "name": "LIFXClient",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "Alamofire based HTTP client for the Bittrex API.",
   "homepage": "https://github.com/dclelland/LIFXClient",
   "license": {
@@ -11,18 +11,28 @@
   },
   "source": {
     "git": "https://github.com/dclelland/LIFXClient.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "12.0",
+    "osx": "10.14"
   },
-  "swift_version": "4.2",
+  "swift_version": "5.0",
   "dependencies": {
     "PromiseKit": [
-      "~> 6.8.3"
+      "~> 6.8.4"
+    ]
+  },
+  "osx": {
+    "source_files": [
+      "Sources/Common/**/*.swift",
+      "Sources/macOS/**/*.swift"
     ]
   },
   "ios": {
-    "source_files": "Sources/**/*.swift"
+    "source_files": [
+      "Sources/Common/**/*.swift",
+      "Sources/iOS/**/*.swift"
+    ]
   }
 }
