@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652E7C4E22674A3A00260647 /* NSAlert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E7C4D22674A3A00260647 /* NSAlert+Extensions.swift */; };
 		654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BC22668DCD00B5FEEA /* AppDelegate.swift */; };
 		654177C122668DD000B5FEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654177C022668DD000B5FEEA /* Assets.xcassets */; };
 		654177C422668DD000B5FEEA /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* App.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		3678F1729C36550414340834 /* Pods_3LED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3LED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652E7C4D22674A3A00260647 /* NSAlert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAlert+Extensions.swift"; sourceTree = "<group>"; };
 		654177B922668DCD00B5FEEA /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654177BC22668DCD00B5FEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654177C022668DD000B5FEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		654A76DB2266BD4000A40D31 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				652E7C4D22674A3A00260647 /* NSAlert+Extensions.swift */,
 				654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */,
 				654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */,
 			);
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652E7C4E22674A3A00260647 /* NSAlert+Extensions.swift in Sources */,
 				654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */,
 				654A771B2267425300A40D31 /* LightColorViewController.swift in Sources */,
 				654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */,

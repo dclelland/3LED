@@ -164,8 +164,13 @@ extension AppDelegate {
     }
     
     @objc func removeLight(_ sender: NSMenuItem) {
-        print("Remove light")
-        #warning("This should be an NSAlert modal promise")
+        guard let light = sender.representedObject as? Light else {
+            return
+        }
+        
+        NSAlert(prompt: "Are you sure you want to remove the light \"\(light.name)\"?", buttonTitle: "Remove Light").runModalPromise().done {
+            print("Remove \(light.name)")
+        }
     }
     
 }
