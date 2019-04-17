@@ -9,27 +9,21 @@
 import AppKit
 import PromiseKit
 
-class AsynchronousViewController<Input, Output>: SynchronousViewController<AsynchronousState<Output>>, Asynchronous {
-    
-    var input: Input? = nil {
-        didSet {
-            refreshState()
-        }
-    }
+class AsynchronousViewController<Input, Output>: SynchronousViewController<AsynchronousState<Input, Output>>, Asynchronous {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshState()
     }
     
-    override func refreshView(_ state: AsynchronousState<Output>) {
-        if case .failure(let error) = state {
+    override func refreshView(_ state: AsynchronousState<Input, Output>) {
+        if case .failure(let error) = state.result {
             NSAlert(error: error).runModal()
             view.window?.close()
         }
     }
     
-    open func requestState(_ input: Input) -> Promise<Output> {
+    func requestState(_ state: AsynchronousState<Input, Output>) -> Promise<Output> {
         return Promise(error: PMKError.cancelled)
     }
     

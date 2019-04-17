@@ -9,44 +9,50 @@
 import Foundation
 import PromiseKit
 
-enum AsynchronousState<Output> {
+struct AsynchronousState<Input, Output> {
     
-    case ready
-    case loading
-    case success(Output)
-    case failure(Error)
+    enum Result<Output> {
+        
+        case ready
+        case loading
+        case success(Output)
+        case failure(Error)
+        
+    }
+    
+    let input: Input
+    
+    let result: Result<Output>
     
 }
 
-protocol Asynchronous: Synchronous where State == AsynchronousState<Output> {
+protocol Asynchronous: Synchronous where State == AsynchronousState<Input, Output> {
     
     associatedtype Input
     
     associatedtype Output
     
-    var input: Input? { get set }
-    
-    func requestState(_ input: Input) -> Promise<Output>
+    func requestState(_ state: State) -> Promise<Output>
 
 }
 
 extension Asynchronous where Self: NSViewController {
     
     func refreshState() {
-        guard let input = input, isViewLoaded else {
+        guard let state = state, isViewLoaded else {
             return
         }
         
-        refreshState(input)
+        refreshState(state)
     }
     
-    func refreshState(_ input: Input) {
-        self.state = .loading
+    func refreshState(_ state: State) {
+        self.state = AsynchronousState(input: state.input, result: .loading)
         
-        requestState(input).done { [weak self] output in
-            self?.state = .success(output)
+        requestState(state).done { [weak self] output in
+            self?.state = AsynchronousState(input: state.input, result: .success(output))
         }.catch { [weak self] error in
-            self?.state = .failure(error)
+            self?.state = AsynchronousState(input: state.input, result: .failure(error))
         }
     }
     
@@ -56,7 +62,7 @@ extension StoryboardBased where Self: NSViewController & Asynchronous {
 
     static func instantiate(input: Input) -> Self {
         let viewController = instantiate()
-        viewController.input = input
+        viewController.state = AsynchronousState(input: input, result: .ready)
         return viewController
     }
 
