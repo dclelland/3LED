@@ -11,15 +11,24 @@ import Network
 import LIFXClient
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
-            return client.light.setColor(color: .green)
-        }.done { response in
-            print(response)
-        }.catch { error in
-            print(error)
-        }
+        statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
+        statusItem.button?.action = #selector(showMenu(_:))
+        
+//        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
+//            return client.light.setColor(color: .green)
+//        }.done { response in
+//            print(response)
+//        }.catch { error in
+//            print(error)
+//        }
+    }
+    
+    @objc func showMenu(_ sender: Any?) {
+        print("Show menu")
     }
 
 }
