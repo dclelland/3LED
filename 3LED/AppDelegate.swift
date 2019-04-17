@@ -79,8 +79,7 @@ import LIFXClient
                 [
                     NSMenuItem(
                         title: "Quit \(Bundle.main.name)",
-                        action: #selector(NSApplication.terminate(_:)),
-                        keyEquivalent: "q"
+                        action: #selector(NSApplication.terminate(_:))
                     )
                 ]
             ]
