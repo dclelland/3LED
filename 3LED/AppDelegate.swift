@@ -22,16 +22,12 @@ import LIFXClient
                     NSMenuItem(
                         title: "Lights",
                         submenu: NSMenu(
-                            items: [
-                                NSMenuItem(
-                                    title: "192.168.1.83",
-                                    action: #selector(AppDelegate.openLight(_:))
-                                ),
-                                NSMenuItem(
-                                    title: "192.168.1.84",
+                            items: Light.all.map { light in
+                                return NSMenuItem(
+                                    title: light.host,
                                     action: #selector(AppDelegate.openLight(_:))
                                 )
-                            ]
+                            }
                         )
                     ),
                     NSMenuItem(
