@@ -167,8 +167,7 @@ extension AppDelegate {
         
         let alert = NSAlert(
             style: .critical,
-            messageText: "Are you sure you want to remove the light \"\(light.name)\"?",
-            informativeText: "This light has IP address \"\(light.address)\".",
+            messageText: "Are you sure you want to remove the light at address \"\(light.address)\"?",
             actionText: "Remove Light"
         )
         

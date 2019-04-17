@@ -4,29 +4,48 @@ iOS/macOS client for LIFX lightbulbs
 
 ## Todo
 
+### Tasks
+
+- Address persistence
+    - Set up `Persistable` protocol
+
+- Initial menu configuration
+    - Will need multiple request resolution
+    - Look into NSMenuDelegate and that special run loop thing
+    - Request resolution will need timeouts
+    - Should show blanked out 'Light is offline' menu instead of 'Set color...' etc
+
 - Set up window reuse
-   - Color, gradient, name etc should be mutually exclusive
-- Standardised IPv4Address validation
-- Persist saved lights
+    - Color and gradient should be mutually exclusive
+   
 - Open on startup option
 
-### Menu
-
-- Menu should be refreshed from scratch when opening the utility; can we use the menu validation functions? Can this be done asynchronously?
-   - Map promises and use a resolved state to enable/disable menu items 
-   - Only thing saved should be a list of addresses, in User defaults
 - Don't forget to prompt on startup to add a light, if there are no lights; and show an empty menu if there are no lights
-- Add submenu for each light
-   - Power
-   - Set Color...
-   - Set Gradient...
-   - Set Name...
 
-### LightViewController
+### Add Light
 
-- Should be a modal hud
-- Rename light
-- Hide window until loaded...? Or hide color well
+- Finish modal promise helper
+- Set up text field validation (i.e. valid IP address)
+    - Should add `try` helper to IPv4Address
+    - Should also do this in promises where possible
+- Connect this to persistent store
+
+### Remove Light
+
+- Finish modal promise helper
+- Connect this to persistent store
+
+### Set Light Color
+
+- Is this finished?
+
+### Set Light Waveform
+
+- Finish this view controller and explore how waveform setting should work
+
+### Set Light Name
+
+- Reuse standard alert with text field
 
 ### Bugs
 
