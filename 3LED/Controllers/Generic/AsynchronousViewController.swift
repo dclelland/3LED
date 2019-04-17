@@ -39,6 +39,7 @@ class AsynchronousViewController<Input, Output>: SynchronousViewController<Async
     override func refreshView(_ state: AsynchronousState<Output>) {
         if case .failure(let error) = state {
             NSAlert(error: error).runModal()
+            view.window?.close()
         }
     }
     
