@@ -127,7 +127,18 @@ extension AppDelegate {
     }
     
     @objc func setLightWaveform(_ sender: NSMenuItem) {
+        guard let light = sender.representedObject as? Light else {
+            return
+        }
         
+        LIFXClient.connect(address: light.address).then { client in
+            return client.light.getState()
+        }.done { state in
+            let windowController = LightWaveformWindowController.instantiate(state: state)
+            windowController.showWindow(self)
+        }.catch { error in
+            NSAlert(error: error).runModal()
+        }
     }
     
     @objc func setLightName(_ sender: NSMenuItem) {

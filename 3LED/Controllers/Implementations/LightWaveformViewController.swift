@@ -8,12 +8,6 @@
 
 import AppKit
 
-class LightWaveformViewController: StatefulViewController<LightState>, StoryboardBased {
-    
-    override func refreshView(_ state: LightState) {
-        super.refreshView(state)
-        
-        title = "\(state.state.label) Waveform"
-    }
+class LightWaveformViewController: StatefulViewController<LightState> {
     
 }
