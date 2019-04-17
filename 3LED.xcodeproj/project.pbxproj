@@ -27,6 +27,7 @@
 		654A771522673EEB00A40D31 /* StatefulWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771422673EEB00A40D31 /* StatefulWindowController.swift */; };
 		654A771B2267425300A40D31 /* LightColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771A2267425300A40D31 /* LightColorViewController.swift */; };
 		654A771D226742B400A40D31 /* LightWaveformWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771C226742B400A40D31 /* LightWaveformWindowController.swift */; };
+		6589113322675C5400525C66 /* IPv4Address+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589113222675C5400525C66 /* IPv4Address+Extensions.swift */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		654A771422673EEB00A40D31 /* StatefulWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulWindowController.swift; sourceTree = "<group>"; };
 		654A771A2267425300A40D31 /* LightColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightColorViewController.swift; sourceTree = "<group>"; };
 		654A771C226742B400A40D31 /* LightWaveformWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWaveformWindowController.swift; sourceTree = "<group>"; };
+		6589113222675C5400525C66 /* IPv4Address+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IPv4Address+Extensions.swift"; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,8 +221,9 @@
 		654A77042266EB3A00A40D31 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
-				654A76DC2266BD4400A40D31 /* Foundation */,
 				654A76DB2266BD4000A40D31 /* AppKit */,
+				654A76DC2266BD4400A40D31 /* Foundation */,
+				6589113122675C3D00525C66 /* Network */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -231,6 +234,14 @@
 				654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */,
 			);
 			path = LIFXClient;
+			sourceTree = "<group>";
+		};
+		6589113122675C3D00525C66 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6589113222675C5400525C66 /* IPv4Address+Extensions.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		95463196D4F57B771E68FD1F /* Pods */ = {
@@ -390,6 +401,7 @@
 				654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */,
 				654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */,
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
+				6589113322675C5400525C66 /* IPv4Address+Extensions.swift in Sources */,
 				654A771322673E8A00A40D31 /* LightColorWindowController.swift in Sources */,
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
 				654A771D226742B400A40D31 /* LightWaveformWindowController.swift in Sources */,

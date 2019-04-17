@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Network
 import LIFXClient
 import LaunchAtLogin
 
@@ -163,10 +164,14 @@ extension AppDelegate {
         
         let textField = NSTextField(frame: NSRect(x: 0.0, y: 0.0, width: 240.0, height: 22.0))
         textField.placeholderString = "192.168.0.1"
-        
         alert.accessoryView = textField
-        alert.runModalPromise().done {
-            self.addresses.value.append(textField.stringValue)
+        
+        alert.runModalPromise().map {
+            return try IPv4Address(textField.stringValue)
+        }.done { address in
+            self.addresses.value.append(String(describing: address))
+        }.catch { error in
+            NSAlert(error: error).runModal()
         }
     }
     
