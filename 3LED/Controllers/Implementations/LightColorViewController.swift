@@ -22,8 +22,12 @@ class LightColorViewController: StatefulViewController<LightState> {
 
 extension LightColorViewController {
     
-    @IBAction func colorWellValueDidChange(_ sender: NSColorWell) {
-        state?.light.setColor(color: sender.color).catch { error in
+    @IBAction func setColor(_ sender: Any?) {
+        guard let state = state else {
+            return
+        }
+        
+        state.light.setColor(color: colorWell.color).catch { error in
             NSAlert(error: error).runModal()
         }
     }

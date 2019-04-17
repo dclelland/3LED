@@ -8,6 +8,7 @@ iOS/macOS client for LIFX lightbulbs
    - Color, gradient, name etc should be mutually exclusive
 - Standardised IPv4Address validation
 - Persist saved lights
+- Open on startup option
 
 ### Menu
 

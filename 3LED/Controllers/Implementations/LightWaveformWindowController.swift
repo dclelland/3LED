@@ -6,7 +6,7 @@
 //  Copyright © 2019 Protonome. All rights reserved.
 //
 
-import Foundation
+import AppKit
 
 class LightWaveformWindowController: StatefulWindowController<LightState>, StoryboardBased {
     

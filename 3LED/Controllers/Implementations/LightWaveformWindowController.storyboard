@@ -9,10 +9,10 @@
         <scene sceneID="ToR-UK-cSt">
             <objects>
                 <windowController id="n7l-mW-7We" customClass="LightWaveformWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="8PP-7P-e9c">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="8PP-7P-e9c" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="contentRect" x="425" y="461" width="216" height="84"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
                         <connections>
                             <outlet property="delegate" destination="n7l-mW-7We" id="zST-Rr-wAJ"/>
@@ -24,15 +24,53 @@
                 </windowController>
                 <customObject id="tAm-KZ-xUI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="519"/>
         </scene>
         <!--Light Waveform View Controller-->
         <scene sceneID="HhA-AU-k1u">
             <objects>
                 <viewController id="tBx-8X-F4T" customClass="LightWaveformViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="1zH-6G-dpe">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="84"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="OqV-Fe-kKb">
+                                <rect key="frame" x="12" y="12" width="90" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8o8-7w-elO"/>
+                                    <constraint firstAttribute="width" constant="90" id="EYk-jv-LIk"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="setWaveform:" target="tBx-8X-F4T" id="8yI-5k-fJa"/>
+                                </connections>
+                            </colorWell>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="2bV-4N-4V3">
+                                <rect key="frame" x="114" y="12" width="90" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bb1-nM-mWK"/>
+                                    <constraint firstAttribute="width" constant="90" id="nOu-Py-GxG"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="setWaveform:" target="tBx-8X-F4T" id="hqZ-tU-9Ed"/>
+                                </connections>
+                            </colorWell>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="OqV-Fe-kKb" firstAttribute="leading" secondItem="1zH-6G-dpe" secondAttribute="leading" constant="12" id="4o9-gj-lUE"/>
+                            <constraint firstAttribute="bottom" secondItem="2bV-4N-4V3" secondAttribute="bottom" constant="12" id="W2a-tH-VgZ"/>
+                            <constraint firstAttribute="bottom" secondItem="OqV-Fe-kKb" secondAttribute="bottom" constant="12" id="WNp-vV-8MR"/>
+                            <constraint firstAttribute="trailing" secondItem="2bV-4N-4V3" secondAttribute="trailing" constant="12" id="ffI-6F-Sb6"/>
+                            <constraint firstItem="2bV-4N-4V3" firstAttribute="leading" secondItem="OqV-Fe-kKb" secondAttribute="trailing" constant="12" id="owN-WI-8dJ"/>
+                            <constraint firstItem="OqV-Fe-kKb" firstAttribute="top" secondItem="1zH-6G-dpe" secondAttribute="top" constant="12" id="vQF-AE-X3B"/>
+                            <constraint firstItem="2bV-4N-4V3" firstAttribute="top" secondItem="1zH-6G-dpe" secondAttribute="top" constant="12" id="wBc-dT-Si1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstColorWell" destination="OqV-Fe-kKb" id="HQt-uD-DZ4"/>
+                        <outlet property="secondColorWell" destination="2bV-4N-4V3" id="b5u-ni-MlA"/>
+                    </connections>
                 </viewController>
                 <customObject id="roN-iW-jah" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
