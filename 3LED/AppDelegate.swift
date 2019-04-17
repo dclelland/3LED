@@ -20,12 +20,19 @@ import LIFXClient
             separatedItems: [
                 [
                     NSMenuItem(
-                        title: "192.168.1.83",
-                        action: #selector(AppDelegate.openLight(_:))
-                    ),
-                    NSMenuItem(
-                        title: "192.168.1.84",
-                        action: #selector(AppDelegate.openLight(_:))
+                        title: "Lights",
+                        submenu: NSMenu(
+                            items: [
+                                NSMenuItem(
+                                    title: "192.168.1.83",
+                                    action: #selector(AppDelegate.openLight(_:))
+                                ),
+                                NSMenuItem(
+                                    title: "192.168.1.84",
+                                    action: #selector(AppDelegate.openLight(_:))
+                                )
+                            ]
+                        )
                     ),
                     NSMenuItem(
                         title: "Add Light...",
