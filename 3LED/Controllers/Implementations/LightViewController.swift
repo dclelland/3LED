@@ -11,7 +11,7 @@ import Network
 import LIFXClient
 import PromiseKit
 
-struct LightViewControllerOutput {
+struct LightViewControllerState {
     
     var light: LIFXLight
     
@@ -19,32 +19,15 @@ struct LightViewControllerOutput {
     
 }
 
-class LightViewController: AsynchronousViewController<Light, LightViewControllerOutput>, StoryboardBased {
+class LightViewController: SynchronousViewController<LightViewControllerState>, StoryboardBased {
     
     @IBOutlet var colorWell: NSColorWell!
     
-    override func requestState(_ state: AsynchronousState<Light, LightViewControllerOutput>) -> Promise<LightViewControllerOutput> {
-        return LIFXClient.connect(host: .ipv4(IPv4Address(state.input.host)!)).then { client in
-            return client.light.get().map { lightState -> LightViewControllerOutput in
-                return LightViewControllerOutput(light: client.light, lightState: lightState)
-            }
-        }
-    }
-    
-    override func refreshView(_ state: AsynchronousState<Light, LightViewControllerOutput>) {
+    override func refreshView(_ state: LightViewControllerState) {
         super.refreshView(state)
         
-        switch state.result {
-        case .ready:
-            title = state.input.name
-        case .loading:
-            title = state.input.name
-        case .success(let output):
-            title = output.lightState.label
-            colorWell.color = output.lightState.color.color
-        case .failure:
-            title = state.input.name
-        }
+        title = state.lightState.label
+        colorWell.color = state.lightState.color.color
     }
     
 }
@@ -52,11 +35,7 @@ class LightViewController: AsynchronousViewController<Light, LightViewController
 extension LightViewController {
     
     @IBAction func colorWellValueDidChange(_ sender: NSColorWell) {
-        guard let light = state?.result.output else {
-            return
-        }
-        
-        light.light.setColor(color: sender.color).catch { error in
+        state?.light.setColor(color: sender.color).catch { error in
             print(error)
         }
     }

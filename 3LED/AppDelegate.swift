@@ -56,9 +56,16 @@ import LIFXClient
 extension AppDelegate {
     
     @objc func openLight(_ sender: NSMenuItem) {
-        let light = Light(name: "Test", host: sender.title)
-        let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(input: light)))
-        windowController.showWindow(self)
+        LIFXClient.connect(host: .ipv4(IPv4Address(sender.title)!)).then { client in
+            return client.light.get().map { lightState -> LightViewControllerState in
+                return LightViewControllerState(light: client.light, lightState: lightState)
+            }
+        }.done { state in
+            let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: state)))
+            windowController.showWindow(self)
+        }.catch { error in
+            NSAlert(error: error).runModal()
+        }
     }
     
     @objc func addLight(_ sender: NSMenuItem) {
