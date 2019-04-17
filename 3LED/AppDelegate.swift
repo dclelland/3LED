@@ -19,17 +19,41 @@ import LIFXClient
         statusItem.menu = NSMenu(
             separatedItems: [
                 [
-                    .init(title: "Add light...", action: #selector(AppDelegate.addLight(_:)), keyEquivalent: "a")
+                    NSMenuItem(
+                        title: "192.168.1.83",
+                        action: #selector(AppDelegate.openLight(_:))
+                    ),
+                    NSMenuItem(
+                        title: "192.168.1.84",
+                        action: #selector(AppDelegate.openLight(_:))
+                    ),
+                    NSMenuItem(
+                        title: "Add Light...",
+                        action: #selector(AppDelegate.addLight(_:)),
+                        keyEquivalent: "l"
+                    )
                 ],
                 [
-                    .init(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+                    NSMenuItem(
+                        title: "Quit \(Bundle.main.name)",
+                        action: #selector(NSApplication.terminate(_:)),
+                        keyEquivalent: "q"
+                    )
                 ]
             ]
         )
     }
+
+}
+
+extension AppDelegate {
     
-    @objc func addLight(_ sender: Any?) {
+    @objc func openLight(_ sender: NSMenuItem) {
+        print("Open light: \(sender.title)")
+    }
+    
+    @objc func addLight(_ sender: NSMenuItem) {
         print("Add light")
     }
-
+    
 }

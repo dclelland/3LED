@@ -12,6 +12,7 @@
 		654177C422668DD000B5FEEA /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* App.storyboard */; };
 		654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */; };
 		654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */; };
+		654A76DE2266BD5200A40D31 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		654177C622668DD000B5FEEA /* _LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _LED.entitlements; sourceTree = "<group>"; };
 		654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+Extensions.swift"; sourceTree = "<group>"; };
 		654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenuItem+Extensions.swift"; sourceTree = "<group>"; };
+		654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,10 +117,27 @@
 		654177D82266B82600B5FEEA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				654A76DC2266BD4400A40D31 /* Foundation */,
+				654A76DB2266BD4000A40D31 /* AppKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		654A76DB2266BD4000A40D31 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
 				654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */,
 				654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */,
 			);
-			path = Extensions;
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		654A76DC2266BD4400A40D31 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		95463196D4F57B771E68FD1F /* Pods */ = {
@@ -255,6 +274,7 @@
 				654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */,
 				654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */,
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
+				654A76DE2266BD5200A40D31 /* Bundle+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
