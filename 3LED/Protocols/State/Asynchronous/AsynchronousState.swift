@@ -8,29 +8,20 @@
 
 import Foundation
 
-struct AsynchronousState<Input, Output>: SynchronousState {
-    
-    let input: Input
-    
-    var result: AsynchronousResult<Output>
-    
-    init(input: Input, result: AsynchronousResult<Output> = .ready) {
-        self.input = input
-        self.result = result
-    }
-    
-}
-
-enum AsynchronousResult<Output> {
+enum AsynchronousState<Output>: SynchronousState {
     
     case ready
     case loading
     case success(Output)
     case failure(Error)
     
+    init() {
+        self = .ready
+    }
+    
 }
 
-extension AsynchronousResult {
+extension AsynchronousState {
     
     var output: Output? {
         get {

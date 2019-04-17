@@ -19,10 +19,10 @@
 		654A76ED2266C20900A40D31 /* SynchronousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EC2266C20900A40D31 /* SynchronousViewController.swift */; };
 		654A76EF2266C21400A40D31 /* AsynchronousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EE2266C21400A40D31 /* AsynchronousViewController.swift */; };
 		654A76F32266C59B00A40D31 /* Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F22266C59B00A40D31 /* Synchronous.swift */; };
-		654A76F52266C5A500A40D31 /* SynchronousState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F42266C5A500A40D31 /* SynchronousState.swift */; };
 		654A76F92266C5C100A40D31 /* Asynchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F82266C5C100A40D31 /* Asynchronous.swift */; };
 		654A76FB2266C5CB00A40D31 /* AsynchronousState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FA2266C5CB00A40D31 /* AsynchronousState.swift */; };
 		654A76FD2266CE0800A40D31 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FC2266CE0800A40D31 /* Light.swift */; };
+		654A76FF2266CF8C00A40D31 /* SynchronousState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FE2266CF8C00A40D31 /* SynchronousState.swift */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +43,10 @@
 		654A76EC2266C20900A40D31 /* SynchronousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousViewController.swift; sourceTree = "<group>"; };
 		654A76EE2266C21400A40D31 /* AsynchronousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousViewController.swift; sourceTree = "<group>"; };
 		654A76F22266C59B00A40D31 /* Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronous.swift; sourceTree = "<group>"; };
-		654A76F42266C5A500A40D31 /* SynchronousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousState.swift; sourceTree = "<group>"; };
 		654A76F82266C5C100A40D31 /* Asynchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asynchronous.swift; sourceTree = "<group>"; };
 		654A76FA2266C5CB00A40D31 /* AsynchronousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousState.swift; sourceTree = "<group>"; };
 		654A76FC2266CE0800A40D31 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		654A76FE2266CF8C00A40D31 /* SynchronousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousState.swift; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				654A76F22266C59B00A40D31 /* Synchronous.swift */,
-				654A76F42266C5A500A40D31 /* SynchronousState.swift */,
+				654A76FE2266CF8C00A40D31 /* SynchronousState.swift */,
 			);
 			path = Synchronous;
 			sourceTree = "<group>";
@@ -351,12 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */,
+				654A76FF2266CF8C00A40D31 /* SynchronousState.swift in Sources */,
 				654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */,
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
 				654A76F92266C5C100A40D31 /* Asynchronous.swift in Sources */,
 				654A76EF2266C21400A40D31 /* AsynchronousViewController.swift in Sources */,
-				654A76F52266C5A500A40D31 /* SynchronousState.swift in Sources */,
 				654A76FD2266CE0800A40D31 /* Light.swift in Sources */,
 				654A76ED2266C20900A40D31 /* SynchronousViewController.swift in Sources */,
 				654A76F32266C59B00A40D31 /* Synchronous.swift in Sources */,

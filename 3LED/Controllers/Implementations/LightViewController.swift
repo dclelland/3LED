@@ -8,6 +8,10 @@
 
 import AppKit
 
-class LightViewController: NSViewController, StoryboardBased {
+class LightViewController: SynchronousViewController<Light>, StoryboardBased {
 
+    override func refreshView(_ light: Light) {
+        title = light.name
+    }
+    
 }

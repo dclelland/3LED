@@ -14,4 +14,14 @@ struct Light {
     
     var host: String
     
+    init() {
+        self.name = ""
+        self.host = ""
+    }
+    
+    init(name: String = "", host: String = "") {
+        self.name = name
+        self.host = host
+    }
+    
 }

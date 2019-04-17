@@ -9,42 +9,35 @@
 import AppKit
 import PromiseKit
 
-class AsynchronousViewController<Input, Output>: SynchronousViewController<AsynchronousState<Input, Output>>, Asynchronous {
+class AsynchronousViewController<Input, Output>: SynchronousViewController<AsynchronousState<Output>>, Asynchronous {
+    
+    var input: Input? = nil {
+        didSet {
+            refresh()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        refresh()
+    }
+    
+    final func refresh() {
+        guard let input = input, isViewLoaded else {
+            return
+        }
+        
+        self.state = .loading
+        
+        request(input: input).done { [weak self] output in
+            self?.state = .success(output)
+        }.catch { [weak self] error in
+            self?.state = .failure(error)
+        }
+    }
     
     open func request(input: Input) -> Promise<Output> {
         fatalError("Override `request(input:)` in subclasses")
     }
     
 }
-
-//class AsynchronousViewController<Value>: SynchronousViewController<AsynchronousState<Value>>, Asynchronous {
-//
-//    var request: ((AsynchronousState<Value>) -> Promise<Value>)?
-//
-//    convenience init(value: Value) {
-//        self.init(state: .success(value))
-//    }
-//
-//    convenience init(request: @escaping (AsynchronousState<Value>) -> Promise<Value>) {
-//        self.init()
-//        self.request = request
-//        self.refresh()
-//    }
-//
-//    override func refreshView(state: State) {
-//        super.refreshView(state: state)
-//
-//        switch state {
-//        case .ready:
-//            navigationItem.titleView = nil
-//        case .loading:
-//            navigationItem.titleView = LoadingView.loadFromNib()
-//        case .success:
-//            navigationItem.titleView = nil
-//        case .failure(let error):
-//            navigationItem.titleView = nil
-//            presentAlert(error: error)
-//        }
-//    }
-//
-//}

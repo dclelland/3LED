@@ -12,7 +12,7 @@ protocol Synchronous: class {
     
     associatedtype State: SynchronousState
     
-    var state: State? { get set }
+    var state: State { get set }
     
 }
 
