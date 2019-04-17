@@ -15,15 +15,6 @@ import LIFXClient
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
-            return client.light.setColor(color: .green)
-        }.done { response in
-            print(response)
-        }.catch { error in
-            print(error)
-        }
-        
-        
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         statusItem.menu = NSMenu(
             separatedItems: [
