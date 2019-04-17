@@ -28,8 +28,9 @@ extension LIFXClient {
 extension LIFXClient {
     
     static func connect(address: String) -> Promise<LIFXClient> {
-        #warning("Validate ipv4 here")
-        return connect(host: .ipv4(IPv4Address(address)!))
+        return firstly {
+            return connect(host: .ipv4(try IPv4Address(address)))
+        }
     }
     
 }

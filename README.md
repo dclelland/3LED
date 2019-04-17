@@ -25,8 +25,6 @@ iOS/macOS client for LIFX lightbulbs
 
 - Finish modal promise helper
 - If light is already added, move it to the end
-- Set up text field validation (i.e. valid IP address)
-    - Should also do this in promises where possible
 
 ### Remove Light
 

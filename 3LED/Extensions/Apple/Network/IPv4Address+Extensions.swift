@@ -18,7 +18,7 @@ extension IPv4Address {
         var errorDescription: String? {
             switch self {
             case .invalidString:
-                return "Invalid IP address"
+                return "Invalid IP address string"
             }
         }
         
