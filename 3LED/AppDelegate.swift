@@ -16,19 +16,20 @@ import LIFXClient
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
-        statusItem.button?.action = #selector(showMenu(_:))
-        
-//        LIFXClient.connect(host: .ipv4(IPv4Address("192.168.1.83")!)).then { client in
-//            return client.light.setColor(color: .green)
-//        }.done { response in
-//            print(response)
-//        }.catch { error in
-//            print(error)
-//        }
+        statusItem.menu = NSMenu(
+            separatedItems: [
+                [
+                    .init(title: "Add light...", action: #selector(AppDelegate.addLight(_:)), keyEquivalent: "a")
+                ],
+                [
+                    .init(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+                ]
+            ]
+        )
     }
     
-    @objc func showMenu(_ sender: Any?) {
-        print("Show menu")
+    @objc func addLight(_ sender: Any?) {
+        print("Add light")
     }
 
 }
