@@ -13,12 +13,19 @@ import LIFXClient
     
     var addresses: [String] = [
         "192.168.1.83",
-        "192.168.1.84"
+        "192.168.1.84",
+        "192.168.1.123"
     ]
     
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
+        #warning("This doesn't time out")
+        LIFXClient.getLightStates(addresses: addresses).done { results in
+            print(results)
+        }
+        
+        
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         statusItem.menu = NSMenu(
             separatedItems: [
@@ -33,22 +40,31 @@ import LIFXClient
                                     action: #selector(AppDelegate.toggleLight(_:)),
                                     representedObject: light,
                                     submenu: NSMenu(
-                                        items: [
-                                            NSMenuItem(
-                                                title: "Set Color...",
-                                                action: #selector(AppDelegate.setLightColor(_:)),
-                                                representedObject: light
-                                            ),
-                                            NSMenuItem(
-                                                title: "Set Gradient...",
-                                                action: #selector(AppDelegate.setLightGradient(_:)),
-                                                representedObject: light
-                                            ),
-                                            NSMenuItem(
-                                                title: "Set Name...",
-                                                action: #selector(AppDelegate.setLightName(_:)),
-                                                representedObject: light
-                                            )
+                                        separatedItems: [
+                                            [
+                                                NSMenuItem(
+                                                    title: "Set Color...",
+                                                    action: #selector(AppDelegate.setLightColor(_:)),
+                                                    representedObject: light
+                                                ),
+                                                NSMenuItem(
+                                                    title: "Set Gradient...",
+                                                    action: #selector(AppDelegate.setLightGradient(_:)),
+                                                    representedObject: light
+                                                ),
+                                                NSMenuItem(
+                                                    title: "Set Name...",
+                                                    action: #selector(AppDelegate.setLightName(_:)),
+                                                    representedObject: light
+                                                )
+                                            ],
+                                            [
+                                                NSMenuItem(
+                                                    title: "Remove Light",
+                                                    action: #selector(AppDelegate.removeLight(_:)),
+                                                    representedObject: light
+                                                )
+                                            ]
                                         ]
                                     )
                                 )
@@ -101,7 +117,7 @@ extension AppDelegate {
         }
         
         LIFXClient.connect(address: light.address).then { client in
-            return client.getLightState()
+            return client.light.getState()
         }.done { state in
             let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: state)))
             windowController.showWindow(self)
@@ -120,6 +136,10 @@ extension AppDelegate {
     
     @objc func addLight(_ sender: NSMenuItem) {
         print("Add light")
+    }
+    
+    @objc func removeLight(_ sender: NSMenuItem) {
+        print("Remove light")
     }
     
 }

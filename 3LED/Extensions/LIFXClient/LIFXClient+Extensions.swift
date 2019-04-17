@@ -13,6 +13,20 @@ import PromiseKit
 
 extension LIFXClient {
     
+    static func getLightStates(addresses: [String]) -> Guarantee<[Result<LightState>]> {
+        return when(
+            resolved: addresses.map { address in
+                return connect(address: address).then { client in
+                    return client.light.getState()
+                }
+            }
+        )
+    }
+    
+}
+
+extension LIFXClient {
+    
     static func connect(address: String) -> Promise<LIFXClient> {
         #warning("Validate ipv4 here")
         return connect(host: .ipv4(IPv4Address(address)!))
@@ -20,11 +34,11 @@ extension LIFXClient {
     
 }
 
-extension LIFXClient {
+extension LIFXLight {
     
-    func getLightState() -> Promise<LightState> {
-        return light.get().map { state -> LightState in
-            return LightState(light: self.light, state: state)
+    func getState() -> Promise<LightState> {
+        return get().map { state -> LightState in
+            return LightState(light: self, state: state)
         }
     }
     
