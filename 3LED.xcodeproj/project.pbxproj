@@ -14,12 +14,14 @@
 		654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */; };
 		654A76DE2266BD5200A40D31 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */; };
 		654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76E02266BFF800A40D31 /* StoryboardBased.swift */; };
-		654A76E52266C05600A40D31 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76E42266C05600A40D31 /* LightViewController.swift */; };
-		654A76E92266C07100A40D31 /* LightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A76E82266C07100A40D31 /* LightViewController.storyboard */; };
+		654A76E52266C05600A40D31 /* LightColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76E42266C05600A40D31 /* LightColorViewController.swift */; };
+		654A76E92266C07100A40D31 /* LightColorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A76E82266C07100A40D31 /* LightColorViewController.storyboard */; };
 		654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EC2266C20900A40D31 /* StatefulViewController.swift */; };
 		654A76F32266C59B00A40D31 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F22266C59B00A40D31 /* Stateful.swift */; };
 		654A76FD2266CE0800A40D31 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FC2266CE0800A40D31 /* Light.swift */; };
 		654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */; };
+		654A770A22673A7700A40D31 /* LightWaveformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A770922673A7700A40D31 /* LightWaveformViewController.swift */; };
+		654A770C22673A8E00A40D31 /* LightWaveformViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A770B22673A8E00A40D31 /* LightWaveformViewController.storyboard */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,13 +37,15 @@
 		654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenuItem+Extensions.swift"; sourceTree = "<group>"; };
 		654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		654A76E02266BFF800A40D31 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
-		654A76E42266C05600A40D31 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
-		654A76E82266C07100A40D31 /* LightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightViewController.storyboard; sourceTree = "<group>"; };
+		654A76E42266C05600A40D31 /* LightColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightColorViewController.swift; sourceTree = "<group>"; };
+		654A76E82266C07100A40D31 /* LightColorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightColorViewController.storyboard; sourceTree = "<group>"; };
 		654A76EC2266C20900A40D31 /* StatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
 		654A76F22266C59B00A40D31 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		654A76FC2266CE0800A40D31 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		654A77002266D4A200A40D31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LIFXClient+Extensions.swift"; sourceTree = "<group>"; };
+		654A770922673A7700A40D31 /* LightWaveformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWaveformViewController.swift; sourceTree = "<group>"; };
+		654A770B22673A8E00A40D31 /* LightWaveformViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightWaveformViewController.storyboard; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
 		D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.release.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,8 +168,10 @@
 		654A76EA2266C1F000A40D31 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				654A76E82266C07100A40D31 /* LightViewController.storyboard */,
-				654A76E42266C05600A40D31 /* LightViewController.swift */,
+				654A76E82266C07100A40D31 /* LightColorViewController.storyboard */,
+				654A76E42266C05600A40D31 /* LightColorViewController.swift */,
+				654A770B22673A8E00A40D31 /* LightWaveformViewController.storyboard */,
+				654A770922673A7700A40D31 /* LightWaveformViewController.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -289,8 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654A76E92266C07100A40D31 /* LightViewController.storyboard in Resources */,
+				654A76E92266C07100A40D31 /* LightColorViewController.storyboard in Resources */,
 				654177C122668DD000B5FEEA /* Assets.xcassets in Resources */,
+				654A770C22673A8E00A40D31 /* LightWaveformViewController.storyboard in Resources */,
 				654177C422668DD000B5FEEA /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,11 +356,12 @@
 				654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */,
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
+				654A770A22673A7700A40D31 /* LightWaveformViewController.swift in Sources */,
 				654A76FD2266CE0800A40D31 /* Light.swift in Sources */,
 				654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */,
 				654A76F32266C59B00A40D31 /* Stateful.swift in Sources */,
 				654A76DE2266BD5200A40D31 /* Bundle+Extensions.swift in Sources */,
-				654A76E52266C05600A40D31 /* LightViewController.swift in Sources */,
+				654A76E52266C05600A40D31 /* LightColorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

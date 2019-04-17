@@ -48,8 +48,8 @@ import LIFXClient
                                                     representedObject: light
                                                 ),
                                                 NSMenuItem(
-                                                    title: "Set Gradient...",
-                                                    action: #selector(AppDelegate.setLightGradient(_:)),
+                                                    title: "Set Waveform...",
+                                                    action: #selector(AppDelegate.setLightWaveform(_:)),
                                                     representedObject: light
                                                 ),
                                                 NSMenuItem(
@@ -119,14 +119,14 @@ extension AppDelegate {
         LIFXClient.connect(address: light.address).then { client in
             return client.light.getState()
         }.done { state in
-            let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: state)))
+            let windowController = NSWindowController(window: NSWindow(contentViewController: LightColorViewController.instantiate(state: state)))
             windowController.showWindow(self)
         }.catch { error in
             NSAlert(error: error).runModal()
         }
     }
     
-    @objc func setLightGradient(_ sender: NSMenuItem) {
+    @objc func setLightWaveform(_ sender: NSMenuItem) {
         
     }
     
