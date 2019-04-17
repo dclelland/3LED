@@ -168,7 +168,7 @@ extension AppDelegate {
             return
         }
         
-        NSAlert(prompt: "Are you sure you want to remove the light \"\(light.name)\"?", buttonTitle: "Remove Light").runModalPromise().done {
+        NSAlert(style: .critical, messageText: "Are you sure you want to remove the light \"\(light.name)\"?", actionText: "Remove Light").runModalPromise().done {
             print("Remove \(light.name)")
         }
     }

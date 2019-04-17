@@ -11,16 +11,16 @@ import PromiseKit
 
 extension NSAlert {
     
-    convenience init(message: String) {
+    convenience init(style: NSAlert.Style = .informational, messageText: String = "", informativeText: String = "") {
         self.init()
-        self.alertStyle = .informational
-        self.messageText = message
+        self.alertStyle = style
+        self.messageText = messageText
+        self.informativeText = informativeText
     }
     
-    convenience init(prompt message: String, buttonTitle: String) {
-        self.init(message: message)
-        self.alertStyle = .critical
-        self.addButton(withTitle: buttonTitle)
+    convenience init(style: NSAlert.Style = .informational, messageText: String = "", informativeText: String = "", actionText: String) {
+        self.init(style: style, messageText: messageText, informativeText: informativeText)
+        self.addButton(withTitle: actionText)
         self.addButton(withTitle: "Cancel")
     }
     
