@@ -34,6 +34,7 @@ iOS/macOS client for LIFX lightbulbs
 
 - Finish modal promise helper
 - Connect this to persistent store
+    - LIFXConnection should have an 'address' helper...
 
 ### Set Light Color
 
