@@ -52,7 +52,13 @@ class LightViewController: AsynchronousViewController<Light, LightViewController
 extension LightViewController {
     
     @IBAction func colorWellValueDidChange(_ sender: NSColorWell) {
+        guard let light = state?.result.output else {
+            return
+        }
         
+        light.light.setColor(color: sender.color).catch { error in
+            print(error)
+        }
     }
     
 }
