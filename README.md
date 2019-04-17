@@ -8,9 +8,9 @@ iOS/macOS client for LIFX lightbulbs
 
 - Initial menu configuration
     - Will need multiple request resolution
-    - Just run on startup at first (and when addresses are mutated), but then...
+        - Will need to add timeouts
+        - Just run on startup at first (and when addresses are mutated), but then...
     - Look into NSMenuDelegate and that special run loop thing
-    - Request resolution will need timeouts
     - Content tweaks:
         - Should show blanked out 'Light is offline' menu instead of 'Set color...' etc
         - Should show blanked out 'No lights added' if there are no lights added
