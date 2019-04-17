@@ -13,7 +13,7 @@ import PromiseKit
 
 class LightViewController: AsynchronousViewController<Light, LIFXLight>, StoryboardBased {
 
-    override func request(_ light: Light) -> Promise<LIFXLight> {
+    override func requestState(_ light: Light) -> Promise<LIFXLight> {
         return LIFXClient.connect(host: .ipv4(IPv4Address(light.host)!)).map { client in
             return client.light
         }

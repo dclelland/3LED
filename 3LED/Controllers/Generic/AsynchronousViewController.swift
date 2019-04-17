@@ -13,27 +13,13 @@ class AsynchronousViewController<Input, Output>: SynchronousViewController<Async
     
     var input: Input? = nil {
         didSet {
-            refresh()
+            refreshState()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        refresh()
-    }
-    
-    final func refresh() {
-        guard let input = input, isViewLoaded else {
-            return
-        }
-        
-        self.state = .loading
-        
-        request(input).done { [weak self] output in
-            self?.state = .success(output)
-        }.catch { [weak self] error in
-            self?.state = .failure(error)
-        }
+        refreshState()
     }
     
     override func refreshView(_ state: AsynchronousState<Output>) {
@@ -43,8 +29,8 @@ class AsynchronousViewController<Input, Output>: SynchronousViewController<Async
         }
     }
     
-    open func request(_ input: Input) -> Promise<Output> {
-        fatalError("Override `request(_:)` in subclasses")
+    open func requestState(_ input: Input) -> Promise<Output> {
+        return Promise(error: PMKError.cancelled)
     }
     
 }

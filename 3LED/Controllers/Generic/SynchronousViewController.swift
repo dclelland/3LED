@@ -21,14 +21,6 @@ class SynchronousViewController<State>: NSViewController, Synchronous {
         refreshView()
     }
     
-    final func refreshView() {
-        guard let state = state, isViewLoaded else {
-            return
-        }
-        
-        refreshView(state)
-    }
-    
     open func refreshView(_ state: State) {
         
     }

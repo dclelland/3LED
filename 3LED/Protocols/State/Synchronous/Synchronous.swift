@@ -14,6 +14,20 @@ protocol Synchronous: class {
     
     var state: State? { get set }
     
+    func refreshView(_ state: State)
+    
+}
+
+extension Synchronous where Self: NSViewController {
+    
+    func refreshView() {
+        guard let state = state, isViewLoaded else {
+            return
+        }
+        
+        refreshView(state)
+    }
+    
 }
 
 extension StoryboardBased where Self: NSViewController & Synchronous {

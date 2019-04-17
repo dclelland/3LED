@@ -12,7 +12,7 @@ import LIFXClient
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
