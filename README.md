@@ -6,9 +6,6 @@ iOS/macOS client for LIFX lightbulbs
 
 ### Tasks
 
-- Address persistence
-    - Set up `Persistable` protocol
-
 - Initial menu configuration
     - Will need multiple request resolution
     - Look into NSMenuDelegate and that special run loop thing
@@ -25,15 +22,14 @@ iOS/macOS client for LIFX lightbulbs
 ### Add Light
 
 - Finish modal promise helper
+- If light is already added, move it to the end
 - Set up text field validation (i.e. valid IP address)
     - Should add `try` helper to IPv4Address
     - Should also do this in promises where possible
-- Connect this to persistent store
 
 ### Remove Light
 
-- Finish modal promise helper
-- Connect this to persistent store
+- Finish menu state stuff first
     - LIFXConnection should have an 'address' helper...
 
 ### Set Light Color

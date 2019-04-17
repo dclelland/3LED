@@ -11,17 +11,24 @@ import LIFXClient
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var addresses: [String] = [
-        "192.168.1.83",
-        "192.168.1.84",
-        "192.168.1.123"
-    ]
+    var addresses = Persistent<[String]>(
+        key: "Addresses",
+        value: [
+            "192.168.1.83",
+            "192.168.1.84",
+            "192.168.1.123"
+        ]
+    ) {
+        didSet {
+            print(addresses.value)
+        }
+    }
     
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         #warning("This doesn't time out")
-        LIFXClient.getLightStates(addresses: addresses).done { results in
+        LIFXClient.getLightStates(addresses: addresses.value).done { results in
             print(results)
         }
         
@@ -156,7 +163,7 @@ extension AppDelegate {
         
         alert.accessoryView = textField
         alert.runModalPromise().done {
-            print("Add light: \(textField.stringValue)")
+            self.addresses.value.append(textField.stringValue)
         }
     }
     
@@ -172,7 +179,9 @@ extension AppDelegate {
         )
         
         alert.runModalPromise().done {
-            print("Remove \(light.name)")
+            self.addresses.value.removeAll { address in
+                address == light.address
+            }
         }
     }
     
