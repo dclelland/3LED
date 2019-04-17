@@ -4,9 +4,8 @@ iOS/macOS client for LIFX lightbulbs
 
 ## Todo
 
-- Splash screen
-- Coordinator pattern
-- Logging
-- Backgrounding
-- Network should be WiFi only and notify/refresh when it changes
-- Design UI
+- Set up window reuse
+- Find way of combining Input and Output on AsynchronousState'
+- Set up error handling and logging
+- Unify refresh/refreshView/request method names
+- Standardised IPv4Address validation
