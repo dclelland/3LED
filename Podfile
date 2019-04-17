@@ -5,6 +5,8 @@ use_frameworks!
 
 target '3LED' do
   
-    pod 'LIFXClient', '~> 1.1.0'
+    pod 'LIFXClient', '~> 1.1'
+    
+    pod 'LaunchAtLogin', '~> 2.5'
     
 end

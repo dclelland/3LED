@@ -8,6 +8,7 @@
 
 import Cocoa
 import LIFXClient
+import LaunchAtLogin
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -18,11 +19,7 @@ import LIFXClient
             "192.168.1.84",
             "192.168.1.123"
         ]
-    ) {
-        didSet {
-            print(addresses.value)
-        }
-    }
+    )
     
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
@@ -31,7 +28,6 @@ import LIFXClient
         LIFXClient.getLightStates(addresses: addresses.value).done { results in
             print(results)
         }
-        
         
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         statusItem.menu = NSMenu(
@@ -81,6 +77,13 @@ import LIFXClient
                     NSMenuItem(
                         title: "Add Light...",
                         action: #selector(AppDelegate.addLight(_:))
+                    )
+                ],
+                [
+                    NSMenuItem(
+                        title: "Launch at Login",
+                        state: LaunchAtLogin.isEnabled ? .on : .off,
+                        action: #selector(AppDelegate.toggleLaunchAtLogin(_:))
                     )
                 ],
                 [
@@ -183,6 +186,14 @@ extension AppDelegate {
                 address == light.address
             }
         }
+    }
+    
+}
+
+extension AppDelegate {
+    
+    @objc func toggleLaunchAtLogin(_ sender: NSMenuItem) {
+        LaunchAtLogin.isEnabled.toggle()
     }
     
 }
