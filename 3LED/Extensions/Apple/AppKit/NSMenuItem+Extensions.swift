@@ -10,12 +10,10 @@ import AppKit
 
 extension NSMenuItem {
     
-    convenience init(title: String, action: Selector? = nil) {
+    convenience init(title: String, state: NSControl.StateValue = .off, action: Selector? = nil, keyEquivalent: String = "", representedObject: Any? = nil, submenu: NSMenu? = nil) {
         self.init(title: title, action: action, keyEquivalent: "")
-    }
-    
-    convenience init(title: String, action: Selector? = nil, submenu: NSMenu) {
-        self.init(title: title, action: action, keyEquivalent: "")
+        self.state = state
+        self.representedObject = representedObject
         self.submenu = submenu
     }
     

@@ -10,9 +10,11 @@ import Foundation
 
 struct Light {
     
-    var host: String
+    var address: String
     
     var name: String
+    
+    var powered: Bool
     
 }
 
@@ -21,12 +23,14 @@ extension Light {
     static var all: [Light] {
         return [
             Light(
-                host: "192.168.1.83",
-                name: "Ceiling"
+                address: "192.168.1.83",
+                name: "Ceiling",
+                powered: true
             ),
             Light(
-                host: "192.168.1.84",
-                name: "Anglepoise"
+                address: "192.168.1.84",
+                name: "Anglepoise",
+                powered: false
             )
         ]
     }

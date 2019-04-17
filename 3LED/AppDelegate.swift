@@ -11,6 +11,11 @@ import LIFXClient
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
+    var addresses: [String] = [
+        "192.168.1.83",
+        "192.168.1.84"
+    ]
+    
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -23,16 +28,36 @@ import LIFXClient
                         submenu: NSMenu(
                             items: Light.all.map { light in
                                 return NSMenuItem(
-                                    title: light.host,
-                                    action: #selector(AppDelegate.openLight(_:))
+                                    title: light.name,
+                                    state: light.powered ? .on : .off,
+                                    action: #selector(AppDelegate.toggleLight(_:)),
+                                    representedObject: light,
+                                    submenu: NSMenu(
+                                        items: [
+                                            NSMenuItem(
+                                                title: "Set Color...",
+                                                action: #selector(AppDelegate.setLightColor(_:)),
+                                                representedObject: light
+                                            ),
+                                            NSMenuItem(
+                                                title: "Set Gradient...",
+                                                action: #selector(AppDelegate.setLightGradient(_:)),
+                                                representedObject: light
+                                            ),
+                                            NSMenuItem(
+                                                title: "Set Name...",
+                                                action: #selector(AppDelegate.setLightName(_:)),
+                                                representedObject: light
+                                            )
+                                        ]
+                                    )
                                 )
                             }
                         )
                     ),
                     NSMenuItem(
                         title: "Add Light...",
-                        action: #selector(AppDelegate.addLight(_:)),
-                        keyEquivalent: "l"
+                        action: #selector(AppDelegate.addLight(_:))
                     )
                 ],
                 [
@@ -50,8 +75,32 @@ import LIFXClient
 
 extension AppDelegate {
     
-    @objc func openLight(_ sender: NSMenuItem) {
-        LIFXClient.connect(address: sender.title).then { client in
+    @objc func openMenu(_ sender: NSStatusItem) {
+        
+    }
+    
+}
+
+extension AppDelegate {
+    
+    @objc func toggleLight(_ sender: NSMenuItem) {
+        guard let light = sender.representedObject as? Light else {
+            return
+        }
+        
+        LIFXClient.connect(address: light.address).then { client in
+            client.light.setPower(on: sender.state == .off)
+        }.catch { error in
+            NSAlert(error: error).runModal()
+        }
+    }
+    
+    @objc func setLightColor(_ sender: NSMenuItem) {
+        guard let light = sender.representedObject as? Light else {
+            return
+        }
+        
+        LIFXClient.connect(address: light.address).then { client in
             return client.getLightState()
         }.done { state in
             let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: state)))
@@ -59,6 +108,14 @@ extension AppDelegate {
         }.catch { error in
             NSAlert(error: error).runModal()
         }
+    }
+    
+    @objc func setLightGradient(_ sender: NSMenuItem) {
+        
+    }
+    
+    @objc func setLightName(_ sender: NSMenuItem) {
+        
     }
     
     @objc func addLight(_ sender: NSMenuItem) {
