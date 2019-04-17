@@ -14,18 +14,14 @@ protocol Stateful: class {
     
     var state: State? { get set }
     
-    func refreshView(_ state: State)
-    
 }
 
-extension Stateful where Self: NSViewController {
+extension StoryboardBased where Self: NSWindowController & Stateful {
     
-    func refreshView() {
-        guard let state = state, isViewLoaded else {
-            return
-        }
-        
-        refreshView(state)
+    static func instantiate(state: State) -> Self {
+        let windowController = instantiate()
+        windowController.state = state
+        return windowController
     }
     
 }

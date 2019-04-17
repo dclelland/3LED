@@ -119,7 +119,7 @@ extension AppDelegate {
         LIFXClient.connect(address: light.address).then { client in
             return client.light.getState()
         }.done { state in
-            let windowController = NSWindowController(window: NSWindow(contentViewController: LightColorViewController.instantiate(state: state)))
+            let windowController = LightColorWindowController.instantiate(state: state)
             windowController.showWindow(self)
         }.catch { error in
             NSAlert(error: error).runModal()

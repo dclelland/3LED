@@ -8,14 +8,13 @@
 
 import AppKit
 
-class LightColorViewController: StatefulViewController<LightState>, StoryboardBased {
+class LightColorViewController: StatefulViewController<LightState> {
     
     @IBOutlet var colorWell: NSColorWell!
     
     override func refreshView(_ state: LightState) {
         super.refreshView(state)
         
-        title = "\(state.state.label) Color"
         colorWell.color = state.state.color.color
     }
     

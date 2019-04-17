@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="21Q-lV-NsK">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="M0q-qm-ZAg">
+            <objects>
+                <windowController id="21Q-lV-NsK" customClass="LightColorWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="SOq-do-Qgl">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="21Q-lV-NsK" id="5YS-5P-y2R"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="nJw-1K-xGP" kind="relationship" relationship="window.shadowedContentViewController" id="9Qt-8r-Sh1"/>
+                    </connections>
+                </windowController>
+                <customObject id="GKt-Td-FX2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="-183"/>
+        </scene>
+        <!--Light Color View Controller-->
+        <scene sceneID="ZPT-Gu-vC3">
+            <objects>
+                <viewController id="nJw-1K-xGP" customClass="LightColorViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Tj7-rw-Kh2">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-oo-Yqn">
+                                <rect key="frame" x="20" y="227" width="44" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="colorWellValueDidChange:" target="nJw-1K-xGP" id="8S9-qZ-eZe"/>
+                                </connections>
+                            </colorWell>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="colorWell" destination="4Ek-oo-Yqn" id="UZO-Pj-glc"/>
+                    </connections>
+                </viewController>
+                <customObject id="aN4-eV-bXd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="242"/>
+        </scene>
+    </scenes>
+</document>

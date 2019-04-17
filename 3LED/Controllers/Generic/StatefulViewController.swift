@@ -26,3 +26,13 @@ class StatefulViewController<State>: NSViewController, Stateful {
     }
     
 }
+
+extension StatefulViewController {
+    
+    final func refreshView() {
+        if let state = state, isViewLoaded {
+            refreshView(state)
+        }
+    }
+    
+}
