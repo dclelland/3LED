@@ -11,14 +11,17 @@ iOS/macOS client for LIFX lightbulbs
     - Just run on startup at first (and when addresses are mutated), but then...
     - Look into NSMenuDelegate and that special run loop thing
     - Request resolution will need timeouts
-    - Should show blanked out 'Light is offline' menu instead of 'Set color...' etc
-
+    - Content tweaks:
+        - Should show blanked out 'Light is offline' menu instead of 'Set color...' etc
+        - Should show blanked out 'No lights added' if there are no lights added
+        - Should show mixed state checkmark if the light is offline; and don't attempt to toggle the power
+    
 - Set up window reuse
     - Color and gradient should be mutually exclusive
    
 - Open on startup option
 
-- Don't forget to prompt on startup to add a light, if there are no lights; and show an empty menu if there are no lights
+- Don't forget to prompt on startup to add a light, if there are no lights
 
 ### Add Light
 
