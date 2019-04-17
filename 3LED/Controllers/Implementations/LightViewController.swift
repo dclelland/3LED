@@ -7,11 +7,31 @@
 //
 
 import AppKit
+import Network
+import LIFXClient
+import PromiseKit
 
-class LightViewController: SynchronousViewController<Light>, StoryboardBased {
+class LightViewController: AsynchronousViewController<Light, LIFXLight>, StoryboardBased {
 
-    override func refreshView(_ light: Light) {
-        title = light.name
+    override func request(_ light: Light) -> Promise<LIFXLight> {
+        return LIFXClient.connect(host: .ipv4(IPv4Address(light.host)!)).map { client in
+            return client.light
+        }
+    }
+    
+    override func refreshView(_ state: AsynchronousState<LIFXLight>) {
+        super.refreshView(state)
+        
+        switch state {
+        case .ready:
+            title = "Ready"
+        case .loading:
+            title = "Loading"
+        case .success:
+            title = "Success"
+        case .failure:
+            title = "Failure"
+        }
     }
     
 }

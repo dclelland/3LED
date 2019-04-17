@@ -56,8 +56,8 @@ import LIFXClient
 extension AppDelegate {
     
     @objc func openLight(_ sender: NSMenuItem) {
-        let light = Light(name: sender.title, host: "192.168.1.83")
-        let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: light)))
+        let light = Light(name: "Test", host: sender.title)
+        let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(input: light)))
         windowController.showWindow(self)
     }
     

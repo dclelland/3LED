@@ -30,7 +30,7 @@ class SynchronousViewController<State>: NSViewController, Synchronous {
     }
     
     open func refreshView(_ state: State) {
-        fatalError("Override `refreshView(_:)` in subclasses")
+        
     }
     
 }
