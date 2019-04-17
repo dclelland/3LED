@@ -9,10 +9,10 @@
         <scene sceneID="M0q-qm-ZAg">
             <objects>
                 <windowController id="21Q-lV-NsK" customClass="LightColorWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="SOq-do-Qgl">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="SOq-do-Qgl" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
+                        <windowPositionMask key="initialPositionMask" rightStrut="YES" topStrut="YES"/>
+                        <rect key="contentRect" x="1948" y="1015" width="114" height="84"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
                         <connections>
                             <outlet property="delegate" destination="21Q-lV-NsK" id="5YS-5P-y2R"/>
@@ -31,18 +31,27 @@
             <objects>
                 <viewController id="nJw-1K-xGP" customClass="LightColorViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Tj7-rw-Kh2">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="114" height="84"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-oo-Yqn">
-                                <rect key="frame" x="20" y="227" width="44" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-oo-Yqn">
+                                <rect key="frame" x="12" y="12" width="90" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="aeb-DO-Y5Z"/>
+                                    <constraint firstAttribute="height" constant="60" id="cw8-py-Jiq"/>
+                                </constraints>
                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="colorWellValueDidChange:" target="nJw-1K-xGP" id="8S9-qZ-eZe"/>
                                 </connections>
                             </colorWell>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Ek-oo-Yqn" secondAttribute="trailing" constant="12" id="2G0-Dl-1ZM"/>
+                            <constraint firstItem="4Ek-oo-Yqn" firstAttribute="top" secondItem="Tj7-rw-Kh2" secondAttribute="top" constant="12" id="JQ5-Eb-lYQ"/>
+                            <constraint firstItem="4Ek-oo-Yqn" firstAttribute="leading" secondItem="Tj7-rw-Kh2" secondAttribute="leading" constant="12" id="qBL-0f-hCh"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ek-oo-Yqn" secondAttribute="bottom" constant="12" id="wiw-yX-OLQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="colorWell" destination="4Ek-oo-Yqn" id="UZO-Pj-glc"/>
@@ -50,7 +59,7 @@
                 </viewController>
                 <customObject id="aN4-eV-bXd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="242"/>
+            <point key="canvasLocation" x="5" y="34"/>
         </scene>
     </scenes>
 </document>

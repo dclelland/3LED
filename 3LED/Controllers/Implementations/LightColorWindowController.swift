@@ -11,7 +11,7 @@ import AppKit
 class LightColorWindowController: StatefulWindowController<LightState>, StoryboardBased {
     
     override func refreshWindow(_ state: LightState) {
-        window?.title = "\(state.state.label) Color"
+        window?.title = state.state.label
     }
     
 }

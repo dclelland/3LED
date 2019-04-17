@@ -11,7 +11,7 @@ import Foundation
 class LightWaveformWindowController: StatefulWindowController<LightState>, StoryboardBased {
     
     override func refreshWindow(_ state: LightState) {
-        window?.title = "\(state.state.label) Waveform"
+        window?.title = state.state.label
     }
     
 }
