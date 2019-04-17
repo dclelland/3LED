@@ -11,7 +11,7 @@ import Network
 import LIFXClient
 import PromiseKit
 
-class LightViewController: SynchronousViewController<LightState>, StoryboardBased {
+class LightViewController: StatefulViewController<LightState>, StoryboardBased {
     
     @IBOutlet var colorWell: NSColorWell!
     

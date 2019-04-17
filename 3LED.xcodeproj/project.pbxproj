@@ -16,8 +16,8 @@
 		654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76E02266BFF800A40D31 /* StoryboardBased.swift */; };
 		654A76E52266C05600A40D31 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76E42266C05600A40D31 /* LightViewController.swift */; };
 		654A76E92266C07100A40D31 /* LightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A76E82266C07100A40D31 /* LightViewController.storyboard */; };
-		654A76ED2266C20900A40D31 /* SynchronousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EC2266C20900A40D31 /* SynchronousViewController.swift */; };
-		654A76F32266C59B00A40D31 /* Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F22266C59B00A40D31 /* Synchronous.swift */; };
+		654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EC2266C20900A40D31 /* StatefulViewController.swift */; };
+		654A76F32266C59B00A40D31 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F22266C59B00A40D31 /* Stateful.swift */; };
 		654A76FD2266CE0800A40D31 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FC2266CE0800A40D31 /* Light.swift */; };
 		654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
@@ -37,8 +37,8 @@
 		654A76E02266BFF800A40D31 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
 		654A76E42266C05600A40D31 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
 		654A76E82266C07100A40D31 /* LightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightViewController.storyboard; sourceTree = "<group>"; };
-		654A76EC2266C20900A40D31 /* SynchronousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronousViewController.swift; sourceTree = "<group>"; };
-		654A76F22266C59B00A40D31 /* Synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronous.swift; sourceTree = "<group>"; };
+		654A76EC2266C20900A40D31 /* StatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
+		654A76F22266C59B00A40D31 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		654A76FC2266CE0800A40D31 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		654A77002266D4A200A40D31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LIFXClient+Extensions.swift"; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		654A76DF2266BFE700A40D31 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				654A76F62266C5A900A40D31 /* Synchronous */,
+				654A76F62266C5A900A40D31 /* Stateful */,
 				654A76F02266C58800A40D31 /* Reusable */,
 			);
 			path = Protocols;
@@ -173,7 +173,7 @@
 		654A76EB2266C1F700A40D31 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
-				654A76EC2266C20900A40D31 /* SynchronousViewController.swift */,
+				654A76EC2266C20900A40D31 /* StatefulViewController.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -186,13 +186,13 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
-		654A76F62266C5A900A40D31 /* Synchronous */ = {
+		654A76F62266C5A900A40D31 /* Stateful */ = {
 			isa = PBXGroup;
 			children = (
-				654A76F22266C59B00A40D31 /* Synchronous.swift */,
+				654A76F22266C59B00A40D31 /* Stateful.swift */,
 			);
-			name = Synchronous;
-			path = State/Synchronous;
+			name = Stateful;
+			path = State/Stateful;
 			sourceTree = "<group>";
 		};
 		654A77042266EB3A00A40D31 /* Apple */ = {
@@ -350,8 +350,8 @@
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
 				654A76FD2266CE0800A40D31 /* Light.swift in Sources */,
-				654A76ED2266C20900A40D31 /* SynchronousViewController.swift in Sources */,
-				654A76F32266C59B00A40D31 /* Synchronous.swift in Sources */,
+				654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */,
+				654A76F32266C59B00A40D31 /* Stateful.swift in Sources */,
 				654A76DE2266BD5200A40D31 /* Bundle+Extensions.swift in Sources */,
 				654A76E52266C05600A40D31 /* LightViewController.swift in Sources */,
 			);

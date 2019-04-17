@@ -1,5 +1,5 @@
 //
-//  SynchronousViewController.swift
+//  StatefulViewController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 17/04/19.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class SynchronousViewController<State>: NSViewController, Synchronous {
+class StatefulViewController<State>: NSViewController, Stateful {
     
     var state: State? {
         didSet {

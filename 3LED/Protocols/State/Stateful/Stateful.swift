@@ -1,5 +1,5 @@
 //
-//  Synchronous.swift
+//  Stateful.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 17/04/19.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-protocol Synchronous: class {
+protocol Stateful: class {
     
     associatedtype State
     
@@ -18,7 +18,7 @@ protocol Synchronous: class {
     
 }
 
-extension Synchronous where Self: NSViewController {
+extension Stateful where Self: NSViewController {
     
     func refreshView() {
         guard let state = state, isViewLoaded else {
@@ -30,7 +30,7 @@ extension Synchronous where Self: NSViewController {
     
 }
 
-extension StoryboardBased where Self: NSViewController & Synchronous {
+extension StoryboardBased where Self: NSViewController & Stateful {
     
     static func instantiate(state: State) -> Self {
         let viewController = instantiate()
