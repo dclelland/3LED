@@ -14,6 +14,7 @@ iOS/macOS client for LIFX lightbulbs
 - Menu should be refreshed from scratch when opening the utility; can we use the menu validation functions? Can this be done asynchronously?
    - Map promises and use a resolved state to enable/disable menu items 
    - Only thing saved should be a list of addresses, in User defaults
+- Don't forget to prompt on startup to add a light, if there are no lights; and show an empty menu if there are no lights
 - Add submenu for each light
    - Power
    - Set Color...

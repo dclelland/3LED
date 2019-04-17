@@ -135,11 +135,26 @@ extension AppDelegate {
     }
     
     @objc func addLight(_ sender: NSMenuItem) {
-        print("Add light")
+//        NSAlert *alert = [[NSAlert alloc] init];
+//        [alert setMessageText:@"Permission denied, sudo password?"];
+//        [alert addButtonWithTitle:@"Ok"];
+//        [alert addButtonWithTitle:@"Cancel"];
+//
+//        NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+//        [input setStringValue:@""];
+//
+//        [alert setAccessoryView:input];
+//        NSInteger button = [alert runModal];
+//        if (button == NSAlertFirstButtonReturn) {
+//            password = [input stringValue];
+//        } else if (button == NSAlertSecondButtonReturn) {
+//
+//        }
     }
     
     @objc func removeLight(_ sender: NSMenuItem) {
         print("Remove light")
+        #warning("This should be an NSAlert modal promise")
     }
     
 }
