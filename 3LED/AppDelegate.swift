@@ -145,6 +145,17 @@ extension AppDelegate {
     }
     
     @objc func addLight(_ sender: NSMenuItem) {
+        let alert = NSAlert(
+            messageText: "Add a light",
+            informativeText: "Lights are referenced via their IP address on the local network, for example \"192.168.0.1\".",
+            actionText: "Add Light"
+        )
+        
+        alert.accessoryView = NSTextField(string: "")
+        
+        alert.runModalPromise().done {
+            print("Add light")
+        }
 //        NSAlert *alert = [[NSAlert alloc] init];
 //        [alert setMessageText:@"Permission denied, sudo password?"];
 //        [alert addButtonWithTitle:@"Ok"];
@@ -167,7 +178,13 @@ extension AppDelegate {
             return
         }
         
-        NSAlert(style: .critical, messageText: "Are you sure you want to remove the light \"\(light.name)\"?", actionText: "Remove Light").runModalPromise().done {
+        let alert = NSAlert(
+            style: .critical,
+            messageText: "Are you sure you want to remove the light \"\(light.name)\"?",
+            actionText: "Remove Light"
+        )
+        
+        alert.runModalPromise().done {
             print("Remove \(light.name)")
         }
     }
