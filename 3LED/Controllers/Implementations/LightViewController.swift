@@ -11,23 +11,15 @@ import Network
 import LIFXClient
 import PromiseKit
 
-struct LightViewControllerState {
-    
-    var light: LIFXLight
-    
-    var lightState: LIFXLight.State
-    
-}
-
-class LightViewController: SynchronousViewController<LightViewControllerState>, StoryboardBased {
+class LightViewController: SynchronousViewController<LightState>, StoryboardBased {
     
     @IBOutlet var colorWell: NSColorWell!
     
-    override func refreshView(_ state: LightViewControllerState) {
+    override func refreshView(_ state: LightState) {
         super.refreshView(state)
         
-        title = state.lightState.label
-        colorWell.color = state.lightState.color.color
+        title = state.state.label
+        colorWell.color = state.state.color.color
     }
     
 }
@@ -36,7 +28,7 @@ extension LightViewController {
     
     @IBAction func colorWellValueDidChange(_ sender: NSColorWell) {
         state?.light.setColor(color: sender.color).catch { error in
-            print(error)
+            NSAlert(error: error).runModal()
         }
     }
     

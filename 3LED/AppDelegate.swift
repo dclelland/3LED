@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Network
 import LIFXClient
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
@@ -52,10 +51,8 @@ import LIFXClient
 extension AppDelegate {
     
     @objc func openLight(_ sender: NSMenuItem) {
-        LIFXClient.connect(host: .ipv4(IPv4Address(sender.title)!)).then { client in
-            return client.light.get().map { lightState -> LightViewControllerState in
-                return LightViewControllerState(light: client.light, lightState: lightState)
-            }
+        LIFXClient.connect(address: sender.title).then { client in
+            return client.getLightState()
         }.done { state in
             let windowController = NSWindowController(window: NSWindow(contentViewController: LightViewController.instantiate(state: state)))
             windowController.showWindow(self)
