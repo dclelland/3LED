@@ -18,11 +18,28 @@ struct AsynchronousState<Input, Output> {
         case success(Output)
         case failure(Error)
         
+        var output: Output? {
+            get {
+                guard case .success(let output) = self else {
+                    return nil
+                }
+                
+                return output
+            }
+            set {
+                guard let output = newValue else {
+                    return
+                }
+                
+                self = .success(output)
+            }
+        }
+        
     }
     
     let input: Input
     
-    let result: Result<Output>
+    var result: Result<Output>
     
 }
 

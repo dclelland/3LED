@@ -11,15 +11,27 @@ import Network
 import LIFXClient
 import PromiseKit
 
-class LightViewController: AsynchronousViewController<Light, LIFXLight>, StoryboardBased {
+struct LightViewControllerOutput {
     
-    override func requestState(_ state: AsynchronousState<Light, LIFXLight>) -> Promise<LIFXLight> {
-        return LIFXClient.connect(host: .ipv4(IPv4Address(state.input.host)!)).map { client in
-            return client.light
+    var light: LIFXLight
+    
+    var lightState: LIFXLight.State
+    
+}
+
+class LightViewController: AsynchronousViewController<Light, LightViewControllerOutput>, StoryboardBased {
+    
+    @IBOutlet var colorWell: NSColorWell!
+    
+    override func requestState(_ state: AsynchronousState<Light, LightViewControllerOutput>) -> Promise<LightViewControllerOutput> {
+        return LIFXClient.connect(host: .ipv4(IPv4Address(state.input.host)!)).then { client in
+            return client.light.get().map { lightState -> LightViewControllerOutput in
+                return LightViewControllerOutput(light: client.light, lightState: lightState)
+            }
         }
     }
     
-    override func refreshView(_ state: AsynchronousState<Light, LIFXLight>) {
+    override func refreshView(_ state: AsynchronousState<Light, LightViewControllerOutput>) {
         super.refreshView(state)
         
         switch state.result {
@@ -27,11 +39,20 @@ class LightViewController: AsynchronousViewController<Light, LIFXLight>, Storybo
             title = state.input.name
         case .loading:
             title = state.input.name
-        case .success(let light):
-            title = "Success"
+        case .success(let output):
+            title = output.lightState.label
+            colorWell.color = output.lightState.color.color
         case .failure:
-            title = "Failure"
+            title = state.input.name
         }
+    }
+    
+}
+
+extension LightViewController {
+    
+    @IBAction func colorWellValueDidChange(_ sender: NSColorWell) {
+        
     }
     
 }

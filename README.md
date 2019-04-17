@@ -6,3 +6,8 @@ iOS/macOS client for LIFX lightbulbs
 
 - Set up window reuse
 - Standardised IPv4Address validation
+
+### LightViewController
+
+- Rename light
+- Hide window until loaded...? Or hide color well
