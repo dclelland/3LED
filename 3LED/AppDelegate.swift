@@ -147,30 +147,17 @@ extension AppDelegate {
     @objc func addLight(_ sender: NSMenuItem) {
         let alert = NSAlert(
             messageText: "Add a light",
-            informativeText: "Lights are referenced via their IP address on the local network, for example \"192.168.0.1\".",
+            informativeText: "Lights are referenced via their IP address on the local network.",
             actionText: "Add Light"
         )
         
-        alert.accessoryView = NSTextField(string: "")
+        let textField = NSTextField(frame: NSRect(x: 0.0, y: 0.0, width: 240.0, height: 22.0))
+        textField.placeholderString = "192.168.0.1"
         
+        alert.accessoryView = textField
         alert.runModalPromise().done {
-            print("Add light")
+            print("Add light: \(textField.stringValue)")
         }
-//        NSAlert *alert = [[NSAlert alloc] init];
-//        [alert setMessageText:@"Permission denied, sudo password?"];
-//        [alert addButtonWithTitle:@"Ok"];
-//        [alert addButtonWithTitle:@"Cancel"];
-//
-//        NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
-//        [input setStringValue:@""];
-//
-//        [alert setAccessoryView:input];
-//        NSInteger button = [alert runModal];
-//        if (button == NSAlertFirstButtonReturn) {
-//            password = [input stringValue];
-//        } else if (button == NSAlertSecondButtonReturn) {
-//
-//        }
     }
     
     @objc func removeLight(_ sender: NSMenuItem) {
