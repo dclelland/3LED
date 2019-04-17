@@ -10,9 +10,9 @@ import AppKit
 
 protocol Synchronous: class {
     
-    associatedtype State: SynchronousState
+    associatedtype State
     
-    var state: State { get set }
+    var state: State? { get set }
     
 }
 

@@ -17,7 +17,7 @@ protocol Asynchronous: Synchronous where State == AsynchronousState<Output> {
     
     var input: Input? { get set }
     
-    func request(input: Input) -> Promise<Output>
+    func request(_ input: Input) -> Promise<Output>
 
 }
 

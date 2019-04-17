@@ -29,15 +29,15 @@ class AsynchronousViewController<Input, Output>: SynchronousViewController<Async
         
         self.state = .loading
         
-        request(input: input).done { [weak self] output in
+        request(input).done { [weak self] output in
             self?.state = .success(output)
         }.catch { [weak self] error in
             self?.state = .failure(error)
         }
     }
     
-    open func request(input: Input) -> Promise<Output> {
-        fatalError("Override `request(input:)` in subclasses")
+    open func request(_ input: Input) -> Promise<Output> {
+        fatalError("Override `request(_:)` in subclasses")
     }
     
 }

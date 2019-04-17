@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AsynchronousState<Output>: SynchronousState {
+enum AsynchronousState<Output> {
     
     case ready
     case loading

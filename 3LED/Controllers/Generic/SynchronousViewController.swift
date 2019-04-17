@@ -8,9 +8,9 @@
 
 import AppKit
 
-class SynchronousViewController<State: SynchronousState>: NSViewController, Synchronous {
+class SynchronousViewController<State>: NSViewController, Synchronous {
     
-    var state: State = .init() {
+    var state: State? {
         didSet {
             refreshView()
         }
@@ -22,7 +22,7 @@ class SynchronousViewController<State: SynchronousState>: NSViewController, Sync
     }
     
     final func refreshView() {
-        guard isViewLoaded else {
+        guard let state = state, isViewLoaded else {
             return
         }
         
@@ -30,7 +30,7 @@ class SynchronousViewController<State: SynchronousState>: NSViewController, Sync
     }
     
     open func refreshView(_ state: State) {
-        fatalError("Override `refreshView(state:)` in subclasses")
+        fatalError("Override `refreshView(_:)` in subclasses")
     }
     
 }
