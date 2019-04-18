@@ -19,22 +19,36 @@ import LaunchAtLogin
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
-        
-        LIFXClient.getConnections(addresses: addresses.value).done { connections in
-            self.statusItem.menu = NSMenu(
-                items: connections.map { connection in
-                    .connection(connection: connection)
-                } + [
-                    .addLight(),
-                    .separator(),
-                    .launchAtLogin(),
-                    .separator(),
-                    .quit()
-                ]
-            )
-        }
+        statusItem.menu = NSMenu(
+            items: [
+                .addLight(),
+                .separator(),
+                .launchAtLogin(),
+                .separator(),
+                .quit()
+            ]
+        )
+        statusItem.menu?.delegate = self
     }
 
+}
+
+extension AppDelegate: NSMenuDelegate {
+    
+    func menuNeedsUpdate(_ menu: NSMenu) {
+        LIFXClient.getConnections(addresses: addresses.value).done { connections in
+            menu.items = connections.map { connection in
+                .connection(connection: connection)
+            } + [
+                .addLight(),
+                .separator(),
+                .launchAtLogin(),
+                .separator(),
+                .quit()
+            ]
+        }
+    }
+    
 }
 
 extension AppDelegate {
