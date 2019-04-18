@@ -13,13 +13,7 @@ import LaunchAtLogin
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var addresses = Persistent<[String]>(
-        key: "Addresses",
-        value: [
-            "192.168.1.83",
-            "192.168.1.84"
-        ]
-    )
+    var addresses = Persistent<[String]>(key: "Addresses", value: [])
     
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
@@ -72,7 +66,7 @@ import LaunchAtLogin
                                         )
                                     case .disconnected(let address, let error):
                                         return NSMenuItem(
-                                            title: "\(address) (Disconnected)",
+                                            title: address,
                                             state: .mixed,
                                             submenu: NSMenu(
                                                 separatedItems: [
@@ -195,7 +189,7 @@ extension AppDelegate {
         
         let alert = NSAlert(
             style: .critical,
-            messageText: "Are you sure you want to remove the light at address \"\(address)\"?",
+            messageText: "Are you sure you want to remove the light with address \"\(address)\"?",
             actionText: "Remove Light"
         )
 
