@@ -21,6 +21,7 @@ import LaunchAtLogin
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         statusItem.menu = NSMenu(
             items: [
+                .connecting(),
                 .addLight(),
                 .separator(),
                 .launchAtLogin(),
@@ -131,7 +132,7 @@ extension AppDelegate {
 
         alert.runModalPromise().done {
             self.addresses.value.removeAll { $0 == address }
-        }
+        }.cauterize()
     }
     
 }
@@ -145,6 +146,13 @@ extension AppDelegate {
 }
 
 extension NSMenuItem {
+    
+    static func connecting() -> NSMenuItem {
+        return NSMenuItem(
+            title: "Connecting...",
+            enabled: false
+        )
+    }
     
     static func connection(connection: Connection) -> NSMenuItem {
         switch connection {
