@@ -26,54 +26,53 @@ import LaunchAtLogin
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         
-        LIFXClient.getLightStates(addresses: addresses.value).done { results in
+        LIFXClient.getConnections(addresses: addresses.value).done { connections in
             self.statusItem.menu = NSMenu(
                 separatedItems: [
                     [
                         NSMenuItem(
                             title: "Lights",
                             submenu: NSMenu(
-                                items: results.map { result in
-                                    switch result {
-                                    case .fulfilled(let state):
+                                items: connections.map { connection in
+                                    switch connection {
+                                    case .connected(let address, let light):
                                         return NSMenuItem(
-                                            title: state.state.label,
-                                            state: state.state.power == 0 ? .off : .on,
+                                            title: light.state.label,
+                                            state: light.state.power == 0 ? .off : .on,
                                             action: #selector(AppDelegate.setLightPower(_:)),
-                                            representedObject: state,
+                                            representedObject: light,
                                             submenu: NSMenu(
                                                 separatedItems: [
                                                     [
                                                         NSMenuItem(
                                                             title: "Set Color...",
                                                             action: #selector(AppDelegate.setLightColor(_:)),
-                                                            representedObject: state
+                                                            representedObject: light
                                                         ),
                                                         NSMenuItem(
                                                             title: "Set Waveform...",
                                                             action: #selector(AppDelegate.setLightWaveform(_:)),
-                                                            representedObject: state
+                                                            representedObject: light
                                                         ),
                                                         NSMenuItem(
                                                             title: "Set Label...",
                                                             action: #selector(AppDelegate.setLightLabel(_:)),
-                                                            representedObject: state
+                                                            representedObject: light
                                                         )
                                                     ],
                                                     [
                                                         NSMenuItem(
                                                             title: "Remove Light",
                                                             action: #selector(AppDelegate.removeLight(_:)),
-                                                            representedObject: state
+                                                            representedObject: address
                                                         )
                                                     ]
                                                 ]
                                             )
                                         )
-                                    case .rejected(let error):
-                                        #warning("Display IP address here, also fix 'remove light'")
+                                    case .disconnected(let address, let error):
                                         return NSMenuItem(
-                                            title: "Light disconnected",
+                                            title: "\(address) (Disconnected)",
                                             state: .mixed,
                                             submenu: NSMenu(
                                                 separatedItems: [
@@ -86,7 +85,8 @@ import LaunchAtLogin
                                                     [
                                                         NSMenuItem(
                                                             title: "Remove Light",
-                                                            action: #selector(AppDelegate.removeLight(_:))
+                                                            action: #selector(AppDelegate.removeLight(_:)),
+                                                            representedObject: address
                                                         )
                                                     ]
                                                 ]
@@ -124,17 +124,17 @@ import LaunchAtLogin
 extension AppDelegate {
     
     @objc func setLightPower(_ sender: NSMenuItem) {
-        guard let state = sender.representedObject as? LightState else {
+        guard let light = sender.representedObject as? Light else {
             return
         }
         
         switch sender.state {
         case .on:
-            state.light.setPower(on: false).catch { error in
+            light.client.light.setPower(on: false).catch { error in
                 NSAlert(error: error).runModal()
             }
         case .off:
-            state.light.setPower(on: true).catch { error in
+            light.client.light.setPower(on: true).catch { error in
                 NSAlert(error: error).runModal()
             }
         default:
@@ -143,26 +143,30 @@ extension AppDelegate {
     }
     
     @objc func setLightColor(_ sender: NSMenuItem) {
-        guard let state = sender.representedObject as? LightState else {
+        guard let light = sender.representedObject as? Light else {
             return
         }
         
-        let windowController = LightColorWindowController.instantiate(state: state)
+        let windowController = LightColorWindowController.instantiate(state: light)
         windowController.showWindow(self)
     }
     
     @objc func setLightWaveform(_ sender: NSMenuItem) {
-        guard let state = sender.representedObject as? LightState else {
+        guard let light = sender.representedObject as? Light else {
             return
         }
         
-        let windowController = LightWaveformWindowController.instantiate(state: state)
+        let windowController = LightWaveformWindowController.instantiate(state: light)
         windowController.showWindow(self)
     }
     
     @objc func setLightLabel(_ sender: NSMenuItem) {
         
     }
+    
+}
+
+extension AppDelegate {
     
     @objc func addLight(_ sender: NSMenuItem) {
         let alert = NSAlert(
@@ -185,21 +189,19 @@ extension AppDelegate {
     }
     
     @objc func removeLight(_ sender: NSMenuItem) {
-        guard let state = sender.representedObject as? LightState else {
+        guard let address = sender.representedObject as? String else {
             return
         }
         
-//        let alert = NSAlert(
-//            style: .critical,
-//            messageText: "Are you sure you want to remove the light at address \"\(state.address)\"?",
-//            actionText: "Remove Light"
-//        )
-//
-//        alert.runModalPromise().done {
-//            self.addresses.value.removeAll { address in
-//                address == light.address
-//            }
-//        }
+        let alert = NSAlert(
+            style: .critical,
+            messageText: "Are you sure you want to remove the light at address \"\(address)\"?",
+            actionText: "Remove Light"
+        )
+
+        alert.runModalPromise().done {
+            self.addresses.value.removeAll { $0 == address }
+        }
     }
     
 }

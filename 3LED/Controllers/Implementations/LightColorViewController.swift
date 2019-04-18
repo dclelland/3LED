@@ -8,14 +8,14 @@
 
 import AppKit
 
-class LightColorViewController: StatefulViewController<LightState> {
+class LightColorViewController: StatefulViewController<Light> {
     
     @IBOutlet var colorWell: NSColorWell!
     
-    override func refreshView(_ state: LightState) {
-        super.refreshView(state)
+    override func refreshView(_ light: Light) {
+        super.refreshView(light)
         
-        colorWell.color = state.state.color.color
+        colorWell.color = light.state.color.color
     }
     
 }
@@ -23,11 +23,11 @@ class LightColorViewController: StatefulViewController<LightState> {
 extension LightColorViewController {
     
     @IBAction func setColor(_ sender: Any?) {
-        guard let state = state else {
+        guard let light = state else {
             return
         }
         
-        state.light.setColor(color: colorWell.color).catch { error in
+        light.client.light.setColor(color: colorWell.color).catch { error in
             NSAlert(error: error).runModal()
         }
     }

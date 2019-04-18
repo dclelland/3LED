@@ -11,44 +11,53 @@ import Network
 import LIFXClient
 import PromiseKit
 
+enum Connection {
+    
+    case connected(address: String, light: Light)
+    case disconnected(address: String, error: Error)
+    
+}
+
+struct Light {
+    
+    var client: LIFXClient
+    var state: LIFXLight.State
+    
+}
+
 extension LIFXClient {
     
-    static func getLightStates(addresses: [String]) -> Guarantee<[Result<LightState>]> {
-        return when(
-            resolved: addresses.map { address in
-                return connect(address: address).then { client in
-                    return client.light.getState()
+    static func getConnections(addresses: [String]) -> Guarantee<[Connection]> {
+        let promises = addresses.map { address in
+            return connect(address: address).then { client in
+                return client.light.get().map { state in
+                    return Light(client: client, state: state)
                 }
             }
-        )
+        }
+        
+        return when(resolved: promises).map { results in
+            return zip(addresses, results).map { address, result in
+                switch result {
+                case .fulfilled(let light):
+                    return .connected(address: address, light: light)
+                case .rejected(let error):
+                    return .disconnected(address: address, error: error)
+                }
+            }
+        }
     }
     
 }
 
 extension LIFXClient {
+    
+    #warning("Need to add timeout here")
     
     static func connect(address: String) -> Promise<LIFXClient> {
         return firstly {
             return connect(host: .ipv4(try IPv4Address(address)))
         }
     }
-    
-}
-
-extension LIFXLight {
-    
-    func getState() -> Promise<LightState> {
-        return get().map { state -> LightState in
-            return LightState(light: self, state: state)
-        }
-    }
-    
-}
-
-struct LightState {
-    
-    var light: LIFXLight
-    
-    var state: LIFXLight.State
     
 }

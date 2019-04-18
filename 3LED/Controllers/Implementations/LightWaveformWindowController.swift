@@ -8,10 +8,10 @@
 
 import AppKit
 
-class LightWaveformWindowController: StatefulWindowController<LightState>, StoryboardBased {
+class LightWaveformWindowController: StatefulWindowController<Light>, StoryboardBased {
     
-    override func refreshWindow(_ state: LightState) {
-        window?.title = state.state.label
+    override func refreshWindow(_ light: Light) {
+        window?.title = light.state.label
     }
     
 }
