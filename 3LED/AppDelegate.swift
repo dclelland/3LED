@@ -18,7 +18,7 @@ import LaunchAtLogin
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        statusItem.button?.image =  imageLiteral(resourceName: "MenuIcon")
+        statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
         
         LIFXClient.getConnections(addresses: addresses.value).done { connections in
             self.statusItem.menu = NSMenu(
