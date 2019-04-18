@@ -19,7 +19,6 @@
 		654A76E92266C07100A40D31 /* LightColorWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A76E82266C07100A40D31 /* LightColorWindowController.storyboard */; };
 		654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76EC2266C20900A40D31 /* StatefulViewController.swift */; };
 		654A76F32266C59B00A40D31 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76F22266C59B00A40D31 /* Stateful.swift */; };
-		654A76FD2266CE0800A40D31 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A76FC2266CE0800A40D31 /* Light.swift */; };
 		654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */; };
 		654A770A22673A7700A40D31 /* LightWaveformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A770922673A7700A40D31 /* LightWaveformViewController.swift */; };
 		654A770C22673A8E00A40D31 /* LightWaveformWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A770B22673A8E00A40D31 /* LightWaveformWindowController.storyboard */; };
@@ -48,7 +47,6 @@
 		654A76E82266C07100A40D31 /* LightColorWindowController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightColorWindowController.storyboard; sourceTree = "<group>"; };
 		654A76EC2266C20900A40D31 /* StatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
 		654A76F22266C59B00A40D31 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
-		654A76FC2266CE0800A40D31 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		654A77002266D4A200A40D31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		654A77062266EB5600A40D31 /* LIFXClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LIFXClient+Extensions.swift"; sourceTree = "<group>"; };
 		654A770922673A7700A40D31 /* LightWaveformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWaveformViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		654177CF2266A31000B5FEEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				654A76FC2266CE0800A40D31 /* Light.swift */,
 				652E7C502267534700260647 /* Persistent.swift */,
 			);
 			path = Models;
@@ -406,7 +403,6 @@
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
 				654A771D226742B400A40D31 /* LightWaveformWindowController.swift in Sources */,
 				654A770A22673A7700A40D31 /* LightWaveformViewController.swift in Sources */,
-				654A76FD2266CE0800A40D31 /* Light.swift in Sources */,
 				654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */,
 				652E7C512267534700260647 /* Persistent.swift in Sources */,
 				654A76F32266C59B00A40D31 /* Stateful.swift in Sources */,

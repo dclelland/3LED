@@ -17,141 +17,150 @@ import LaunchAtLogin
         key: "Addresses",
         value: [
             "192.168.1.83",
-            "192.168.1.84",
-            "192.168.1.123"
+            "192.168.1.84"
         ]
     )
     
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        #warning("This doesn't time out")
-        LIFXClient.getLightStates(addresses: addresses.value).done { results in
-            print(results)
-        }
-        
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
-        statusItem.menu = NSMenu(
-            separatedItems: [
-                [
-                    NSMenuItem(
-                        title: "Lights",
-                        submenu: NSMenu(
-                            items: Light.all.map { light in
-                                return NSMenuItem(
-                                    title: light.name,
-                                    state: light.powered ? .on : .off,
-                                    action: #selector(AppDelegate.toggleLight(_:)),
-                                    representedObject: light,
-                                    submenu: NSMenu(
-                                        separatedItems: [
-                                            [
-                                                NSMenuItem(
-                                                    title: "Set Color...",
-                                                    action: #selector(AppDelegate.setLightColor(_:)),
-                                                    representedObject: light
-                                                ),
-                                                NSMenuItem(
-                                                    title: "Set Waveform...",
-                                                    action: #selector(AppDelegate.setLightWaveform(_:)),
-                                                    representedObject: light
-                                                ),
-                                                NSMenuItem(
-                                                    title: "Set Name...",
-                                                    action: #selector(AppDelegate.setLightName(_:)),
-                                                    representedObject: light
-                                                )
-                                            ],
-                                            [
-                                                NSMenuItem(
-                                                    title: "Remove Light",
-                                                    action: #selector(AppDelegate.removeLight(_:)),
-                                                    representedObject: light
-                                                )
-                                            ]
-                                        ]
-                                    )
-                                )
-                            }
-                        )
-                    ),
-                    NSMenuItem(
-                        title: "Add Light...",
-                        action: #selector(AppDelegate.addLight(_:))
-                    )
-                ],
-                [
-                    NSMenuItem(
-                        title: "Launch at Login",
-                        state: LaunchAtLogin.isEnabled ? .on : .off,
-                        action: #selector(AppDelegate.toggleLaunchAtLogin(_:))
-                    )
-                ],
-                [
-                    NSMenuItem(
-                        title: "Quit \(Bundle.main.name)",
-                        action: #selector(NSApplication.terminate(_:))
-                    )
-                ]
-            ]
-        )
-    }
-
-}
-
-extension AppDelegate {
-    
-    @objc func openMenu(_ sender: NSStatusItem) {
         
+        LIFXClient.getLightStates(addresses: addresses.value).done { results in
+            self.statusItem.menu = NSMenu(
+                separatedItems: [
+                    [
+                        NSMenuItem(
+                            title: "Lights",
+                            submenu: NSMenu(
+                                items: results.map { result in
+                                    switch result {
+                                    case .fulfilled(let state):
+                                        return NSMenuItem(
+                                            title: state.state.label,
+                                            state: state.state.power == 0 ? .off : .on,
+                                            action: #selector(AppDelegate.setLightPower(_:)),
+                                            representedObject: state,
+                                            submenu: NSMenu(
+                                                separatedItems: [
+                                                    [
+                                                        NSMenuItem(
+                                                            title: "Set Color...",
+                                                            action: #selector(AppDelegate.setLightColor(_:)),
+                                                            representedObject: state
+                                                        ),
+                                                        NSMenuItem(
+                                                            title: "Set Waveform...",
+                                                            action: #selector(AppDelegate.setLightWaveform(_:)),
+                                                            representedObject: state
+                                                        ),
+                                                        NSMenuItem(
+                                                            title: "Set Label...",
+                                                            action: #selector(AppDelegate.setLightLabel(_:)),
+                                                            representedObject: state
+                                                        )
+                                                    ],
+                                                    [
+                                                        NSMenuItem(
+                                                            title: "Remove Light",
+                                                            action: #selector(AppDelegate.removeLight(_:)),
+                                                            representedObject: state
+                                                        )
+                                                    ]
+                                                ]
+                                            )
+                                        )
+                                    case .rejected(let error):
+                                        #warning("Display IP address here, also fix 'remove light'")
+                                        return NSMenuItem(
+                                            title: "Light disconnected",
+                                            state: .mixed,
+                                            submenu: NSMenu(
+                                                separatedItems: [
+                                                    [
+                                                        NSMenuItem(
+                                                            title: error.localizedDescription,
+                                                            enabled: false
+                                                        )
+                                                    ],
+                                                    [
+                                                        NSMenuItem(
+                                                            title: "Remove Light",
+                                                            action: #selector(AppDelegate.removeLight(_:))
+                                                        )
+                                                    ]
+                                                ]
+                                            )
+                                        )
+                                    }
+                                }
+                            )
+                        ),
+                        NSMenuItem(
+                            title: "Add Light...",
+                            action: #selector(AppDelegate.addLight(_:))
+                        )
+                    ],
+                    [
+                        NSMenuItem(
+                            title: "Launch at Login",
+                            state: LaunchAtLogin.isEnabled ? .on : .off,
+                            action: #selector(AppDelegate.toggleLaunchAtLogin(_:))
+                        )
+                    ],
+                    [
+                        NSMenuItem(
+                            title: "Quit \(Bundle.main.name)",
+                            action: #selector(NSApplication.terminate(_:))
+                        )
+                    ]
+                ]
+            )
+        }
     }
-    
+
 }
 
 extension AppDelegate {
     
-    @objc func toggleLight(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+    @objc func setLightPower(_ sender: NSMenuItem) {
+        guard let state = sender.representedObject as? LightState else {
             return
         }
         
-        LIFXClient.connect(address: light.address).then { client in
-            client.light.setPower(on: sender.state == .off)
-        }.catch { error in
-            NSAlert(error: error).runModal()
+        switch sender.state {
+        case .on:
+            state.light.setPower(on: false).catch { error in
+                NSAlert(error: error).runModal()
+            }
+        case .off:
+            state.light.setPower(on: true).catch { error in
+                NSAlert(error: error).runModal()
+            }
+        default:
+            return
         }
     }
     
     @objc func setLightColor(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+        guard let state = sender.representedObject as? LightState else {
             return
         }
         
-        LIFXClient.connect(address: light.address).then { client in
-            return client.light.getState()
-        }.done { state in
-            let windowController = LightColorWindowController.instantiate(state: state)
-            windowController.showWindow(self)
-        }.catch { error in
-            NSAlert(error: error).runModal()
-        }
+        let windowController = LightColorWindowController.instantiate(state: state)
+        windowController.showWindow(self)
     }
     
     @objc func setLightWaveform(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+        guard let state = sender.representedObject as? LightState else {
             return
         }
         
-        LIFXClient.connect(address: light.address).then { client in
-            return client.light.getState()
-        }.done { state in
-            let windowController = LightWaveformWindowController.instantiate(state: state)
-            windowController.showWindow(self)
-        }.catch { error in
-            NSAlert(error: error).runModal()
-        }
+        let windowController = LightWaveformWindowController.instantiate(state: state)
+        windowController.showWindow(self)
     }
     
-    @objc func setLightName(_ sender: NSMenuItem) {
+    @objc func setLightLabel(_ sender: NSMenuItem) {
         
     }
     
@@ -176,21 +185,21 @@ extension AppDelegate {
     }
     
     @objc func removeLight(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+        guard let state = sender.representedObject as? LightState else {
             return
         }
         
-        let alert = NSAlert(
-            style: .critical,
-            messageText: "Are you sure you want to remove the light at address \"\(light.address)\"?",
-            actionText: "Remove Light"
-        )
-        
-        alert.runModalPromise().done {
-            self.addresses.value.removeAll { address in
-                address == light.address
-            }
-        }
+//        let alert = NSAlert(
+//            style: .critical,
+//            messageText: "Are you sure you want to remove the light at address \"\(state.address)\"?",
+//            actionText: "Remove Light"
+//        )
+//
+//        alert.runModalPromise().done {
+//            self.addresses.value.removeAll { address in
+//                address == light.address
+//            }
+//        }
     }
     
 }
