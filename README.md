@@ -9,8 +9,6 @@ iOS/macOS client for LIFX lightbulbs
 - Initial menu configuration
     - Look into NSMenuDelegate and that special run loop thing
         - Will need to add timeouts to connection request
-    - Content tweaks:
-        - Should show blanked out 'No lights added' if there are no lights added
     
 - Set up window reuse
     - Color and gradient should be mutually exclusive
