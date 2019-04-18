@@ -22,86 +22,14 @@ import LaunchAtLogin
         
         LIFXClient.getConnections(addresses: addresses.value).done { connections in
             self.statusItem.menu = NSMenu(
-                separatedItems: [
-                    connections.map { connection in
-                        switch connection {
-                        case .connected(let address, let light):
-                            return NSMenuItem(
-                                title: light.state.label,
-                                state: light.state.power == 0 ? .off : .on,
-                                action: #selector(AppDelegate.setLightPower(_:)),
-                                representedObject: light,
-                                submenu: NSMenu(
-                                    separatedItems: [
-                                        [
-                                            NSMenuItem(
-                                                title: "Set Color...",
-                                                action: #selector(AppDelegate.setLightColor(_:)),
-                                                representedObject: light
-                                            ),
-                                            NSMenuItem(
-                                                title: "Set Waveform...",
-                                                action: #selector(AppDelegate.setLightWaveform(_:)),
-                                                representedObject: light
-                                            ),
-                                            NSMenuItem(
-                                                title: "Set Label...",
-                                                action: #selector(AppDelegate.setLightLabel(_:)),
-                                                representedObject: light
-                                            )
-                                        ],
-                                        [
-                                            NSMenuItem(
-                                                title: "Remove Light",
-                                                action: #selector(AppDelegate.removeLight(_:)),
-                                                representedObject: address
-                                            )
-                                        ]
-                                    ]
-                                )
-                            )
-                        case .disconnected(let address, let error):
-                            return NSMenuItem(
-                                title: address,
-                                state: .mixed,
-                                submenu: NSMenu(
-                                    separatedItems: [
-                                        [
-                                            NSMenuItem(
-                                                title: error.localizedDescription,
-                                                enabled: false
-                                            )
-                                        ],
-                                        [
-                                            NSMenuItem(
-                                                title: "Remove Light",
-                                                action: #selector(AppDelegate.removeLight(_:)),
-                                                representedObject: address
-                                            )
-                                        ]
-                                    ]
-                                )
-                            )
-                        }
-                    } + [
-                        NSMenuItem(
-                            title: "Add Light...",
-                            action: #selector(AppDelegate.addLight(_:))
-                        )
-                    ],
-                    [
-                        NSMenuItem(
-                            title: "Launch at Login",
-                            state: LaunchAtLogin.isEnabled ? .on : .off,
-                            action: #selector(AppDelegate.toggleLaunchAtLogin(_:))
-                        )
-                    ],
-                    [
-                        NSMenuItem(
-                            title: "Quit \(Bundle.main.name)",
-                            action: #selector(NSApplication.terminate(_:))
-                        )
-                    ]
+                items: connections.map { connection in
+                    .connection(connection: connection)
+                } + [
+                    .addLight(),
+                    .separator(),
+                    .launchAtLogin(),
+                    .separator(),
+                    .quit()
                 ]
             )
         }
@@ -198,6 +126,120 @@ extension AppDelegate {
     
     @objc func toggleLaunchAtLogin(_ sender: NSMenuItem) {
         LaunchAtLogin.isEnabled.toggle()
+    }
+    
+}
+
+extension NSMenuItem {
+    
+    static func connection(connection: Connection) -> NSMenuItem {
+        switch connection {
+        case .connected(let address, let light):
+            return .connected(address: address, light: light)
+        case .disconnected(let address, let error):
+            return .disconnected(address: address, error: error)
+        }
+    }
+    
+    static func connected(address: String, light: Light) -> NSMenuItem {
+        return NSMenuItem(
+            title: light.state.label,
+            state: light.state.power == 0 ? .off : .on,
+            action: #selector(AppDelegate.setLightPower(_:)),
+            representedObject: light,
+            submenu: NSMenu(
+                items: [
+                    .setLightColor(light: light),
+                    .setLightWaveform(light: light),
+                    .setLightLabel(light: light),
+                    .separator(),
+                    .removeLight(address: address)
+                ]
+            )
+        )
+    }
+    
+    static func disconnected(address: String, error: Error) -> NSMenuItem {
+        return NSMenuItem(
+            title: address,
+            state: .mixed,
+            submenu: NSMenu(
+                items: [
+                    NSMenuItem(
+                        title: error.localizedDescription,
+                        enabled: false
+                    ),
+                    .separator(),
+                    .removeLight(address: address)
+                ]
+            )
+        )
+    }
+    
+}
+
+extension NSMenuItem {
+    
+    static func setLightColor(light: Light) -> NSMenuItem {
+        return NSMenuItem(
+            title: "Set Color...",
+            action: #selector(AppDelegate.setLightColor(_:)),
+            representedObject: light
+        )
+    }
+    
+    static func setLightWaveform(light: Light) -> NSMenuItem {
+        return NSMenuItem(
+            title: "Set Waveform...",
+            action: #selector(AppDelegate.setLightWaveform(_:)),
+            representedObject: light
+        )
+    }
+    
+    static func setLightLabel(light: Light) -> NSMenuItem {
+        return NSMenuItem(
+            title: "Set Label...",
+            action: #selector(AppDelegate.setLightLabel(_:)),
+            representedObject: light
+        )
+    }
+    
+}
+
+extension NSMenuItem {
+    
+    static func addLight() -> NSMenuItem {
+        return NSMenuItem(
+            title: "Add Light...",
+            action: #selector(AppDelegate.addLight(_:))
+        )
+    }
+    
+    static func removeLight(address: String) -> NSMenuItem {
+        return NSMenuItem(
+            title: "Remove Light",
+            action: #selector(AppDelegate.removeLight(_:)),
+            representedObject: address
+        )
+    }
+    
+}
+
+extension NSMenuItem {
+    
+    static func launchAtLogin() -> NSMenuItem {
+        return NSMenuItem(
+            title: "Launch at Login",
+            state: LaunchAtLogin.isEnabled ? .on : .off,
+            action: #selector(AppDelegate.toggleLaunchAtLogin(_:))
+        )
+    }
+    
+    static func quit() -> NSMenuItem {
+        return NSMenuItem(
+            title: "Quit \(Bundle.main.name)",
+            action: #selector(NSApplication.terminate(_:))
+        )
     }
     
 }

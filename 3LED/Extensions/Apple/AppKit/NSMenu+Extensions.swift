@@ -15,11 +15,4 @@ extension NSMenu {
         self.items = items
     }
     
-    convenience init(title: String = "", separatedItems: [[NSMenuItem]]) {
-        self.init(title: title)
-        self.items = separatedItems.reduce([]) { result, items in
-            return result.isEmpty ? items : result + [NSMenuItem.separator()] + items
-        }
-    }
-    
 }
