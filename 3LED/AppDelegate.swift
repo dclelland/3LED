@@ -18,78 +18,72 @@ import LaunchAtLogin
     let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
+        statusItem.button?.image =  imageLiteral(resourceName: "MenuIcon")
         
         LIFXClient.getConnections(addresses: addresses.value).done { connections in
             self.statusItem.menu = NSMenu(
                 separatedItems: [
-                    [
-                        NSMenuItem(
-                            title: "Lights",
-                            submenu: NSMenu(
-                                items: connections.map { connection in
-                                    switch connection {
-                                    case .connected(let address, let light):
-                                        return NSMenuItem(
-                                            title: light.state.label,
-                                            state: light.state.power == 0 ? .off : .on,
-                                            action: #selector(AppDelegate.setLightPower(_:)),
-                                            representedObject: light,
-                                            submenu: NSMenu(
-                                                separatedItems: [
-                                                    [
-                                                        NSMenuItem(
-                                                            title: "Set Color...",
-                                                            action: #selector(AppDelegate.setLightColor(_:)),
-                                                            representedObject: light
-                                                        ),
-                                                        NSMenuItem(
-                                                            title: "Set Waveform...",
-                                                            action: #selector(AppDelegate.setLightWaveform(_:)),
-                                                            representedObject: light
-                                                        ),
-                                                        NSMenuItem(
-                                                            title: "Set Label...",
-                                                            action: #selector(AppDelegate.setLightLabel(_:)),
-                                                            representedObject: light
-                                                        )
-                                                    ],
-                                                    [
-                                                        NSMenuItem(
-                                                            title: "Remove Light",
-                                                            action: #selector(AppDelegate.removeLight(_:)),
-                                                            representedObject: address
-                                                        )
-                                                    ]
-                                                ]
+                    connections.map { connection in
+                        switch connection {
+                        case .connected(let address, let light):
+                            return NSMenuItem(
+                                title: light.state.label,
+                                state: light.state.power == 0 ? .off : .on,
+                                action: #selector(AppDelegate.setLightPower(_:)),
+                                representedObject: light,
+                                submenu: NSMenu(
+                                    separatedItems: [
+                                        [
+                                            NSMenuItem(
+                                                title: "Set Color...",
+                                                action: #selector(AppDelegate.setLightColor(_:)),
+                                                representedObject: light
+                                            ),
+                                            NSMenuItem(
+                                                title: "Set Waveform...",
+                                                action: #selector(AppDelegate.setLightWaveform(_:)),
+                                                representedObject: light
+                                            ),
+                                            NSMenuItem(
+                                                title: "Set Label...",
+                                                action: #selector(AppDelegate.setLightLabel(_:)),
+                                                representedObject: light
                                             )
-                                        )
-                                    case .disconnected(let address, let error):
-                                        return NSMenuItem(
-                                            title: address,
-                                            state: .mixed,
-                                            submenu: NSMenu(
-                                                separatedItems: [
-                                                    [
-                                                        NSMenuItem(
-                                                            title: error.localizedDescription,
-                                                            enabled: false
-                                                        )
-                                                    ],
-                                                    [
-                                                        NSMenuItem(
-                                                            title: "Remove Light",
-                                                            action: #selector(AppDelegate.removeLight(_:)),
-                                                            representedObject: address
-                                                        )
-                                                    ]
-                                                ]
+                                        ],
+                                        [
+                                            NSMenuItem(
+                                                title: "Remove Light",
+                                                action: #selector(AppDelegate.removeLight(_:)),
+                                                representedObject: address
                                             )
-                                        )
-                                    }
-                                }
+                                        ]
+                                    ]
+                                )
                             )
-                        ),
+                        case .disconnected(let address, let error):
+                            return NSMenuItem(
+                                title: address,
+                                state: .mixed,
+                                submenu: NSMenu(
+                                    separatedItems: [
+                                        [
+                                            NSMenuItem(
+                                                title: error.localizedDescription,
+                                                enabled: false
+                                            )
+                                        ],
+                                        [
+                                            NSMenuItem(
+                                                title: "Remove Light",
+                                                action: #selector(AppDelegate.removeLight(_:)),
+                                                representedObject: address
+                                            )
+                                        ]
+                                    ]
+                                )
+                            )
+                        }
+                    } + [
                         NSMenuItem(
                             title: "Add Light...",
                             action: #selector(AppDelegate.addLight(_:))
