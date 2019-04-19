@@ -1,6 +1,6 @@
 # 3LED
 
-iOS/macOS client for LIFX lightbulbs
+macOS client for LIFX lightbulbs
 
 ## Todo
 
