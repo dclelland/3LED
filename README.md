@@ -23,6 +23,11 @@ macOS client for LIFX lightbulbs
 - Set light waveform
     - Finish this view controller and explore how waveform setting should work
 
+### Testing
+
+- Launch at login
+    - Archive binary and test this
+
 ### Features
 
 - Can we add keyboard shortcuts?
