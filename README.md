@@ -12,6 +12,8 @@ iOS/macOS client for LIFX lightbulbs
     
 - Set up window reuse
     - Color and gradient should be mutually exclusive
+    
+- Set up correct initial window positions
 
 - Don't forget to prompt on startup to add a light, if there are no lights
 
