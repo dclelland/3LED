@@ -14,12 +14,6 @@ iOS/macOS client for LIFX lightbulbs
 
 - Don't forget to prompt on startup to add a light, if there are no lights
 
-### Add Light/Remove Light
-
-- Finish alert promise helpers
-   - Regular alert
-   - Alert with text field
-
 ### Set Light Color
 
 - Is this finished?
@@ -27,10 +21,6 @@ iOS/macOS client for LIFX lightbulbs
 ### Set Light Waveform
 
 - Finish this view controller and explore how waveform setting should work
-
-### Set Light Name
-
-- Reuse standard alert with text field
 
 ### Bugs
 

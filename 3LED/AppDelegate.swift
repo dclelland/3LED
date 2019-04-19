@@ -95,7 +95,26 @@ extension AppDelegate {
     }
     
     @objc func setLightLabel(_ sender: NSMenuItem) {
+        guard let light = sender.representedObject as? Light else {
+            return
+        }
         
+        NSAlert.textField(
+            text: .init(
+                message: "Set light label"
+            ),
+            textField: .init(
+                text: light.state.label,
+                placeholder: "Label"
+            ),
+            button: .init(
+                title: "Set Label"
+            )
+        ).then { label in
+            return light.client.device.setLabel(label: label)
+        }.catch { error in
+            NSAlert(error: error).runModal()
+        }
     }
     
 }
@@ -103,18 +122,19 @@ extension AppDelegate {
 extension AppDelegate {
     
     @objc func addLight(_ sender: NSMenuItem) {
-        let textField = NSTextField(frame: NSRect(x: 0.0, y: 0.0, width: 240.0, height: 22.0))
-        textField.placeholderString = "192.168.0.1"
-        
-        let alert = NSAlert(
-            messageText: "Add a light",
-            informativeText: "Lights are referenced via their IP address on the local network.",
-            accessoryView: textField,
-            actionText: "Add Light"
-        )
-        
-        alert.runModalPromise().map {
-            return String(describing: try IPv4Address(textField.stringValue))
+        NSAlert.textField(
+            text: .init(
+                message: "Add a light",
+                information: "Lights are referenced via their IP address on the local network."
+            ),
+            textField: .init(
+                placeholder: "192.168.0.1"
+            ),
+            button: .init(
+                title: "Add Light"
+            )
+        ).map { address in
+            return String(describing: try IPv4Address(address))
         }.done { address in
             self.addresses.value.removeAll { $0 == address }
             self.addresses.value.append(address)
@@ -128,13 +148,15 @@ extension AppDelegate {
             return
         }
         
-        let alert = NSAlert(
+        NSAlert.action(
             style: .critical,
-            messageText: "Are you sure you want to remove the light with address \"\(address)\"?",
-            actionText: "Remove Light"
-        )
-
-        alert.runModalPromise().done {
+            text: .init(
+                message: "Are you sure you want to remove the light with address \"\(address)\"?"
+            ),
+            button: .init(
+                title: "Remove Light"
+            )
+        ).done {
             self.addresses.value.removeAll { $0 == address }
         }.cauterize()
     }
