@@ -12,15 +12,13 @@ iOS/macOS client for LIFX lightbulbs
     
 - Set up correct initial window positions
 
-- Don't forget to prompt on startup to add a light, if there are no lights
+### Design
 
-### Set Light Color
+- Set light color
+    - Is this finished?
 
-- Is this finished?
-
-### Set Light Waveform
-
-- Finish this view controller and explore how waveform setting should work
+- Set light waveform
+    - Finish this view controller and explore how waveform setting should work
 
 ### Bugs
 
