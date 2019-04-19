@@ -14,15 +14,11 @@ iOS/macOS client for LIFX lightbulbs
 
 - Don't forget to prompt on startup to add a light, if there are no lights
 
-### Add Light
+### Add Light/Remove Light
 
-- Finish modal promise helper
-- If light is already added, move it to the end
-
-### Remove Light
-
-- Finish menu state stuff first
-    - LIFXConnection should have an 'address' helper...
+- Finish alert promise helpers
+   - Regular alert
+   - Alert with text field
 
 ### Set Light Color
 

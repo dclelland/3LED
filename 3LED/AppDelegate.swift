@@ -114,9 +114,10 @@ extension AppDelegate {
         alert.accessoryView = textField
         
         alert.runModalPromise().map {
-            return try IPv4Address(textField.stringValue)
+            return String(describing: try IPv4Address(textField.stringValue))
         }.done { address in
-            self.addresses.value.append(String(describing: address))
+            self.addresses.value.removeAll { $0 == address }
+            self.addresses.value.append(address)
         }.catch { error in
             NSAlert(error: error).runModal()
         }
