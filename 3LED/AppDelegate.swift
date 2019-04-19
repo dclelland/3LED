@@ -103,15 +103,15 @@ extension AppDelegate {
 extension AppDelegate {
     
     @objc func addLight(_ sender: NSMenuItem) {
+        let textField = NSTextField(frame: NSRect(x: 0.0, y: 0.0, width: 240.0, height: 22.0))
+        textField.placeholderString = "192.168.0.1"
+        
         let alert = NSAlert(
             messageText: "Add a light",
             informativeText: "Lights are referenced via their IP address on the local network.",
+            accessoryView: textField,
             actionText: "Add Light"
         )
-        
-        let textField = NSTextField(frame: NSRect(x: 0.0, y: 0.0, width: 240.0, height: 22.0))
-        textField.placeholderString = "192.168.0.1"
-        alert.accessoryView = textField
         
         alert.runModalPromise().map {
             return String(describing: try IPv4Address(textField.stringValue))
