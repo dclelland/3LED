@@ -23,3 +23,9 @@ macOS client for LIFX lightbulbs
 ### Bugs
 
 - getHue:saturation:brightness:alpha: not valid for the NSColor NSCalibratedWhiteColorSpace
+
+### Features
+
+- Can we add keyboard shortcuts?
+
+- Look at adding a scene manager
