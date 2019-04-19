@@ -26,12 +26,16 @@ extension StoryboardBased where Self: NSWindowController & Stateful {
     
 }
 
-extension StoryboardBased where Self: NSViewController & Stateful {
+extension StoryboardBased where Self: NSWindowController & Stateful, Self.State: Equatable {
     
-    static func instantiate(state: State) -> Self {
-        let viewController = instantiate()
-        viewController.state = state
-        return viewController
+    static func first(state: State) -> Self? {
+        return first { windowController in
+            return windowController.state == state
+        }
+    }
+    
+    static func firstOrInstantiate(state: State) -> Self {
+        return first(state: state) ?? instantiate(state: state)
     }
     
 }

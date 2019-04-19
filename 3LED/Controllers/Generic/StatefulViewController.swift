@@ -8,7 +8,7 @@
 
 import AppKit
 
-class StatefulViewController<State>: NSViewController, Stateful {
+class StatefulViewController<State>: ViewController, Stateful {
     
     var state: State? {
         didSet {

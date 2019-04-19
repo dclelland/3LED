@@ -34,14 +34,14 @@ extension StoryboardBased where Self: NSWindowController {
     
 }
 
-extension StoryboardBased where Self: NSViewController {
+extension StoryboardBased where Self: NSWindowController {
     
-    static func instantiate() -> Self {
-        let viewController = sceneStoryboard.instantiateInitialController()
-        guard let typedViewController = viewController as? Self else {
-            fatalError("The initialController of '\(sceneStoryboard)' is not of class '\(self)'")
-        }
-        return typedViewController
+    static func first(where predicate: (Self) throws -> Bool) rethrows -> Self? {
+        return try NSApplication.shared.windowControllers.firstCast(where: predicate)
+    }
+    
+    static func firstOrInstantiate(where predicate: (Self) throws -> Bool) rethrows -> Self? {
+        return try first(where: predicate) ?? instantiate()
     }
     
 }

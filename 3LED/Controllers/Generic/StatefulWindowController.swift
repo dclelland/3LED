@@ -8,7 +8,7 @@
 
 import AppKit
 
-class StatefulWindowController<State>: NSWindowController, Stateful {
+class StatefulWindowController<State>: WindowController, Stateful {
     
     var state: State? {
         get {

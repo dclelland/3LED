@@ -18,10 +18,14 @@ enum Connection {
     
 }
 
-struct Light {
+struct Light: Equatable {
     
     var client: LIFXClient
     var state: LIFXLight.State
+    
+    static func == (lhs: Light, rhs: Light) -> Bool {
+        return lhs.client.connection.endpoint == rhs.client.connection.endpoint
+    }
     
 }
 

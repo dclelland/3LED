@@ -15,7 +15,7 @@ import LaunchAtLogin
     
     var addresses = Persistent<[String]>(key: "Addresses", value: [])
     
-    let statusItem: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem.button?.image = #imageLiteral(resourceName: "MenuIcon")
@@ -83,8 +83,7 @@ extension AppDelegate {
             return
         }
         
-        let windowController = LightColorWindowController.instantiate(state: light)
-        windowController.showWindow(self)
+        LightColorWindowController.firstOrInstantiate(state: light).showWindow(self)
     }
     
     @objc func setLightWaveform(_ sender: NSMenuItem) {
@@ -92,8 +91,7 @@ extension AppDelegate {
             return
         }
         
-        let windowController = LightWaveformWindowController.instantiate(state: light)
-        windowController.showWindow(self)
+        LightWaveformWindowController.firstOrInstantiate(state: light).showWindow(self)
     }
     
     @objc func setLightLabel(_ sender: NSMenuItem) {
