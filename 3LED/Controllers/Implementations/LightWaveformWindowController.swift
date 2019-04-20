@@ -10,7 +10,14 @@ import AppKit
 
 class LightWaveformWindowController: StatefulWindowController<Light>, StoryboardBased {
     
+    override func windowDidLoad() {
+        super.windowDidLoad()
+        
+        shouldCascadeWindows = true
+    }
+    
     override func refreshWindow(_ light: Light) {
+        windowFrameAutosaveName = "\(light.state.label) Waveform"
         window?.title = light.state.label
     }
     

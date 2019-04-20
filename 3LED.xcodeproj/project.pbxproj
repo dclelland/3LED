@@ -12,7 +12,6 @@
 		6537B2D822699782000860AB /* NSApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537B2D722699782000860AB /* NSApplication+Extensions.swift */; };
 		6537B2DB226997A9000860AB /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537B2DA226997A9000860AB /* WindowController.swift */; };
 		6537B2DD226997B1000860AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537B2DC226997B1000860AB /* ViewController.swift */; };
-		6537B2E1226B519B000860AB /* NSScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537B2E0226B519B000860AB /* NSScreen+Extensions.swift */; };
 		654177BD22668DCD00B5FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654177BC22668DCD00B5FEEA /* AppDelegate.swift */; };
 		654177C122668DD000B5FEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654177C022668DD000B5FEEA /* Assets.xcassets */; };
 		654177C422668DD000B5FEEA /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654177C222668DD000B5FEEA /* App.storyboard */; };
@@ -42,7 +41,6 @@
 		6537B2D722699782000860AB /* NSApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSApplication+Extensions.swift"; sourceTree = "<group>"; };
 		6537B2DA226997A9000860AB /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		6537B2DC226997B1000860AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6537B2E0226B519B000860AB /* NSScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScreen+Extensions.swift"; sourceTree = "<group>"; };
 		654177B922668DCD00B5FEEA /* 3LED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3LED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654177BC22668DCD00B5FEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654177C022668DD000B5FEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				6537B2D722699782000860AB /* NSApplication+Extensions.swift */,
 				654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */,
 				654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */,
-				6537B2E0226B519B000860AB /* NSScreen+Extensions.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -421,7 +418,6 @@
 				654A771B2267425300A40D31 /* LightColorViewController.swift in Sources */,
 				6537B2DB226997A9000860AB /* WindowController.swift in Sources */,
 				654A77072266EB5600A40D31 /* LIFXClient+Extensions.swift in Sources */,
-				6537B2E1226B519B000860AB /* NSScreen+Extensions.swift in Sources */,
 				654177DA2266B83A00B5FEEA /* NSMenu+Extensions.swift in Sources */,
 				654177DC2266B84600B5FEEA /* NSMenuItem+Extensions.swift in Sources */,
 				6589113322675C5400525C66 /* IPv4Address+Extensions.swift in Sources */,

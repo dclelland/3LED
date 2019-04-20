@@ -13,18 +13,12 @@ class LightColorWindowController: StatefulWindowController<Light>, StoryboardBas
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        if let window = window, let screen = window.screen {
-            window.setFrameOrigin(
-                NSPoint(
-                    x: screen.desktopFrame.maxX - window.frame.width - 20.0,
-                    y: screen.desktopFrame.maxY - window.frame.height - 20.0
-                )
-            )
-        }
+        shouldCascadeWindows = true
     }
     
     override func refreshWindow(_ light: Light) {
-        window?.title = light.state.label
+        windowFrameAutosaveName = "\(light.state.label) Color"
+        window?.title = "\(light.state.label) Color"
     }
     
 }
