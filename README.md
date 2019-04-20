@@ -21,7 +21,6 @@ macOS client for LIFX lightbulbs
 ### Testing
 
 - Launch at login
-    - Archive binary and test this
 
 ### Features
 
