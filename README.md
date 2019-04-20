@@ -15,8 +15,6 @@ macOS client for LIFX lightbulbs
     
 ### Design
 
-- Set up correct initial window positions
-
 - Set light color
     - Is this finished?
 
