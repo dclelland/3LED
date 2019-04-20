@@ -83,7 +83,8 @@ extension AppDelegate {
             return
         }
         
-        LightColorWindowController.firstOrInstantiate(state: light).showWindow(self)
+        let windowController = LightColorWindowController.firstOrInstantiate(state: light)
+        windowController.showWindow(self)
     }
     
     @objc func setLightWaveform(_ sender: NSMenuItem) {
@@ -91,7 +92,8 @@ extension AppDelegate {
             return
         }
         
-        LightWaveformWindowController.firstOrInstantiate(state: light).showWindow(self)
+        let windowController = LightWaveformWindowController.firstOrInstantiate(state: light)
+        windowController.showWindow(self)
     }
     
     @objc func setLightLabel(_ sender: NSMenuItem) {
