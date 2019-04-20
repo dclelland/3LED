@@ -9,9 +9,6 @@ macOS client for LIFX lightbulbs
 - Menu configuration
     - Look into NSMenuDelegate and that special run loop thing
     - Will need to add timeouts to connection request
-
-- Colors
-    - getHue:saturation:brightness:alpha: not valid for the NSColor NSCalibratedWhiteColorSpace
     
 ### Design
 

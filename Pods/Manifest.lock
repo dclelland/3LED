@@ -1,6 +1,6 @@
 PODS:
   - LaunchAtLogin (2.5.0)
-  - LIFXClient (1.1.0):
+  - LIFXClient (1.1.1):
     - PromiseKit (~> 6.8.4)
   - PromiseKit (6.8.4):
     - PromiseKit/CorePromise (= 6.8.4)
@@ -22,9 +22,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   LaunchAtLogin: 550b0cbbdaf1b13f87a0fab6a3f8e2fbafe067fe
-  LIFXClient: 911fd344a6a063f325cd6ff971f83dbd957bc70f
+  LIFXClient: f5bb908c964c34c8f0f689a6dfdfb7333bbc3240
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
 
-PODFILE CHECKSUM: 8c4c79bc813aeb3a676b1931f468e200a0fabd91
+PODFILE CHECKSUM: d0ef12f04b304569d29406cd0816cc8446b45c5a
 
 COCOAPODS: 1.7.0.beta.3
