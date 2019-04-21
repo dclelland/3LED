@@ -45,7 +45,7 @@ extension AppDelegate: NSMenuDelegate {
 
 extension AppDelegate {
     
-    func refreshMenu() {
+    private func refreshMenu() {
         LIFXClient.getConnections(addresses: addresses.value).done { connections in
             self.statusItem.menu?.items = connections.map { connection in
                 .connection(connection: connection)
