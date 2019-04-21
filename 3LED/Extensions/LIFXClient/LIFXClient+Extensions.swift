@@ -31,9 +31,9 @@ struct Light: Equatable {
 
 extension LIFXClient {
     
-    static func getConnections(addresses: [String]) -> Guarantee<[Connection]> {
+    static func getConnections(addresses: [String], timeout seconds: TimeInterval) -> Guarantee<[Connection]> {
         let promises = addresses.map { address in
-            return getConnection(address: address)
+            return getLight(address: address).timeout(seconds: seconds)
         }
         
         return when(resolved: promises).map { results in
@@ -48,7 +48,11 @@ extension LIFXClient {
         }
     }
     
-    static func getConnection(address: String) -> Promise<Light> {
+}
+
+extension LIFXClient {
+    
+    static func getLight(address: String) -> Promise<Light> {
         return firstly {
             return connect(host: .ipv4(try IPv4Address(address)))
         }.then { client in

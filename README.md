@@ -8,7 +8,6 @@ macOS client for LIFX lightbulbs
 
 - Menu configuration
     - Look into NSMenuDelegate and that special run loop thing
-    - Will need to add timeouts to connection request
 
 ### Testing
 
