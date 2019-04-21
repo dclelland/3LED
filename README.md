@@ -4,10 +4,6 @@ macOS client for LIFX lightbulbs
 
 ## Todo
 
-### Features
-
-- Keyboard shortcuts
-
 ### Bugs
 
 - Menu configuration
@@ -20,5 +16,6 @@ macOS client for LIFX lightbulbs
 
 ### Wishlist
 
+- Keyboard shortcuts
 - Scene manager
 - Waveform editing
