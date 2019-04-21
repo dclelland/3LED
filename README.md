@@ -30,4 +30,4 @@ Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ---
 
-Just a quick note: 3LED itself is a paid app, but I provide the source code free of charge as a learning resource. I ask that you kindly don't put clones of 3LED in the App Store.
+Just a quick note: While 3LED is on the App Store, I provide the source code free of charge as a learning resource. I ask that you kindly don't put clones of 3LED in the App Store.
