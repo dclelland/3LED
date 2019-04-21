@@ -45,7 +45,7 @@
 		654177C022668DD000B5FEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		654177C322668DD000B5FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/App.storyboard; sourceTree = "<group>"; };
 		654177C522668DD000B5FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		654177C622668DD000B5FEEA /* _LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _LED.entitlements; sourceTree = "<group>"; };
+		654177C622668DD000B5FEEA /* 3LED.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3LED.entitlements; sourceTree = "<group>"; };
 		654177D92266B83A00B5FEEA /* NSMenu+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+Extensions.swift"; sourceTree = "<group>"; };
 		654177DB2266B84600B5FEEA /* NSMenuItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenuItem+Extensions.swift"; sourceTree = "<group>"; };
 		654A76DD2266BD5200A40D31 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				654177C522668DD000B5FEEA /* Info.plist */,
-				654177C622668DD000B5FEEA /* _LED.entitlements */,
+				654177C622668DD000B5FEEA /* 3LED.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -569,7 +569,7 @@
 			baseConfigurationReference = BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/_LED.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/3LED.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
@@ -578,7 +578,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.protonome.-LED";
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.3LED;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -589,7 +589,7 @@
 			baseConfigurationReference = D94F92E442930C2EE9B83D79 /* Pods-3LED.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/_LED.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "3LED/Supporting Files/3LED.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SP382Y6YUY;
@@ -598,7 +598,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.protonome.-LED";
+				PRODUCT_BUNDLE_IDENTIFIER = com.protonome.3LED;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
