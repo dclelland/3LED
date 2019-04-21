@@ -23,6 +23,10 @@ import LaunchAtLogin
         statusItem.menu?.delegate = self
         
         refreshMenu()
+        
+        if addresses.value.isEmpty {
+            addLight(self)
+        }
     }
 
 }
@@ -59,12 +63,12 @@ extension AppDelegate {
 
 extension AppDelegate {
     
-    @objc func setLightPower(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+    @objc func setLightPower(_ sender: Any?) {
+        guard let menuItem = sender as? NSMenuItem, let light = menuItem.representedObject as? Light else {
             return
         }
         
-        switch sender.state {
+        switch menuItem.state {
         case .on:
             light.client.light.setPower(on: false).catch { error in
                 NSAlert(error: error).runModal()
@@ -78,8 +82,8 @@ extension AppDelegate {
         }
     }
     
-    @objc func setLightColor(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+    @objc func setLightColor(_ sender: Any?) {
+        guard let menuItem = sender as? NSMenuItem, let light = menuItem.representedObject as? Light else {
             return
         }
         
@@ -87,8 +91,8 @@ extension AppDelegate {
         windowController.showWindow(self)
     }
     
-    @objc func setLightLabel(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
+    @objc func setLightLabel(_ sender: Any?) {
+        guard let menuItem = sender as? NSMenuItem, let light = menuItem.representedObject as? Light else {
             return
         }
         
@@ -114,7 +118,7 @@ extension AppDelegate {
 
 extension AppDelegate {
     
-    @objc func addLight(_ sender: NSMenuItem) {
+    @objc func addLight(_ sender: Any?) {
         NSAlert.textField(
             text: .init(
                 message: "Add a light",
@@ -136,8 +140,8 @@ extension AppDelegate {
         }
     }
     
-    @objc func removeLight(_ sender: NSMenuItem) {
-        guard let address = sender.representedObject as? String else {
+    @objc func removeLight(_ sender: Any?) {
+        guard let menuItem = sender as? NSMenuItem, let address = menuItem.representedObject as? String else {
             return
         }
         
@@ -158,7 +162,7 @@ extension AppDelegate {
 
 extension AppDelegate {
     
-    @objc func toggleLaunchAtLogin(_ sender: NSMenuItem) {
+    @objc func toggleLaunchAtLogin(_ sender: Any?) {
         LaunchAtLogin.isEnabled.toggle()
     }
     
