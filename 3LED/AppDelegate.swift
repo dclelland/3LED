@@ -37,10 +37,6 @@ extension AppDelegate: NSMenuDelegate {
         refreshMenu()
     }
     
-    func menuDidClose(_ menu: NSMenu) {
-        refreshMenu()
-    }
-    
 }
 
 extension AppDelegate {
@@ -67,6 +63,8 @@ extension AppDelegate {
         guard let menuItem = sender as? NSMenuItem, let light = menuItem.representedObject as? Light else {
             return
         }
+        
+        menuItem.state = light.state.power == 0 ? .on : .off
         
         light.client.light.setPower(on: light.state.power == 0).catch { error in
             NSAlert(error: error).runModal()
