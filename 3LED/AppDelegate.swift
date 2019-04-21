@@ -187,6 +187,11 @@ private extension NSMenuItem {
             representedObject: light,
             submenu: NSMenu(
                 items: [
+                    NSMenuItem(
+                        title: "Connected: \(address)",
+                        enabled: false
+                    ),
+                    .separator(),
                     .setLightColor(light: light),
                     .setLightLabel(light: light),
                     .separator(),
@@ -198,10 +203,14 @@ private extension NSMenuItem {
     
     static func disconnected(address: String, error: Error) -> NSMenuItem {
         return NSMenuItem(
-            title: address,
+            title: "Unknown",
             state: .mixed,
             submenu: NSMenu(
                 items: [
+                    NSMenuItem(
+                        title: "Disconnected: \(address)",
+                        enabled: false
+                    ),
                     NSMenuItem(
                         title: error.localizedDescription,
                         enabled: false
@@ -246,7 +255,7 @@ private extension NSMenuItem {
     
     static func removeLight(address: String) -> NSMenuItem {
         return NSMenuItem(
-            title: "Remove Light",
+            title: "Remove Light...",
             action: #selector(AppDelegate.removeLight(_:)),
             representedObject: address
         )

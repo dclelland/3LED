@@ -7,7 +7,6 @@ macOS client for LIFX lightbulbs
 ### Features
 
 - Keyboard shortcuts
-- Show light IP address somehow
 
 ### Bugs
 
