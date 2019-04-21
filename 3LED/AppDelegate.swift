@@ -68,17 +68,8 @@ extension AppDelegate {
             return
         }
         
-        switch menuItem.state {
-        case .on:
-            light.client.light.setPower(on: false).catch { error in
-                NSAlert(error: error).runModal()
-            }
-        case .off:
-            light.client.light.setPower(on: true).catch { error in
-                NSAlert(error: error).runModal()
-            }
-        default:
-            return
+        light.client.light.setPower(on: light.state.power == 0).catch { error in
+            NSAlert(error: error).runModal()
         }
     }
     
