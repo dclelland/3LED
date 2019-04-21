@@ -21,10 +21,10 @@ Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 3LED does not gather any kind of user data.
 
-### 1.1 Wishlist
+### Wishlist
 
 - Investigate menu run loop issues
-- Keyboard shortcuts (check out [HotKey](https://github.com/soffes/HotKey), [Magnet](https://github.com/Clipy/Magnet), or [SpiceKey](https://github.com/Kyome22/SpiceKey)
+- Keyboard shortcuts (check out [HotKey](https://github.com/soffes/HotKey), [Magnet](https://github.com/Clipy/Magnet), or [SpiceKey](https://github.com/Kyome22/SpiceKey))
 - Waveform editing
 - Scene manager
 
