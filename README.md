@@ -8,13 +8,14 @@ A simple macOS menu bar app for managing a collection of LIFX light bulbs.
 
 ![3LED screenshot](/Screenshot.png?raw=true "3LED screenshot")
 
-### Links
-
-- [LIFXClient](https://github.com/dclelland/LIFXClient) (LIFX UDP protocol client)
-
 ### Building
 
 Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 10.2).
+
+#### Dependencies
+
+- [LIFXClient](https://github.com/dclelland/LIFXClient)
+- [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin)
 
 ### Privacy policy
 
