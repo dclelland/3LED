@@ -13,7 +13,11 @@ import LaunchAtLogin
 
 @NSApplicationMain class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var addresses = Persistent<[String]>(key: "Addresses", value: [])
+    var addresses = Persistent<[String]>(key: "Addresses", value: []) {
+        didSet {
+            refreshMenu()
+        }
+    }
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
