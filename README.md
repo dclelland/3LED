@@ -4,9 +4,9 @@ macOS client for LIFX lightbulbs
 
 ## Todo
 
-### Testing
+### Bugs
 
-- Launch at login
+- Launch at login isn't working
 
 ### Wishlist
 
