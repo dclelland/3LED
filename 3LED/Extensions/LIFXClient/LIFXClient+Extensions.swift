@@ -33,11 +33,7 @@ extension LIFXClient {
     
     static func getConnections(addresses: [String]) -> Guarantee<[Connection]> {
         let promises = addresses.map { address in
-            return connect(address: address).then { client in
-                return client.light.get().map { state in
-                    return Light(client: client, state: state)
-                }
-            }
+            return getConnection(address: address)
         }
         
         return when(resolved: promises).map { results in
@@ -52,15 +48,13 @@ extension LIFXClient {
         }
     }
     
-}
-
-extension LIFXClient {
-    
-    #warning("Need to add timeout here")
-    
-    static func connect(address: String) -> Promise<LIFXClient> {
+    static func getConnection(address: String) -> Promise<Light> {
         return firstly {
             return connect(host: .ipv4(try IPv4Address(address)))
+        }.then { client in
+            return client.light.get().map { state in
+                return Light(client: client, state: state)
+            }
         }
     }
     
