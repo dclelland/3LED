@@ -16,6 +16,10 @@ A simple macOS menu bar app for managing a collection of LIFX light bulbs.
 
 Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing the latest version is Xcode 10.2).
 
+### Privacy policy
+
+3LED does not gather any kind of user data.
+
 ### 1.1 Wishlist
 
 - Investigate menu run loop issues
