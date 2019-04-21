@@ -10,6 +10,7 @@ macOS client for LIFX lightbulbs
 
 ### Wishlist
 
+- Investigate menu run loop issues
 - Keyboard shortcuts
 - Scene manager
 - Waveform editing
