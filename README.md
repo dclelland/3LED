@@ -4,26 +4,23 @@ macOS client for LIFX lightbulbs
 
 ## Todo
 
+### Features
+
+- Keyboard shortcuts
+- Prompt on startup
+- Show light IP address somehow
+
 ### Bugs
 
 - Menu configuration
     - Look into NSMenuDelegate and that special run loop thing
     - Will need to add timeouts to connection request
-    
-### Design
-
-- Set light color
-    - Is this finished?
-
-- Set light waveform
-    - Finish this view controller and explore how waveform setting should work
 
 ### Testing
 
 - Launch at login
 
-### Features
+### Wishlist
 
-- Can we add keyboard shortcuts?
-
-- Look at adding a scene manager
+- Scene manager
+- Waveform editing

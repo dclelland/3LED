@@ -1,5 +1,5 @@
 //
-//  LightColorWindowController.swift
+//  LightWindowController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 17/04/19.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class LightColorWindowController: StatefulWindowController<Light>, StoryboardBased {
+class LightWindowController: StatefulWindowController<Light>, StoryboardBased {
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -17,8 +17,10 @@ class LightColorWindowController: StatefulWindowController<Light>, StoryboardBas
     }
     
     override func refreshWindow(_ light: Light) {
-        windowFrameAutosaveName = "\(light.state.label) Color"
-        window?.title = "\(light.state.label) Color"
+        super.refreshWindow(light)
+        
+        windowFrameAutosaveName = light.state.label
+        window?.title = light.state.label
     }
     
 }

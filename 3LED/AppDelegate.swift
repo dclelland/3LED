@@ -83,16 +83,7 @@ extension AppDelegate {
             return
         }
         
-        let windowController = LightColorWindowController.firstOrInstantiate(state: light)
-        windowController.showWindow(self)
-    }
-    
-    @objc func setLightWaveform(_ sender: NSMenuItem) {
-        guard let light = sender.representedObject as? Light else {
-            return
-        }
-        
-        let windowController = LightWaveformWindowController.firstOrInstantiate(state: light)
+        let windowController = LightWindowController.firstOrInstantiate(state: light)
         windowController.showWindow(self)
     }
     
@@ -173,7 +164,7 @@ extension AppDelegate {
     
 }
 
-extension NSMenuItem {
+private extension NSMenuItem {
     
     static func connection(connection: Connection) -> NSMenuItem {
         switch connection {
@@ -193,7 +184,6 @@ extension NSMenuItem {
             submenu: NSMenu(
                 items: [
                     .setLightColor(light: light),
-                    .setLightWaveform(light: light),
                     .setLightLabel(light: light),
                     .separator(),
                     .removeLight(address: address)
@@ -221,20 +211,12 @@ extension NSMenuItem {
     
 }
 
-extension NSMenuItem {
+private extension NSMenuItem {
     
     static func setLightColor(light: Light) -> NSMenuItem {
         return NSMenuItem(
             title: "Set Color...",
             action: #selector(AppDelegate.setLightColor(_:)),
-            representedObject: light
-        )
-    }
-    
-    static func setLightWaveform(light: Light) -> NSMenuItem {
-        return NSMenuItem(
-            title: "Set Waveform...",
-            action: #selector(AppDelegate.setLightWaveform(_:)),
             representedObject: light
         )
     }
@@ -249,7 +231,7 @@ extension NSMenuItem {
     
 }
 
-extension NSMenuItem {
+private extension NSMenuItem {
     
     static func addLight() -> NSMenuItem {
         return NSMenuItem(
@@ -268,7 +250,7 @@ extension NSMenuItem {
     
 }
 
-extension NSMenuItem {
+private extension NSMenuItem {
     
     static func launchAtLogin() -> NSMenuItem {
         return NSMenuItem(
