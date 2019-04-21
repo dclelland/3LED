@@ -4,6 +4,10 @@ A simple macOS menu bar app for managing a collection of LIFX light bulbs.
 
 3LED is a bare bones, open source utility; currently it just has facility for toggling lights on and off, as well as adjusting their colors.
 
+### Screenshot
+
+![3LED screenshot](/Screenshot.png?raw=true "3LED screenshot")
+
 ### Links
 
 - [LIFXClient](https://github.com/dclelland/LIFXClient) (LIFX UDP protocol client)
