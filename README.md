@@ -18,3 +18,7 @@ Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing t
 - Keyboard shortcuts (check out [HotKey](https://github.com/soffes/HotKey), [Magnet](https://github.com/Clipy/Magnet), or [SpiceKey](https://github.com/Kyome22/SpiceKey)
 - Waveform editing
 - Scene manager
+
+---
+
+Just a quick note: 3LED itself is a paid app, but I provide the source code free of charge as a learning resource. I ask that you kindly don't put clones of 3LED in the App Store.
