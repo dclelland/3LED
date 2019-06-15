@@ -27,6 +27,7 @@ Just open `3LED.xcworkspace` in Xcode and hit build (as of the time of writing t
 
 ## Wishlist
 
+- Rewrite using the Combine framework once that is available
 - Investigate menu run loop issues
 - Keyboard shortcuts (check out [HotKey](https://github.com/soffes/HotKey), [Magnet](https://github.com/Clipy/Magnet), or [SpiceKey](https://github.com/Kyome22/SpiceKey))
 - Waveform editing
