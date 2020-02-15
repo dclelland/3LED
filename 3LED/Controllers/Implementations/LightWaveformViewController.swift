@@ -25,7 +25,7 @@ class LightWaveformViewController: StatefulViewController<Light> {
         
         firstColorWell.color = light.state.color.color
         secondColorWell.color = light.state.color.color
-        periodSlider.doubleValue = 1.0
+        periodSlider.doubleValue = 0.0
         waveformPopUpButton.selectItem(withTag: Int(LIFXLight.Waveform.sine.rawValue))
     }
     
