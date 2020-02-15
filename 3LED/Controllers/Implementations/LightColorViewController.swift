@@ -1,5 +1,5 @@
 //
-//  LightViewController.swift
+//  LightColorViewController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 17/04/19.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class LightViewController: StatefulViewController<Light> {
+class LightColorViewController: StatefulViewController<Light> {
     
     @IBOutlet var colorWell: NSColorWell!
     
@@ -20,7 +20,7 @@ class LightViewController: StatefulViewController<Light> {
     
 }
 
-extension LightViewController {
+extension LightColorViewController {
     
     @IBAction func setColor(_ sender: Any?) {
         guard let light = state else {

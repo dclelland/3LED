@@ -1,5 +1,5 @@
 //
-//  LightWindowController.swift
+//  LightColorWindowController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 17/04/19.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class LightWindowController: StatefulWindowController<Light>, StoryboardBased {
+class LightColorWindowController: StatefulWindowController<Light>, StoryboardBased {
     
     override func windowDidLoad() {
         super.windowDidLoad()

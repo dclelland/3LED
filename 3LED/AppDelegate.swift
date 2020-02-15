@@ -80,7 +80,7 @@ extension AppDelegate {
             return
         }
         
-        let windowController = LightWindowController.firstOrInstantiate(state: light)
+        let windowController = LightColorWindowController.firstOrInstantiate(state: light)
         windowController.showWindow(self)
     }
     

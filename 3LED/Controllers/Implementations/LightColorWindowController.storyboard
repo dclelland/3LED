@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="21Q-lV-NsK">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="21Q-lV-NsK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
         <scene sceneID="M0q-qm-ZAg">
             <objects>
-                <windowController id="21Q-lV-NsK" customClass="LightWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController id="21Q-lV-NsK" customClass="LightColorWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="SOq-do-Qgl" customClass="NSPanel">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
@@ -26,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="5" y="-183"/>
         </scene>
-        <!--Light View Controller-->
+        <!--Light Color View Controller-->
         <scene sceneID="ZPT-Gu-vC3">
             <objects>
-                <viewController id="nJw-1K-xGP" customClass="LightViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nJw-1K-xGP" customClass="LightColorViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Tj7-rw-Kh2">
                         <rect key="frame" x="0.0" y="0.0" width="114" height="84"/>
                         <autoresizingMask key="autoresizingMask"/>
