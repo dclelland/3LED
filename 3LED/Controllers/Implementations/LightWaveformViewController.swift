@@ -18,7 +18,7 @@ class LightWaveformViewController: StatefulViewController<Light> {
         super.refreshView(light)
         
         firstColorWell.color = light.state.color.color
-        secondColorWell.color = .black
+        secondColorWell.color = light.state.color.color
     }
     
 }
