@@ -34,8 +34,8 @@ extension LightWaveformViewController {
             return
         }
         
-        when(fulfilled: light.setColor(color: firstColorWell.color), after(seconds: 0.1)).then { state in
-            light.setWaveform(color: self.secondColorWell.color, period: 1.0 / self.periodSlider.doubleValue, waveform: .pulse)
+        light.setColor(color: secondColorWell.color).then { state in
+            light.setWaveform(color: self.firstColorWell.color, period: 1.0 / self.periodSlider.doubleValue, waveform: .pulse)
         }.catch { error in
             NSAlert(error: error).runModal()
         }

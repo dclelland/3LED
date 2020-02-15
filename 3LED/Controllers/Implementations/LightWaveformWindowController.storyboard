@@ -31,8 +31,8 @@
         <scene sceneID="17N-uZ-hMU">
             <objects>
                 <viewController id="JID-0P-9up" customClass="LightWaveformViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="4xG-Lc-8CR">
-                        <rect key="frame" x="0.0" y="0.0" width="216" height="113"/>
+                    <view key="view" misplaced="YES" id="4xG-Lc-8CR">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="114"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Upc-Ja-yT3">
@@ -59,7 +59,7 @@
                             </colorWell>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LI0-OM-a1Q">
                                 <rect key="frame" x="10" y="11" width="196" height="24"/>
-                                <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="20" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="WoT-rn-4yN"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="30" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="30" allowsTickMarkValuesOnly="YES" sliderType="linear" id="WoT-rn-4yN"/>
                                 <connections>
                                     <action selector="setWaveform:" target="JID-0P-9up" id="Sj0-rU-3ya"/>
                                 </connections>
