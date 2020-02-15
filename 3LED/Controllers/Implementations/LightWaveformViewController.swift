@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import PromiseKit
 
 class LightWaveformViewController: StatefulViewController<Light> {
     
@@ -14,11 +15,14 @@ class LightWaveformViewController: StatefulViewController<Light> {
     
     @IBOutlet var secondColorWell: NSColorWell!
     
+    @IBOutlet var periodSlider: NSSlider!
+    
     override func refreshView(_ light: Light) {
         super.refreshView(light)
         
         firstColorWell.color = light.state.color.color
         secondColorWell.color = light.state.color.color
+        periodSlider.doubleValue = 1.0
     }
     
 }
@@ -30,8 +34,8 @@ extension LightWaveformViewController {
             return
         }
         
-        light.setColor(color: firstColorWell.color).then { state in
-            light.setWaveform(transient: true, color: self.secondColorWell.color, period: 0.5, waveform: .pulse)
+        when(fulfilled: light.setColor(color: firstColorWell.color), after(seconds: 0.1)).then { state in
+            light.setWaveform(color: self.secondColorWell.color, period: 1.0 / self.periodSlider.doubleValue, waveform: .pulse)
         }.catch { error in
             NSAlert(error: error).runModal()
         }

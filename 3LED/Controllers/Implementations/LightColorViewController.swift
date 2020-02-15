@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import PromiseKit
 
 class LightColorViewController: StatefulViewController<Light> {
     
