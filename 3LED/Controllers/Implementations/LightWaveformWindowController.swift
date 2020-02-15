@@ -1,5 +1,5 @@
 //
-//  LightGradientWindowController.swift
+//  LightWaveformWindowController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 15/02/20.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class LightGradientWindowController: StatefulWindowController<Light>, StoryboardBased {
+class LightWaveformWindowController: StatefulWindowController<Light>, StoryboardBased {
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -19,8 +19,8 @@ class LightGradientWindowController: StatefulWindowController<Light>, Storyboard
     override func refreshWindow(_ light: Light) {
         super.refreshWindow(light)
         
-        windowFrameAutosaveName = "\(light.state.label) Gradient"
-        window?.title = "\(light.state.label) Gradient"
+        windowFrameAutosaveName = "\(light.state.label) Waveform"
+        window?.title = "\(light.state.label) Waveform"
     }
     
 }

@@ -27,9 +27,9 @@
 		654A771322673E8A00A40D31 /* LightColorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771222673E8A00A40D31 /* LightColorWindowController.swift */; };
 		654A771522673EEB00A40D31 /* StatefulWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771422673EEB00A40D31 /* StatefulWindowController.swift */; };
 		654A771B2267425300A40D31 /* LightColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A771A2267425300A40D31 /* LightColorViewController.swift */; };
-		657A082D23F7C9CD00D1A837 /* LightGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A082C23F7C9CD00D1A837 /* LightGradientViewController.swift */; };
-		657A082F23F7C9DC00D1A837 /* LightGradientWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A082E23F7C9DC00D1A837 /* LightGradientWindowController.swift */; };
-		657A083323F7CA2000D1A837 /* LightGradientWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657A083223F7CA2000D1A837 /* LightGradientWindowController.storyboard */; };
+		657A082D23F7C9CD00D1A837 /* LightWaveformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A082C23F7C9CD00D1A837 /* LightWaveformViewController.swift */; };
+		657A082F23F7C9DC00D1A837 /* LightWaveformWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A082E23F7C9DC00D1A837 /* LightWaveformWindowController.swift */; };
+		657A083323F7CA2000D1A837 /* LightWaveformWindowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657A083223F7CA2000D1A837 /* LightWaveformWindowController.storyboard */; };
 		6589113322675C5400525C66 /* IPv4Address+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589113222675C5400525C66 /* IPv4Address+Extensions.swift */; };
 		65891137226987F000525C66 /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65891136226987F000525C66 /* Sequence+Extensions.swift */; };
 		E152A6844104B4F2E91C1C88 /* Pods_3LED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3678F1729C36550414340834 /* Pods_3LED.framework */; };
@@ -61,9 +61,9 @@
 		654A771222673E8A00A40D31 /* LightColorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightColorWindowController.swift; sourceTree = "<group>"; };
 		654A771422673EEB00A40D31 /* StatefulWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulWindowController.swift; sourceTree = "<group>"; };
 		654A771A2267425300A40D31 /* LightColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightColorViewController.swift; sourceTree = "<group>"; };
-		657A082C23F7C9CD00D1A837 /* LightGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGradientViewController.swift; sourceTree = "<group>"; };
-		657A082E23F7C9DC00D1A837 /* LightGradientWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGradientWindowController.swift; sourceTree = "<group>"; };
-		657A083223F7CA2000D1A837 /* LightGradientWindowController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightGradientWindowController.storyboard; sourceTree = "<group>"; };
+		657A082C23F7C9CD00D1A837 /* LightWaveformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWaveformViewController.swift; sourceTree = "<group>"; };
+		657A082E23F7C9DC00D1A837 /* LightWaveformWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightWaveformWindowController.swift; sourceTree = "<group>"; };
+		657A083223F7CA2000D1A837 /* LightWaveformWindowController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LightWaveformWindowController.storyboard; sourceTree = "<group>"; };
 		6589113222675C5400525C66 /* IPv4Address+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IPv4Address+Extensions.swift"; sourceTree = "<group>"; };
 		65891136226987F000525C66 /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		BDF09C1CD68917939ABE7557 /* Pods-3LED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3LED.debug.xcconfig"; path = "Target Support Files/Pods-3LED/Pods-3LED.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,9 +213,9 @@
 				654A76E82266C07100A40D31 /* LightColorWindowController.storyboard */,
 				654A771222673E8A00A40D31 /* LightColorWindowController.swift */,
 				654A771A2267425300A40D31 /* LightColorViewController.swift */,
-				657A083223F7CA2000D1A837 /* LightGradientWindowController.storyboard */,
-				657A082E23F7C9DC00D1A837 /* LightGradientWindowController.swift */,
-				657A082C23F7C9CD00D1A837 /* LightGradientViewController.swift */,
+				657A083223F7CA2000D1A837 /* LightWaveformWindowController.storyboard */,
+				657A082E23F7C9DC00D1A837 /* LightWaveformWindowController.swift */,
+				657A082C23F7C9CD00D1A837 /* LightWaveformViewController.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				654A76E92266C07100A40D31 /* LightColorWindowController.storyboard in Resources */,
-				657A083323F7CA2000D1A837 /* LightGradientWindowController.storyboard in Resources */,
+				657A083323F7CA2000D1A837 /* LightWaveformWindowController.storyboard in Resources */,
 				654177C122668DD000B5FEEA /* Assets.xcassets in Resources */,
 				654177C422668DD000B5FEEA /* App.storyboard in Resources */,
 			);
@@ -434,9 +434,9 @@
 				6537B2E4226C2D59000860AB /* Promise+Extensions.swift in Sources */,
 				6589113322675C5400525C66 /* IPv4Address+Extensions.swift in Sources */,
 				654A771322673E8A00A40D31 /* LightColorWindowController.swift in Sources */,
-				657A082D23F7C9CD00D1A837 /* LightGradientViewController.swift in Sources */,
+				657A082D23F7C9CD00D1A837 /* LightWaveformViewController.swift in Sources */,
 				6537B2DD226997B1000860AB /* ViewController.swift in Sources */,
-				657A082F23F7C9DC00D1A837 /* LightGradientWindowController.swift in Sources */,
+				657A082F23F7C9DC00D1A837 /* LightWaveformWindowController.swift in Sources */,
 				654A76E12266BFF800A40D31 /* StoryboardBased.swift in Sources */,
 				6537B2D822699782000860AB /* NSApplication+Extensions.swift in Sources */,
 				654A76ED2266C20900A40D31 /* StatefulViewController.swift in Sources */,

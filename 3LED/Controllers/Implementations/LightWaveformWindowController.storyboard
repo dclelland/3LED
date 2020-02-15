@@ -9,7 +9,7 @@
         <!--Window Controller-->
         <scene sceneID="w3U-SQ-tzw">
             <objects>
-                <windowController id="bJL-1U-nAi" customClass="LightGradientWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController id="bJL-1U-nAi" customClass="LightWaveformWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="gZq-8L-gA0" customClass="NSPanel">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="5" y="-183"/>
         </scene>
-        <!--Light Gradient View Controller-->
+        <!--Light Waveform View Controller-->
         <scene sceneID="17N-uZ-hMU">
             <objects>
-                <viewController id="JID-0P-9up" customClass="LightGradientViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JID-0P-9up" customClass="LightWaveformViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4xG-Lc-8CR">
                         <rect key="frame" x="0.0" y="0.0" width="216" height="84"/>
                         <autoresizingMask key="autoresizingMask"/>

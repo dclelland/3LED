@@ -84,12 +84,12 @@ extension AppDelegate {
         windowController.showWindow(self)
     }
     
-    @objc func setLightGradient(_ sender: Any?) {
+    @objc func setLightWaveform(_ sender: Any?) {
         guard let menuItem = sender as? NSMenuItem, let light = menuItem.representedObject as? Light else {
             return
         }
         
-        let windowController = LightGradientWindowController.firstOrInstantiate(state: light)
+        let windowController = LightWaveformWindowController.firstOrInstantiate(state: light)
         windowController.showWindow(self)
     }
     
@@ -195,7 +195,7 @@ private extension NSMenuItem {
                     ),
                     .separator(),
                     .setLightColor(light: light),
-                    .setLightGradient(light: light),
+                    .setLightWaveform(light: light),
                     .setLightLabel(light: light),
                     .separator(),
                     .removeLight(address: address)
@@ -237,10 +237,10 @@ private extension NSMenuItem {
         )
     }
     
-    static func setLightGradient(light: Light) -> NSMenuItem {
+    static func setLightWaveform(light: Light) -> NSMenuItem {
         return NSMenuItem(
-            title: "Set Gradient...",
-            action: #selector(AppDelegate.setLightGradient(_:)),
+            title: "Set Waveform...",
+            action: #selector(AppDelegate.setLightWaveform(_:)),
             representedObject: light
         )
     }

@@ -1,5 +1,5 @@
 //
-//  LightGradientViewController.swift
+//  LightWaveformViewController.swift
 //  3LED
 //
 //  Created by Daniel Clelland on 15/02/20.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class LightGradientViewController: StatefulViewController<Light> {
+class LightWaveformViewController: StatefulViewController<Light> {
     
     @IBOutlet var colorWell: NSColorWell!
     
@@ -20,7 +20,7 @@ class LightGradientViewController: StatefulViewController<Light> {
     
 }
 
-extension LightGradientViewController {
+extension LightWaveformViewController {
     
     @IBAction func setColor(_ sender: Any?) {
         guard let light = state else {
