@@ -19,8 +19,8 @@ class LightColorWindowController: StatefulWindowController<Light>, StoryboardBas
     override func refreshWindow(_ light: Light) {
         super.refreshWindow(light)
         
-        windowFrameAutosaveName = light.state.label
-        window?.title = light.state.label
+        windowFrameAutosaveName = "\(light.state.label) Color"
+        window?.title = "\(light.state.label) Color"
     }
     
 }

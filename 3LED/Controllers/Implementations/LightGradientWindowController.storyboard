@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bJL-1U-nAi">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="w3U-SQ-tzw">
+            <objects>
+                <windowController id="bJL-1U-nAi" customClass="LightGradientWindowController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="gZq-8L-gA0" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
+                        <rect key="contentRect" x="42" y="1313" width="114" height="84"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="bJL-1U-nAi" id="R8g-9Q-2my"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="JID-0P-9up" kind="relationship" relationship="window.shadowedContentViewController" id="Wh0-Pr-ftZ"/>
+                    </connections>
+                </windowController>
+                <customObject id="DnA-Uq-Oja" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="-183"/>
+        </scene>
+        <!--Light Gradient View Controller-->
+        <scene sceneID="17N-uZ-hMU">
+            <objects>
+                <viewController id="JID-0P-9up" customClass="LightGradientViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="4xG-Lc-8CR">
+                        <rect key="frame" x="0.0" y="0.0" width="114" height="84"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Upc-Ja-yT3">
+                                <rect key="frame" x="12" y="12" width="90" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="IBJ-eI-vWm"/>
+                                    <constraint firstAttribute="height" constant="60" id="Pdw-Vw-JbO"/>
+                                </constraints>
+                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="setColor:" target="JID-0P-9up" id="ivN-fX-0aN"/>
+                                </connections>
+                            </colorWell>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Upc-Ja-yT3" secondAttribute="bottom" constant="12" id="9Ks-rH-J6W"/>
+                            <constraint firstItem="Upc-Ja-yT3" firstAttribute="top" secondItem="4xG-Lc-8CR" secondAttribute="top" constant="12" id="lzE-7z-VEH"/>
+                            <constraint firstItem="Upc-Ja-yT3" firstAttribute="leading" secondItem="4xG-Lc-8CR" secondAttribute="leading" constant="12" id="tMi-Yt-jao"/>
+                            <constraint firstAttribute="trailing" secondItem="Upc-Ja-yT3" secondAttribute="trailing" constant="12" id="tSe-7j-Cu3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorWell" destination="Upc-Ja-yT3" id="8w8-4f-pg5"/>
+                    </connections>
+                </viewController>
+                <customObject id="wIp-WR-FHb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="34"/>
+        </scene>
+    </scenes>
+</document>
