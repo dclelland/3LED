@@ -23,11 +23,11 @@ class LightColorViewController: StatefulViewController<Light> {
 extension LightColorViewController {
     
     @IBAction func setColor(_ sender: Any?) {
-        guard let light = state else {
+        guard let light = state?.client.light else {
             return
         }
         
-        light.client.light.setColor(color: colorWell.color).catch { error in
+        light.setColor(color: colorWell.color).catch { error in
             NSAlert(error: error).runModal()
         }
     }

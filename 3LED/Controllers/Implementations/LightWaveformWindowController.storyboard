@@ -43,7 +43,7 @@
                                 </constraints>
                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="setColor:" target="JID-0P-9up" id="ivN-fX-0aN"/>
+                                    <action selector="setWaveform:" target="JID-0P-9up" id="xpV-i9-gng"/>
                                 </connections>
                             </colorWell>
                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gD6-2w-fg0">
@@ -54,7 +54,7 @@
                                 </constraints>
                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="setColor:" target="JID-0P-9up" id="Cet-Hq-e6J"/>
+                                    <action selector="setWaveform:" target="JID-0P-9up" id="Ycc-x7-vS6"/>
                                 </connections>
                             </colorWell>
                         </subviews>
@@ -69,7 +69,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorWell" destination="Upc-Ja-yT3" id="8w8-4f-pg5"/>
+                        <outlet property="firstColorWell" destination="Upc-Ja-yT3" id="NLs-ap-aU8"/>
+                        <outlet property="secondColorWell" destination="gD6-2w-fg0" id="XzN-JS-xHe"/>
                     </connections>
                 </viewController>
                 <customObject id="wIp-WR-FHb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

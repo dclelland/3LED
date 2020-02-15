@@ -10,24 +10,29 @@ import AppKit
 
 class LightWaveformViewController: StatefulViewController<Light> {
     
-    @IBOutlet var colorWell: NSColorWell!
+    @IBOutlet var firstColorWell: NSColorWell!
+    
+    @IBOutlet var secondColorWell: NSColorWell!
     
     override func refreshView(_ light: Light) {
         super.refreshView(light)
         
-        colorWell.color = light.state.color.color
+        firstColorWell.color = light.state.color.color
+        secondColorWell.color = .black
     }
     
 }
 
 extension LightWaveformViewController {
     
-    @IBAction func setColor(_ sender: Any?) {
-        guard let light = state else {
+    @IBAction func setWaveform(_ sender: Any?) {
+        guard let light = state?.client.light else {
             return
         }
         
-        light.client.light.setColor(color: colorWell.color).catch { error in
+        light.setColor(color: firstColorWell.color).then { state in
+            light.setWaveform(transient: true, color: self.secondColorWell.color, period: 0.5, waveform: .pulse)
+        }.catch { error in
             NSAlert(error: error).runModal()
         }
     }
