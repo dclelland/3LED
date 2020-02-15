@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import LIFXClient
 import PromiseKit
 
 class LightWaveformViewController: StatefulViewController<Light> {
@@ -17,12 +18,15 @@ class LightWaveformViewController: StatefulViewController<Light> {
     
     @IBOutlet var periodSlider: NSSlider!
     
+    @IBOutlet var waveformPopUpButton: NSPopUpButton!
+    
     override func refreshView(_ light: Light) {
         super.refreshView(light)
         
         firstColorWell.color = light.state.color.color
         secondColorWell.color = light.state.color.color
         periodSlider.doubleValue = 1.0
+        waveformPopUpButton.selectItem(withTag: Int(LIFXLight.Waveform.sine.rawValue))
     }
     
 }
@@ -34,8 +38,13 @@ extension LightWaveformViewController {
             return
         }
         
-        light.setColor(color: secondColorWell.color).then { state in
-            light.setWaveform(color: self.firstColorWell.color, period: 1.0 / self.periodSlider.doubleValue, waveform: .pulse)
+        let firstColor = firstColorWell.color
+        let secondColor = secondColorWell.color
+        let period = pow(30.0, -self.periodSlider.doubleValue)
+        let waveform = LIFXLight.Waveform(rawValue: UInt8(waveformPopUpButton.selectedTag()))!
+        
+        light.setColor(color: secondColor).then { state in
+            light.setWaveform(color: firstColor, period: period, waveform: waveform)
         }.catch { error in
             NSAlert(error: error).runModal()
         }

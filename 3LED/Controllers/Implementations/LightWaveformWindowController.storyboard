@@ -31,12 +31,12 @@
         <scene sceneID="17N-uZ-hMU">
             <objects>
                 <viewController id="JID-0P-9up" customClass="LightWaveformViewController" customModule="_LED" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="4xG-Lc-8CR">
-                        <rect key="frame" x="0.0" y="0.0" width="216" height="114"/>
+                    <view key="view" id="4xG-Lc-8CR">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="142"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Upc-Ja-yT3">
-                                <rect key="frame" x="12" y="41" width="90" height="60"/>
+                                <rect key="frame" x="12" y="70" width="90" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="IBJ-eI-vWm"/>
                                     <constraint firstAttribute="height" constant="60" id="Pdw-Vw-JbO"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </colorWell>
                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gD6-2w-fg0">
-                                <rect key="frame" x="114" y="41" width="90" height="60"/>
+                                <rect key="frame" x="114" y="70" width="90" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="i8M-cM-DF8"/>
                                     <constraint firstAttribute="width" constant="90" id="tWk-Pj-iiW"/>
@@ -58,18 +58,38 @@
                                 </connections>
                             </colorWell>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LI0-OM-a1Q">
-                                <rect key="frame" x="10" y="11" width="196" height="24"/>
-                                <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="30" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="30" allowsTickMarkValuesOnly="YES" sliderType="linear" id="WoT-rn-4yN"/>
+                                <rect key="frame" x="10" y="40" width="196" height="24"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="7" sliderType="linear" id="WoT-rn-4yN"/>
                                 <connections>
                                     <action selector="setWaveform:" target="JID-0P-9up" id="Sj0-rU-3ya"/>
                                 </connections>
                             </slider>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0YA-Nb-R9O">
+                                <rect key="frame" x="10" y="9" width="197" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="Sine" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="JOs-EG-zev" id="S3i-2d-TPG">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="lpG-ad-ora">
+                                        <items>
+                                            <menuItem title="Sine" tag="1" id="JOs-EG-zev"/>
+                                            <menuItem title="Triangle" tag="3" id="S4y-mL-I33"/>
+                                            <menuItem title="Pulse" tag="4" id="ZVt-Yc-dOF"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="setWaveform:" target="JID-0P-9up" id="MGV-kt-BjE"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstItem="LI0-OM-a1Q" firstAttribute="leading" secondItem="4xG-Lc-8CR" secondAttribute="leading" constant="12" id="0ng-fc-cWd"/>
+                            <constraint firstItem="0YA-Nb-R9O" firstAttribute="leading" secondItem="4xG-Lc-8CR" secondAttribute="leading" constant="12" id="1Cx-TU-E6s"/>
                             <constraint firstAttribute="trailing" secondItem="gD6-2w-fg0" secondAttribute="trailing" constant="12" id="8Ah-Qp-E6v"/>
                             <constraint firstItem="gD6-2w-fg0" firstAttribute="leading" secondItem="Upc-Ja-yT3" secondAttribute="trailing" constant="12" id="9gi-KC-ihS"/>
-                            <constraint firstAttribute="bottom" secondItem="LI0-OM-a1Q" secondAttribute="bottom" constant="12" id="L27-Er-kQg"/>
+                            <constraint firstAttribute="bottom" secondItem="0YA-Nb-R9O" secondAttribute="bottom" constant="12" id="GFL-d5-Gcy"/>
+                            <constraint firstAttribute="trailing" secondItem="0YA-Nb-R9O" secondAttribute="trailing" constant="12" id="Hj2-6Z-7o2"/>
+                            <constraint firstItem="0YA-Nb-R9O" firstAttribute="top" secondItem="LI0-OM-a1Q" secondAttribute="bottom" constant="8" id="PHe-oZ-QIk"/>
                             <constraint firstAttribute="trailing" secondItem="LI0-OM-a1Q" secondAttribute="trailing" constant="12" id="atw-LX-wKa"/>
                             <constraint firstItem="Upc-Ja-yT3" firstAttribute="top" secondItem="4xG-Lc-8CR" secondAttribute="top" constant="12" id="lzE-7z-VEH"/>
                             <constraint firstItem="LI0-OM-a1Q" firstAttribute="top" secondItem="Upc-Ja-yT3" secondAttribute="bottom" constant="8" id="tCD-vm-qrV"/>
@@ -81,11 +101,12 @@
                         <outlet property="firstColorWell" destination="Upc-Ja-yT3" id="NLs-ap-aU8"/>
                         <outlet property="periodSlider" destination="LI0-OM-a1Q" id="yMQ-qq-w16"/>
                         <outlet property="secondColorWell" destination="gD6-2w-fg0" id="XzN-JS-xHe"/>
+                        <outlet property="waveformPopUpButton" destination="0YA-Nb-R9O" id="uV3-X5-YPM"/>
                     </connections>
                 </viewController>
                 <customObject id="wIp-WR-FHb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="74.5"/>
+            <point key="canvasLocation" x="5" y="90"/>
         </scene>
     </scenes>
 </document>
